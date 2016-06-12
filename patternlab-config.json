@@ -4,6 +4,7 @@
       "root": "./source/",
       "patterns" : "./source/_patterns/",
       "data" : "./source/_data/",
+      "meta": "./source/_meta/",
       "annotations" : "./source/_annotations/",
       "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
       "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
@@ -29,6 +30,7 @@
     "pages"
   ],
   "defaultPattern": "all",
+  "cleanPublic" : true,
   "patternExtension": "mustache",
   "ignored-extensions" : ["scss", "DS_Store", "less"],
   "ignored-directories" : ["scss"],
@@ -61,5 +63,6 @@
   "patternExportPatternPartials": [],
   "patternExportDirectory": "./pattern_exports/",
   "baseurl" : "",
-  "cacheBust": true
+  "cacheBust": true,
+  "starterkitSubDir": "dist"
 }

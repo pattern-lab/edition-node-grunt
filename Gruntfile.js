@@ -1,14 +1,68 @@
+/******************************************************
+ * PATTERN LAB NODE
+ * EDITION-NODE-GRUNT
+ * The grunt wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.
+******************************************************/
+
 module.exports = function (grunt) {
 
-  var path = require('path');
+  var path = require('path'),
+      argv = require('minimist')(process.argv.slice(2));;
+
+  /******************************************************
+   * PATTERN LAB CONFIGURATION
+  ******************************************************/
+
+  //read all paths from our namespaced config file
+  var config = require('./patternlab-config.json'),
+    pl = require('patternlab-node')(config);
 
   function paths() {
     return require('./patternlab-config.json').paths;
   }
 
-  // Project configuration.
+  function getConfiguredCleanOption() {
+    return config.cleanPublic;
+  }
+
+  grunt.registerTask('patternlab', 'create design systems with atomic design', function (arg) {
+
+    if (arguments.length === 0) {
+      pl.build(getConfiguredCleanOption());
+    }
+
+    if (arg && arg === 'version') {
+      pl.version();
+    }
+
+    if (arg && arg === "patternsonly") {
+      pl.patternsonly(getConfiguredCleanOption());
+    }
+
+    if (arg && arg === "help") {
+      pl.help();
+    }
+
+    if (arg && arg === "starterkit-list") {
+      pl.liststarterkits();
+    }
+
+    if (arg && arg === "starterkit-load") {
+      pl.loadstarterkit(argv.kit);
+    }
+
+    if (arg && (arg !== "version" && arg !== "patternsonly" && arg !== "help" && arg !== "starterkit-list" && arg !== "starterkit-load")) {
+      pl.help();
+    }
+  });
+
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
+    /******************************************************
+     * COPY TASKS
+    ******************************************************/
     copy: {
       main: {
         files: [
@@ -26,6 +80,9 @@ module.exports = function (grunt) {
         ]
       }
     },
+    /******************************************************
+     * SERVER AND WATCH TASKS
+    ******************************************************/
     watch: {
       all: {
         files: [
@@ -91,11 +148,15 @@ module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
-  //load the patternlab task
-  require('./core/lib/patternlab_grunt')(grunt);
+
+  /******************************************************
+   * COMPOUND AND ALIASED TASKS
+  ******************************************************/
 
   grunt.registerTask('default', ['patternlab', 'copy:main', 'copy:styleguide']);
+  grunt.registerTask('pl-serve', ['patternlab', 'copy:main', 'copy:styleguide', 'browserSync', 'watch:all']);
 
-  grunt.registerTask('serve', ['patternlab', 'copy:main', 'copy:styleguide', 'browserSync', 'watch:all']);
-
+  //Aliases
+  grunt.registerTask('pl-help', ['patternlab:help']);
+  grunt.registerTask('pl-patterns', ['patternlab:patternsonly']);
 };

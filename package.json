@@ -1,7 +1,7 @@
 {
   "name": "edition-node-grunt",
-  "description": "The grunt wrapper around patternlab-node core.",
-  "version": "0.1.0",
+  "description": "The grunt wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.",
+  "version": "1.0.0",
   "main": "./core/lib/patternlab.js",
   "dependencies": {
     "bs-html-injector": "^3.0.0",
@@ -9,12 +9,11 @@
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
-    "patternlab-node": "pattern-lab/patternlab-node#dev-2.0-core",
-    "matchdep": "^1.0.0",
-    "mustache": "^2.2.0",
-    "handlebars": "^4.0.5",
-    "underscore": "^1.8.3",
-    "twig": "^0.9.5"
+    "minimist": "^1.2.0",
+    "patternlab-node": "pattern-lab/patternlab-node#v2.0.0-alpha",
+    "styleguidekit-assets-default": "pattern-lab/styleguidekit-assets-default#feature-panels",
+    "styleguidekit-mustache-default": "pattern-lab/styleguidekit-mustache-default#feature-panels",
+    "matchdep": "^1.0.0"
   },
   "keywords": [
     "Pattern Lab",
