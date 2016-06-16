@@ -23,7 +23,7 @@ module.exports = function (grunt) {
     pl = require('patternlab-node')(config);
 
   function paths() {
-    return require('./patternlab-config.json').paths;
+    return config.paths;
   }
 
   function getConfiguredCleanOption() {
@@ -70,17 +70,14 @@ module.exports = function (grunt) {
     copy: {
       main: {
         files: [
-          { expand: true, cwd: path.resolve(paths().source.js), src: '*.js', dest: path.resolve(paths().public.js) },
+          { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js', dest: path.resolve(paths().public.js) },
           { expand: true, cwd: path.resolve(paths().source.css), src: '*.css', dest: path.resolve(paths().public.css) },
-          { expand: true, cwd: path.resolve(paths().source.images), src: ['**/*.png', '**/*.jpg', '**/*.gif', '**/*.jpeg'], dest: path.resolve(paths().public.images) },
+          { expand: true, cwd: path.resolve(paths().source.images), src: '*', dest: path.resolve(paths().public.images) },
           { expand: true, cwd: path.resolve(paths().source.fonts), src: '*', dest: path.resolve(paths().public.fonts) },
-          { expand: true, cwd: path.resolve(paths().source.data), src: 'annotations.js', dest: path.resolve(paths().public.data) },
-          { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) }
-        ]
-      },
-      styleguide: {
-        files: [
-          { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*.*', '**/*.*'], dest: path.resolve(paths().public.styleguide) }
+          { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
+          { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*', '**'], dest: path.resolve(paths().public.root) },
+          // slightly inefficient to do this again - I am not a grunt glob master. someone fix
+          { expand: true, flatten: true, cwd: path.resolve(paths().source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(paths().public.styleguide, 'css') }
         ]
       }
     },
@@ -150,13 +147,11 @@ module.exports = function (grunt) {
   });
 
   /******************************************************
-   * COMPOUND AND ALIASED TASKS
+   * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'copy:main', 'copy:styleguide']);
-  grunt.registerTask('pl-serve', ['patternlab', 'copy:main', 'copy:styleguide', 'browserSync', 'watch:all']);
+  grunt.registerTask('default', ['patternlab', 'copy:main']);
+  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
+  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
 
-  //Aliases
-  grunt.registerTask('pl-help', ['patternlab:help']);
-  grunt.registerTask('pl-patterns', ['patternlab:patternsonly']);
 };
