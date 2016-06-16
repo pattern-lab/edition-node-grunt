@@ -7,7 +7,12 @@
 module.exports = function (grunt) {
 
   var path = require('path'),
-      argv = require('minimist')(process.argv.slice(2));;
+      argv = require('minimist')(process.argv.slice(2));
+
+  // load all grunt tasks
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browser-sync');
 
   /******************************************************
    * PATTERN LAB CONFIGURATION
@@ -58,7 +63,6 @@ module.exports = function (grunt) {
 
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
 
     /******************************************************
      * COPY TASKS
@@ -144,10 +148,6 @@ module.exports = function (grunt) {
       css: path.resolve(paths().public.root + '**/*.css')
     }
   });
-
-  // load all grunt tasks
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-
 
   /******************************************************
    * COMPOUND AND ALIASED TASKS

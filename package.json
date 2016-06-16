@@ -13,7 +13,6 @@
     "patternlab-node": "pattern-lab/patternlab-node#v2.0.0-alpha",
     "styleguidekit-assets-default": "pattern-lab/styleguidekit-assets-default#feature-panels",
     "styleguidekit-mustache-default": "pattern-lab/styleguidekit-mustache-default#feature-panels",
-    "matchdep": "^1.0.0"
   },
   "keywords": [
     "Pattern Lab",
