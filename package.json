@@ -1,0 +1,34 @@
+{
+  "name": "edition-node-grunt",
+  "description": "The grunt wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.",
+  "version": "1.0.0",
+  "main": "./core/lib/patternlab.js",
+  "dependencies": {
+    "bs-html-injector": "^3.0.0",
+    "grunt": "~1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "minimist": "^1.2.0",
+    "patternlab-node": "^2.0.0",
+    "styleguidekit-assets-default": "^3.0.0",
+    "styleguidekit-mustache-default": "^3.0.0"
+  },
+  "keywords": [
+    "Pattern Lab",
+    "Atomic Web Design",
+    "Node",
+    "Grunt",
+    "Javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pattern-lab/edition-node-grunt.git"
+  },
+  "bugs": "https://github.com/pattern-lab/edition-node-grunt/issues",
+  "author": "Brian Muenzenmeyer",
+  "license": "MIT",
+  "engines": {
+    "node": ">=5.0"
+  }
+}
