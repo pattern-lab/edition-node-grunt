@@ -33,7 +33,7 @@ module.exports = function (grunt) {
   grunt.registerTask('patternlab', 'create design systems with atomic design', function (arg) {
 
     if (arguments.length === 0) {
-      pl.build(getConfiguredCleanOption());
+      pl.build(function(){}, getConfiguredCleanOption());
     }
 
     if (arg && arg === 'version') {
@@ -41,7 +41,7 @@ module.exports = function (grunt) {
     }
 
     if (arg && arg === "patternsonly") {
-      pl.patternsonly(getConfiguredCleanOption());
+      pl.patternsonly(function(){},getConfiguredCleanOption());
     }
 
     if (arg && arg === "help") {

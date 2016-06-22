@@ -10,9 +10,9 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "minimist": "^1.2.0",
-    "patternlab-node": "pattern-lab/patternlab-node#v2.0.0-alpha",
-    "styleguidekit-assets-default": "pattern-lab/styleguidekit-assets-default#feature-panels",
-    "styleguidekit-mustache-default": "pattern-lab/styleguidekit-mustache-default#feature-panels",
+    "patternlab-node": "^2.0.0",
+    "styleguidekit-assets-default": "^3.0.0",
+    "styleguidekit-mustache-default": "^3.0.0"
   },
   "keywords": [
     "Pattern Lab",
