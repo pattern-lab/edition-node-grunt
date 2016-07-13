@@ -13,9 +13,7 @@ The Grunt Edition comes with the following components:
 
 ## Prerequisites
 
-Pattern Lab Node uses [Node](https://nodejs.org) and  [npm](https://www.npmjs.com/) to manage project dependencies, and [grunt](http://gruntjs.com/) to run tasks and interface with core.
-
-Please follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website. This should include `npm`.
+The Pattern Lab Node - Grunt Edition uses [Node](https://nodejs.org) for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [grunt.js](http://gruntjs.com/) to run tasks and interface with the core library. Node version 4 or higher suffices. You can follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website if you haven't done so already. Installation of Node will include npm.
 
 It's also highly recommended that you [install grunt](http://gruntjs.com/getting-started) globally.
 
@@ -36,11 +34,14 @@ The fastest way to get started with the Grunt Edition is to [download the pre-bu
 
 `npm` is a dependency management and package system which can pull in all of the Grunt Edition's dependencies for you. To accomplish this:
 
-* download or clone this repository to an install location.
+* download or `git clone` this repository to an install location.
 
 * run the following
+
+    ```
     cd install/location
     npm install
+    ```
 
 Running `npm install` from a directory containing a `package.json` file will download all dependencies defined within.
 
@@ -79,7 +80,7 @@ To generate the front-end for Pattern Lab type:
 
 To watch for changes, re-generate the front-end, and server it via a BrowserSync server,  type:
 
-    grunt patternlab:erve
+    grunt patternlab:serve
 
 BrowserSync should open [http://localhost:3000](http://localhost:3000) in your browser.
 
