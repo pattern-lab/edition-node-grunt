@@ -67,19 +67,19 @@ These are some helpful commands you can use on the command line for working with
 
 To list all available commands type:
 
-    grunt pl-help
+    grunt patternlab:help
 
 ### Generate Pattern Lab
 
 To generate the front-end for Pattern Lab type:
 
-    grunt pl-build
+    grunt patternlab:build
 
 ### Watch for changes and re-generate Pattern Lab
 
 To watch for changes, re-generate the front-end, and server it via a BrowserSync server,  type:
 
-    grunt pl-serve
+    grunt patternlab:erve
 
 BrowserSync should open [http://localhost:3000](http://localhost:3000) in your browser.
 
@@ -89,4 +89,4 @@ To install a specific StarterKit from GitHub type:
 
     npm install [starterkit-vendor/starterkit-name]
 
-    grunt patternlab:starterkit-load --kit=[starterkit-name]
+    grunt patternlab:loadstarterkit --kit=[starterkit-name]
