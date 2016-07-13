@@ -13,9 +13,7 @@ The Grunt Edition comes with the following components:
 
 ## Prerequisites
 
-Pattern Lab Node uses [Node](https://nodejs.org) and  [npm](https://www.npmjs.com/) to manage project dependencies, and [grunt](http://gruntjs.com/) to run tasks and interface with core.
-
-Please follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website. This should include `npm`.
+The Pattern Lab Node - Grunt Edition uses [Node](https://nodejs.org) for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [grunt.js](http://gruntjs.com/) to run tasks and interface with the core library. Node version 4 or higher suffices. You can follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website if you haven't done so already. Installation of Node will include npm.
 
 It's also highly recommended that you [install grunt](http://gruntjs.com/getting-started) globally.
 
@@ -28,7 +26,7 @@ There are two methods for downloading and installing the Grunt Edition:
 
 ### Download a pre-built package
 
-The fastest way to get started with the Grunt Edition is to [download the pre-built version](https://github.com/pattern-lab/edition-node-gulp/releases) from the [releases page](https://github.com/pattern-lab/edition-node-gulp/releases). The pre-built project comes with the [Default Starterkit for Mustache](https://github.com/pattern-lab/starterkit-mustache-default/tree/dev) installed by default.
+The fastest way to get started with the Grunt Edition is to [download the pre-built version](https://github.com/pattern-lab/edition-node-gulp/releases) from the [releases page](https://github.com/pattern-lab/edition-node-gulp/releases). The pre-built project comes with the [Base Starterkit for Mustache](https://github.com/pattern-lab/starterkit-mustache-base) installed by default.
 
 **Please note:** Pattern Lab Node uses [npm](https://www.npmjs.com/) to manage project dependencies. To upgrade the Grunt Edition or to install plug-ins you'll need to be familiar with npm.
 
@@ -36,11 +34,14 @@ The fastest way to get started with the Grunt Edition is to [download the pre-bu
 
 `npm` is a dependency management and package system which can pull in all of the Grunt Edition's dependencies for you. To accomplish this:
 
-* download or clone this repository to an install location.
+* download or `git clone` this repository to an install location.
 
 * run the following
+
+    ```
     cd install/location
     npm install
+    ```
 
 Running `npm install` from a directory containing a `package.json` file will download all dependencies defined within.
 
@@ -67,19 +68,19 @@ These are some helpful commands you can use on the command line for working with
 
 To list all available commands type:
 
-    grunt pl-help
+    grunt patternlab:help
 
 ### Generate Pattern Lab
 
 To generate the front-end for Pattern Lab type:
 
-    grunt pl-build
+    grunt patternlab:build
 
 ### Watch for changes and re-generate Pattern Lab
 
 To watch for changes, re-generate the front-end, and server it via a BrowserSync server,  type:
 
-    grunt pl-serve
+    grunt patternlab:serve
 
 BrowserSync should open [http://localhost:3000](http://localhost:3000) in your browser.
 
@@ -89,4 +90,4 @@ To install a specific StarterKit from GitHub type:
 
     npm install [starterkit-vendor/starterkit-name]
 
-    grunt patternlab:starterkit-load --kit=[starterkit-name]
+    grunt patternlab:loadstarterkit --kit=[starterkit-name]
