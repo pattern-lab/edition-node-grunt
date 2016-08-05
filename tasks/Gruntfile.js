@@ -24,7 +24,6 @@ module.exports = function (grunt) {
 
     // Use specified config or else use default
     var options = this.options(default_pl_config);
-
     if (options.config_file) {
       // If seperate config file was specified
       config = grunt.file.readJSON(options.config_file);
@@ -74,7 +73,7 @@ module.exports = function (grunt) {
      * COPY TASKS
     ******************************************************/
 
-    // relative path to main gruntfile dir
+    // relative path to default source dir
     var rel_path = path.relative(process.cwd(), __dirname);
 
     grunt.config('copy', {
@@ -99,8 +98,6 @@ module.exports = function (grunt) {
         }]
       }
     });
-
-    console.log(grunt.config("copy.set-up"));
 
     /******************************************************
      * SERVER AND WATCH TASKS
