@@ -16,7 +16,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
-
   grunt.registerTask('patternlab', 'create design systems with atomic design', function (arg) {
     /******************************************************
      * PATTERN LAB CONFIGURATION
@@ -42,30 +41,31 @@ module.exports = function (grunt) {
       grunt.task.run(['copy:main']);
     }
 
-    if (arg && arg === 'version') {
-      pl.version();
-    }
+    var patternlab_targets = {
+      "version": function () {
+        pl.version();
+      },
+      "patternsonly": function () {
+        pl.patternsonly(function(){},config.cleanPublic);
+      },
+      "help": function () {
+        pl.help();
+      },
+      "starterkit-list": function () {
+        pl.liststarterkits();
+      },
+      "starterkit-load": function () {
+        pl.loadstarterkit(argv.kit);
+      }
+    };
 
-    if (arg && arg === "patternsonly") {
-      pl.patternsonly(function(){},config.cleanPublic);
+    if (arg) {
+      if (patternlab_targets[arg]) {
+        patternlab_targets[arg]();
+      } else {
+        pl.help();
+      }
     }
-
-    if (arg && arg === "help") {
-      pl.help();
-    }
-
-    if (arg && arg === "starterkit-list") {
-      pl.liststarterkits();
-    }
-
-    if (arg && arg === "starterkit-load") {
-      pl.loadstarterkit(argv.kit);
-    }
-
-    if (arg && (arg !== "version" && arg !== "patternsonly" && arg !== "help" && arg !== "starterkit-list" && arg !== "starterkit-load")) {
-      pl.help();
-    }
-
 
     /******************************************************
      * COPY TASKS
@@ -85,8 +85,6 @@ module.exports = function (grunt) {
       }
     });
 
-
-
     /******************************************************
      * SERVER AND WATCH TASKS
     ******************************************************/
@@ -105,7 +103,6 @@ module.exports = function (grunt) {
         tasks: ['default', 'bsReload:css']
       }
     });
-
 
     grunt.config('browserSync', {
       dev: {
