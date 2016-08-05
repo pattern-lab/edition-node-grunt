@@ -5,6 +5,7 @@
 ******************************************************/
 
 module.exports = function (grunt) {
+  var patternLab = require('patternlab-node');
 
   var path = require('path'),
       argv = require('minimist')(process.argv.slice(2));
@@ -17,24 +18,19 @@ module.exports = function (grunt) {
   /******************************************************
    * PATTERN LAB CONFIGURATION
   ******************************************************/
-
-  grunt.config.requires('patternlab.config_file');
-  var config_path = grunt.config('patternlab.config_file');
-  //read all paths from our namespaced config file
-  var config = grunt.file.readJSON(config_path),
-    pl = require('patternlab-node')(config);
-
-  function paths() {
-    return config.paths;
-  }
-
-  function getConfiguredCleanOption() {
-    return config.cleanPublic;
-  }
-
   grunt.registerTask('patternlab', 'create design systems with atomic design', function (arg) {
+    //read all paths from our namespaced config file
+
+
+    var options = this.options({
+      config_file: 'patternlab-config.json',
+    });
+
+    var config = grunt.file.readJSON(options.config_file);
+    var pl = patternLab(config);
+
     if (arguments.length === 0) {
-      pl.build(function(){}, getConfiguredCleanOption());
+      pl.build(function(){}, config.cleanPublic);
     }
 
     if (arg && arg === 'version') {
@@ -42,7 +38,7 @@ module.exports = function (grunt) {
     }
 
     if (arg && arg === "patternsonly") {
-      pl.patternsonly(function(){},getConfiguredCleanOption());
+      pl.patternsonly(function(){},config.cleanPublic);
     }
 
     if (arg && arg === "help") {
@@ -61,102 +57,104 @@ module.exports = function (grunt) {
       pl.help();
     }
 
-    grunt.task.run(['copy:main']);
-  });
 
-
-  /******************************************************
-   * COPY TASKS
-  ******************************************************/
-  grunt.config('copy', {
-    main: {
-      files: [
-        { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js', dest: path.resolve(paths().public.js) },
-        { expand: true, cwd: path.resolve(paths().source.css), src: '*.css', dest: path.resolve(paths().public.css) },
-        { expand: true, cwd: path.resolve(paths().source.images), src: '*', dest: path.resolve(paths().public.images) },
-        { expand: true, cwd: path.resolve(paths().source.fonts), src: '*', dest: path.resolve(paths().public.fonts) },
-        { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
-        { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*', '**'], dest: path.resolve(paths().public.root) },
-        // slightly inefficient to do this again - I am not a grunt glob master. someone fix
-        { expand: true, flatten: true, cwd: path.resolve(paths().source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(paths().public.styleguide, 'css') }
-      ]
-    }
-  });
+    /******************************************************
+     * COPY TASKS
+    ******************************************************/
+    grunt.config('copy', {
+      main: {
+        files: [
+          { expand: true, cwd: path.resolve(config.paths.source.js), src: '**/*.js', dest: path.resolve(config.paths.public.js) },
+          { expand: true, cwd: path.resolve(config.paths.source.css), src: '*.css', dest: path.resolve(config.paths.public.css) },
+          { expand: true, cwd: path.resolve(config.paths.source.images), src: '*', dest: path.resolve(config.paths.public.images) },
+          { expand: true, cwd: path.resolve(config.paths.source.fonts), src: '*', dest: path.resolve(config.paths.public.fonts) },
+          { expand: true, cwd: path.resolve(config.paths.source.root), src: 'favicon.ico', dest: path.resolve(config.paths.public.root) },
+          { expand: true, cwd: path.resolve(config.paths.source.styleguide), src: ['*', '**'], dest: path.resolve(config.paths.public.root) },
+          // slightly inefficient to do this again - I am not a grunt glob master. someone fix
+          { expand: true, flatten: true, cwd: path.resolve(config.paths.source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(config.paths.public.styleguide, 'css') }
+        ]
+      }
+    });
 
 
 
-  /******************************************************
-   * SERVER AND WATCH TASKS
-  ******************************************************/
-  grunt.config('watch', {
-    all: {
-      files: [
-        path.resolve(paths().source.css + '**/*.css'),
-        path.resolve(paths().source.styleguide + 'css/*.css'),
-        path.resolve(paths().source.patterns + '**/*'),
-        path.resolve(paths().source.fonts + '/*'),
-        path.resolve(paths().source.images + '/*'),
-        path.resolve(paths().source.data + '*.json'),
-        path.resolve(paths().source.js + '/*.js'),
-        path.resolve(paths().source.root + '/*.ico')
-      ],
-      tasks: ['default', 'bsReload:css']
-    }
-  });
-
-
-  grunt.config('browserSync', {
-    dev: {
-      options: {
-        server:  path.resolve(paths().public.root),
-        watchTask: true,
-        watchOptions: {
-          ignoreInitial: true,
-          ignored: '*.html'
-        },
-        snippetOptions: {
-          // Ignore all HTML files within the templates folder
-          blacklist: ['/index.html', '/', '/?*']
-        },
-        plugins: [
-          {
-            module: 'bs-html-injector',
-            options: {
-              files: [path.resolve(paths().public.root + '/index.html'), path.resolve(paths().public.styleguide + '/styleguide.html')]
-            }
-          }
+    /******************************************************
+     * SERVER AND WATCH TASKS
+    ******************************************************/
+    grunt.config('watch', {
+      all: {
+        files: [
+          path.resolve(config.paths.source.css + '**/*.css'),
+          path.resolve(config.paths.source.styleguide + 'css/*.css'),
+          path.resolve(config.paths.source.patterns + '**/*'),
+          path.resolve(config.paths.source.fonts + '/*'),
+          path.resolve(config.paths.source.images + '/*'),
+          path.resolve(config.paths.source.data + '*.json'),
+          path.resolve(config.paths.source.js + '/*.js'),
+          path.resolve(config.paths.source.root + '/*.ico')
         ],
-        notify: {
-          styles: [
-            'display: none',
-            'padding: 15px',
-            'font-family: sans-serif',
-            'position: fixed',
-            'font-size: 1em',
-            'z-index: 9999',
-            'bottom: 0px',
-            'right: 0px',
-            'border-top-left-radius: 5px',
-            'background-color: #1B2032',
-            'opacity: 0.4',
-            'margin: 0',
-            'color: white',
-            'text-align: center'
-          ]
+        tasks: ['default', 'bsReload:css']
+      }
+    });
+
+
+    grunt.config('browserSync', {
+      dev: {
+        options: {
+          server:  path.resolve(config.paths.public.root),
+          watchTask: true,
+          watchOptions: {
+            ignoreInitial: true,
+            ignored: '*.html'
+          },
+          snippetOptions: {
+            // Ignore all HTML files within the templates folder
+            blacklist: ['/index.html', '/', '/?*']
+          },
+          plugins: [
+            {
+              module: 'bs-html-injector',
+              options: {
+                files: [path.resolve(config.paths.public.root + '/index.html'), path.resolve(config.paths.public.styleguide + '/styleguide.html')]
+              }
+            }
+          ],
+          notify: {
+            styles: [
+              'display: none',
+              'padding: 15px',
+              'font-family: sans-serif',
+              'position: fixed',
+              'font-size: 1em',
+              'z-index: 9999',
+              'bottom: 0px',
+              'right: 0px',
+              'border-top-left-radius: 5px',
+              'background-color: #1B2032',
+              'opacity: 0.4',
+              'margin: 0',
+              'color: white',
+              'text-align: center'
+            ]
+          }
         }
       }
-    }
-  });
+    });
 
-  grunt.config('bsReload', {
-    css: path.resolve(paths().public.root + '**/*.css')
+    grunt.config('bsReload', {
+      css: path.resolve(config.paths.public.root + '**/*.css')
+    });
+
+
+
+    grunt.task.run(['copy:main']);
   });
 
   /******************************************************
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
-  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
+  grunt.registerTask('patternlab:watch', ['patternlab', 'watch:all']);
+  grunt.registerTask('patternlab:serve', ['patternlab', 'browserSync', 'watch:all']);
 
 };
