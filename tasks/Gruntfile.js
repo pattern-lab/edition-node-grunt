@@ -42,6 +42,9 @@ module.exports = function (grunt) {
     }
 
     var patternlab_targets = {
+      "set-up": function () {
+        grunt.task.run(['copy:set-up']);
+      },
       "version": function () {
         pl.version();
       },
@@ -70,6 +73,10 @@ module.exports = function (grunt) {
     /******************************************************
      * COPY TASKS
     ******************************************************/
+
+    // relative path to main gruntfile dir
+    var rel_path = path.relative(process.cwd(), __dirname);
+
     grunt.config('copy', {
       main: {
         files: [
@@ -82,8 +89,18 @@ module.exports = function (grunt) {
           // slightly inefficient to do this again - I am not a grunt glob master. someone fix
           { expand: true, flatten: true, cwd: path.resolve(config.paths.source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(config.paths.public.styleguide, 'css') }
         ]
+      },
+      "set-up": {
+        files: [{
+          expand: true,
+          cwd: rel_path + '/../source/',
+          src: '**',
+          dest: 'source/'
+        }]
       }
     });
+
+    console.log(grunt.config("copy.set-up"));
 
     /******************************************************
      * SERVER AND WATCH TASKS
