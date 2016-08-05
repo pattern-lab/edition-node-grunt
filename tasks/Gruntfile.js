@@ -6,6 +6,7 @@
 
 module.exports = function (grunt) {
   var patternLab = require('patternlab-node');
+  var default_pl_config = require('../default-config.json');
 
   var path = require('path'),
       argv = require('minimist')(process.argv.slice(2));
@@ -15,22 +16,30 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
 
-  /******************************************************
-   * PATTERN LAB CONFIGURATION
-  ******************************************************/
+
   grunt.registerTask('patternlab', 'create design systems with atomic design', function (arg) {
-    //read all paths from our namespaced config file
+    /******************************************************
+     * PATTERN LAB CONFIGURATION
+    ******************************************************/
+    var config;
 
+    // Use specified config or else use default
+    var options = this.options(default_pl_config);
 
-    var options = this.options({
-      config_file: 'patternlab-config.json',
-    });
+    if (options.config_file) {
+      // If seperate config file was specified
+      config = grunt.file.readJSON(options.config_file);
+    } else {
+      // Else use specified/default config
+      config = options;
+    }
 
-    var config = grunt.file.readJSON(options.config_file);
     var pl = patternLab(config);
-
     if (arguments.length === 0) {
       pl.build(function(){}, config.cleanPublic);
+
+      // Move other files
+      grunt.task.run(['copy:main']);
     }
 
     if (arg && arg === 'version') {
@@ -144,10 +153,6 @@ module.exports = function (grunt) {
     grunt.config('bsReload', {
       css: path.resolve(config.paths.public.root + '**/*.css')
     });
-
-
-
-    grunt.task.run(['copy:main']);
   });
 
   /******************************************************
