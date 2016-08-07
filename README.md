@@ -32,7 +32,7 @@ First, install the Grunt Edition as a dependency of your project using [npm inst
 
 This will install the Grunt Edition into a directory called `node_modules` in `install/location/`.
 
-Next, add the edition-node-grunt [tasks](http://gruntjs.com/getting-started#loading-grunt-plugins-and-tasks) to your main [Gruntfile](http://gruntjs.com/getting-started#the-gruntfile) by adding `grunt.loadNpmTasks('edition-node-grunt');`.  See [Sample Gruntfile](#sample-gruntfile) for help.
+Next, add the edition-node-grunt [tasks](http://gruntjs.com/getting-started#loading-grunt-plugins-and-tasks) to your main [Gruntfile](http://gruntjs.com/getting-started#the-gruntfile) by adding `grunt.loadNpmTasks('edition-node-grunt');`.  See [Sample Gruntfile](#sample-gruntfiles) for help.
 
 Now, continue on and finish [setting up your configuration](#set-up-and-configuration).
 
@@ -55,9 +55,9 @@ Run `grunt patternlab:set-up` to create a default source directory for your Patt
 
 Pattern Lab runs using the default configs defined in the [default-config.json](/default-config.json) file.
 
-If you want to change any of these configurations you can create your own `config.json` file and then add its path to your Gruntfile as the `config_file` option.  See [Sample Gruntfile](#sample-gruntfile) for help.  Make sure your config file includes **ALL** the necessary configurations.  
+If you want to change any of these configurations you can create your own `config.json` file and then add its path to your Gruntfile as the `config_file` option.  See [Sample Gruntfile](#sample-gruntfiles) for help.  Make sure your config file includes **ALL** the necessary configurations.  
 
-You can also add your custom configurations directly in your Gruntfile as options. These options will only overwrite the existing default configurations so don't worry about including them all.  Again see [Sample Gruntfile](#sample-gruntfile) for help.  Note, overwriting options in your Gruntfile does not nest so if you overwrite the `"paths"` config, be sure to include **ALL** the source and public paths information.
+You can also add your custom configurations directly in your Gruntfile as options. These options will only overwrite the existing default configurations so don't worry about including them all.  Again see [Sample Gruntfile](#sample-gruntfiles) for help.  Note, overwriting options in your Gruntfile does not nest so if you overwrite the `"paths"` config, be sure to include **ALL** the source and public paths information.
 
 ## Sample Gruntfiles
 Your Gruntfile.js could look something like this:
