@@ -34,17 +34,6 @@ The fastest way to get started with the Grunt Edition is to [download the pre-bu
 
 `npm` is a dependency management and package system which can pull in all of the Grunt Edition's dependencies for you. To accomplish this:
 
-* download or `git clone` this repository to an install location.
-
-* run the following
-
-    ```
-    cd install/location
-    npm install
-    ```
-
-Running `npm install` from a directory containing a `package.json` file will download all dependencies defined within.
-
 #### Install the Grunt Edition of Pattern Lab Node as a Dependency
 
 Most people want to run Pattern Lab Node standalone and not as a dependency. If you wish to install as a dependency you can do the following:
@@ -55,6 +44,18 @@ Use npm's [`install` command](https://docs.npmjs.com/cli/install) with an argume
     npm install edition-node-grunt
 
 This will install the Grunt Edition into a directory called `node_modules` in `install/location/`.
+
+#### Install the Grunt Edition of Pattern Lab Node as standalone
+* download or `git clone` this repository to an install location.
+
+* run the following
+
+    ```
+    cd install/location
+    npm install
+    ```
+
+Running `npm install` from a directory containing a `package.json` file will download all dependencies defined within.
 
 ## Updating Pattern Lab
 
