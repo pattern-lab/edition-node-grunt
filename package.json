@@ -27,6 +27,9 @@
   },
   "bugs": "https://github.com/pattern-lab/edition-node-grunt/issues",
   "author": "Brian Muenzenmeyer",
+  "scripts": {
+    "postinstall": "node node_modules/patternlab-node/core/scripts/postinstall.js"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=5.0"
