@@ -1,7 +1,7 @@
 {
   "name": "edition-node-grunt",
   "description": "The grunt wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "main": "./core/lib/patternlab.js",
   "dependencies": {
     "bs-html-injector": "^3.0.0",
@@ -27,6 +27,9 @@
   },
   "bugs": "https://github.com/pattern-lab/edition-node-grunt/issues",
   "author": "Brian Muenzenmeyer",
+  "scripts": {
+    "postinstall": "node node_modules/patternlab-node/core/scripts/postinstall.js"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=5.0"
