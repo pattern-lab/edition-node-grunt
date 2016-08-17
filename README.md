@@ -19,20 +19,25 @@ It's also highly recommended that you [install grunt](http://gruntjs.com/getting
 
 ## Installing
 
-There are two methods for downloading and installing the Grunt Edition:
-
-* [Download a pre-built package](#download-a-pre-built-package)
-* [Use npm](#use-npm)
-
-### Download a pre-built package
-
-The fastest way to get started with the Grunt Edition is to [download the pre-built version](https://github.com/pattern-lab/edition-node-grunt/releases) from the [releases page](https://github.com/pattern-lab/edition-node-grunt/releases). The pre-built project comes with the [Base Starterkit for Mustache](https://github.com/pattern-lab/starterkit-mustache-base) installed by default.
-
-**Please note:** Pattern Lab Node uses [npm](https://www.npmjs.com/) to manage project dependencies. To upgrade the Grunt Edition or to install plug-ins you'll need to be familiar with npm.
-
 ### Use npm
 
-`npm` is a dependency management and package system which can pull in all of the Grunt Edition's dependencies for you. To accomplish this:
+`npm` is a dependency management and package system which can pull in all of the Grunt Edition's dependencies for you. There are two ways of using `npm` to install the Grunt Edition of Pattern Lab Node:
+
+#### Install as a Dependency of an existing project
+
+First, install the Grunt Edition as a dependency of your project using [npm install](https://docs.npmjs.com/cli/install):
+
+    cd project/
+    npm install edition-node-grunt --save-dev
+
+This will install the Grunt Edition into a directory called `node_modules` in `install/location/`.
+
+Next, add the edition-node-grunt [tasks](http://gruntjs.com/getting-started#loading-grunt-plugins-and-tasks) to your main [Gruntfile](http://gruntjs.com/getting-started#the-gruntfile) by adding `grunt.loadNpmTasks('edition-node-grunt');`.  See [Sample Gruntfile](#sample-gruntfiles) for help.
+
+Now, continue on and finish [setting up your configuration](#set-up-and-configuration).
+
+
+#### Install the Grunt Edition of Pattern Lab Node as standalone
 
 * download or `git clone` this repository to an install location.
 
@@ -45,16 +50,56 @@ The fastest way to get started with the Grunt Edition is to [download the pre-bu
 
 Running `npm install` from a directory containing a `package.json` file will download all dependencies defined within.
 
-#### Install the Grunt Edition of Pattern Lab Node as a Dependency
+## Set up and Configuration
+Run `grunt patternlab:set-up` to create a default source directory for your Pattern Lab project.  This is only necessary if your installed the Grunt Edition as a dependency.
 
-Most people want to run Pattern Lab Node standalone and not as a dependency. If you wish to install as a dependency you can do the following:
+Pattern Lab runs using the default configs defined in the [default-config.json](/default-config.json) file.
 
-Use npm's [`install` command](https://docs.npmjs.com/cli/install) with an argument to install the Grunt Edition into a location of your choosing. In Terminal type:
+If you want to change any of these configurations you can create your own `config.json` file and then add its path to your Gruntfile as the `config_file` option.  See [Sample Gruntfile](#sample-gruntfiles) for help.  Make sure your config file includes **ALL** the necessary configurations.  
 
-    cd install/location/
-    npm install edition-node-grunt
+You can also add your custom configurations directly in your Gruntfile as options. These options will only overwrite the existing default configurations so don't worry about including them all.  Again see [Sample Gruntfile](#sample-gruntfiles) for help.  Note, overwriting options in your Gruntfile does not nest so if you overwrite the `"paths"` config, be sure to include **ALL** the source and public paths information.
 
-This will install the Grunt Edition into a directory called `node_modules` in `install/location/`.
+## Sample Gruntfiles
+Your Gruntfile.js could look something like this:
+
+```
+module.exports = function(grunt) {
+
+  grunt.initConfig({
+
+    patternlab: {
+        // You can place a path do your own config file here
+        options: {
+            config_file: "config.json"
+        }
+    }
+  });
+
+  grunt.loadNpmTasks('edition-node-grunt');
+};
+
+```
+
+Or this:
+
+```
+module.exports = function(grunt) {
+
+  grunt.initConfig({
+
+    patternlab: {
+        // You can overwrite default config directly in your Gruntfile
+        options: {
+            "cleanPublic" : false,
+            "patternExportDirectory": "./exports/"
+        }
+    }
+  });
+
+  grunt.loadNpmTasks('edition-node-grunt');
+};
+
+```
 
 ## Getting started
 
@@ -75,6 +120,14 @@ These are some helpful commands you can use on the command line for working with
 To list all available commands type:
 
     grunt patternlab:help
+
+### Set Up Pattern Lab source directories
+
+To generate the default Pattern Lab source directories:
+
+    grunt patternlab:set-up
+
+See [Set up and Configuration](#set-up-and-configuration)
 
 ### Generate Pattern Lab
 
