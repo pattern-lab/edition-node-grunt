@@ -64,5 +64,10 @@
   "patternExportDirectory": "./pattern_exports/",
   "baseurl" : "",
   "cacheBust": true,
-  "starterkitSubDir": "dist"
+  "starterkitSubDir": "dist",
+  "outputFileSuffixes": {
+    "rendered": "",
+    "rawTemplate": "",
+    "markupOnly": ".markup-only"
+  }
 }
