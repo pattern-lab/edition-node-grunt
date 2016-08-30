@@ -48,11 +48,11 @@ module.exports = function (grunt) {
       pl.help();
     }
 
-    if (arg && arg === "starterkit-list") {
+    if (arg && arg === "liststarterkits") {
       pl.liststarterkits();
     }
 
-    if (arg && arg === "starterkit-load") {
+    if (arg && arg === "loadstarterkit") {
       pl.loadstarterkit(argv.kit);
     }
 
