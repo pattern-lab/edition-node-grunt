@@ -151,6 +151,7 @@ module.exports = function (grunt) {
   ******************************************************/
 
   grunt.registerTask('default', ['patternlab', 'copy:main']);
+  grunt.registerTask('patternlab:build', ['patternlab', 'copy:main']);
   grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
 
