@@ -97,3 +97,13 @@ To install a specific StarterKit from GitHub type:
     npm install [starterkit-vendor/starterkit-name]
 
     grunt patternlab:loadstarterkit --kit=[starterkit-name]
+
+### Install SASS
+To install Sass:
+`npm install grunt-contrib-sass --save-dev`
+
+In your Gruntfile, add:
+`grunt.loadNpmTasks('grunt-contrib-sass');`
+
+Then run
+`sass --watch source`
