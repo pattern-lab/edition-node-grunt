@@ -24,6 +24,16 @@
       "alt": "16x9 Image"
     }
   },
+  "definitionlist": {
+    "title": "Item Title",
+    "description": "Item description."
+  },
+  "unorderedlist": {
+    "listitem": "Item Title"
+  },
+  "orderedlist": {
+    "listitem": "Item Title"
+  },
   "headline": {
     "short": "Lorizzle pimpin' dolizzle sit amet I",
     "medium": "Rizzle adipiscing elizzle. Nullam sapien velizzle, shit volutpizzle, my"
