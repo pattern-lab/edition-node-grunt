@@ -1,6 +1,6 @@
 # AppCivist Pattern Library and Style Guide
 
-This style guide library is designed to provide a central placeFor the team toDocumentsAnd Store front endComponentsLike markup and CSS styles.It is based on the pattern lab tool.
+This style guide library is designed to provide a central place for the team to document and store front end components like HTML partials and CSS styles. It is based on the [Pattern Lab](https://patternlab.io) tool.
 
 # Pattern Lab Node - Grunt Edition
 
