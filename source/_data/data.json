@@ -8,7 +8,7 @@
       "alt": "Avatar"
     },
     "square": {
-      "src": "http://placeimg.com/300/300/nature",
+      "src": "http://placeimg.com/300/300/tech",
       "alt": "Square"
     },
     "rectangle": {
@@ -22,17 +22,11 @@
     "landscape-16x9": {
       "src": "http://placeimg.com/640/360/tech",
       "alt": "16x9 Image"
+    },
+    "logo": {
+      "src": "http://placeimg.com/150/150/tech",
+      "alt": "Logo Image"
     }
-  },
-  "definitionlist": {
-    "title": "Item Title",
-    "description": "Item description."
-  },
-  "unorderedlist": {
-    "listitem": "Item Title"
-  },
-  "orderedlist": {
-    "listitem": "Item Title"
   },
   "headline": {
     "short": "Lorizzle pimpin' dolizzle sit amet I",

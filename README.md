@@ -110,4 +110,4 @@ In your Gruntfile, add:
 `grunt.loadNpmTasks('grunt-contrib-sass');`
 
 Then run
-`sass --watch source`
+`sass --watch source/_scss:public/css`
