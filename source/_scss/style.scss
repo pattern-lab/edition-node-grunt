@@ -1,33 +1,22 @@
-/*------------------------------------/
-  IMPORTS
-/------------------------------------*/
+/*--------------------------------------
+This is the principal style file for the Appcivist PatternLab instance
+This is the only file that should be compiled into production.
+/--------------------------------------*/
+
+//--------------------------------------
+// FRAMEWORKS AND DEPENDENCIES
 @import "compass/reset";
 @import "compass/css3";
 
-/*------------------------------------/
-  RESETS
-/------------------------------------*/
+//--------------------------------------
+// PATTERNLAB STYLES
+@import "pattern-scaffolding";
+@import "patternlab-reset";
 
-body {
-  font: 100%/1.5 -apple-system, BlinkMacSystemFont,
-    "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-text-size-adjust: 100%;
-  min-height: 100vh;
-}
-
-/*------------------------------------*\
-    #ANIMATION
-\*------------------------------------*/
-/**
- * Fade Animation
- */
-.animate-fade {
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -ms-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out; }
-  .animate-fade:hover {
-    opacity: 0; }
+//--------------------------------------
+// APPCIVIST STYLES
+@import "appcivist-variables";
+@import "appcivist-typography";
+@import "appcivist-layout";
+@import "appcivist-colors";
+@import "appcivist-motion";
