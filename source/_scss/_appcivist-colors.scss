@@ -16,6 +16,10 @@ a {
   }
 }
 
+header {
+  @extend .grey.lighten-2;
+}
+
 blockquote {
   color: $color__text;
 }

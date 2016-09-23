@@ -16,6 +16,25 @@ a {
   @include transition-duration(.3s);
   @include transition-timing-function(ease);
 }
+
+.mainmenu {
+  input:checked ~ .submenu {
+    @include transition-property(max-height);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease);
+  }
+}
+
+.submenu {
+  @include transition-property(max-height);
+  @include transition-duration(.5s);
+  @include transition-timing-function(ease);
+}
+
 // 2.0 ANIMATIONS
+
+
+
+
 
 // 3.0 KEYFRAMES
