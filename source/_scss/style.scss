@@ -170,6 +170,9 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 /**
  * Body base styles
  */
+
+ @import "compass/css3";
+
 body {
   background: #fff;
   color: #808080;

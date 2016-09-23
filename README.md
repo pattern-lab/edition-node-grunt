@@ -111,3 +111,15 @@ In your Gruntfile, add:
 
 Then run
 `sass --watch source/_scss:public/css`
+
+### Install Compass
+To install Compass:
+`gem install compass`
+
+`cd project/folder`
+`compass create --bare --sass-dir "source/_scss" --css-dir "public/css" --javascripts-dir "source/js" --images-dir "source/images"`
+
+Add the public CSS folder to your Gruntfile watch command:
+`path.resolve(paths().public.css + '**/*.css')`
+
+Then run `compass watch` and `grunt patternlab:serve` to start working.

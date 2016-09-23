@@ -95,7 +95,8 @@ module.exports = function (grunt) {
           path.resolve(paths().source.images + '/*'),
           path.resolve(paths().source.data + '*.json'),
           path.resolve(paths().source.js + '/*.js'),
-          path.resolve(paths().source.root + '/*.ico')
+          path.resolve(paths().source.root + '/*.ico'),
+          path.resolve(paths().public.css + '**/*.css')
         ],
         tasks: ['default', 'bsReload:css']
       }
