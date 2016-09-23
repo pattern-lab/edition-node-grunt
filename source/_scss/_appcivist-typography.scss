@@ -1,5 +1,66 @@
+/*--------------------------------------
+This file contains all typographic styles
+in use throughout the AppCivist Sass files
+
+TABLE OF CONTENTS
+1.0 GENERAL
+2.0 HEADINGS
+3.0 BODY TEXT
+4.0 LISTS
+5.0 INLINE STYLES
+6.0 ALERTS
+/--------------------------------------*/
+
+
+// 1.0 GENERAL
 body {
   font: 100%/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-text-size-adjust: 100%;
   min-height: 100vh;
 }
+
+a {
+  &:focus {
+  }
+}
+
+// 2.0 HEADINGS
+.type__heading--mega {
+}
+.type__heading--jumbo {
+}
+.type__heading--display {
+}
+.type__heading--headline {
+}
+.type__heading--title {
+}
+.type__heading--subheader {
+}
+
+// 3.0 BODY TEXT
+p {
+}
+small {
+}
+blockquote {
+  font-style: italic;
+}
+time {
+}
+figcaption {
+  font-style: italic;
+}
+
+// 4.0 LISTS
+dt {
+  font-weight: bold;
+}
+
+// 5.0 INLINE STYLES
+strong {
+}
+em {
+}
+
+// 6.0 ALERTS

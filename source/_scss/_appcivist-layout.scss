@@ -1,0 +1,26 @@
+/*--------------------------------------
+This file contains all layout styles
+in use throughout the AppCivist Sass files
+
+TABLE OF CONTENTS
+1.0 GENERAL
+2.0 NAVIGATION
+3.0 GRID
+/--------------------------------------*/
+
+
+// 1.0 GENERAL
+figure {
+  margin-bottom: 1em;
+  & img {
+    margin-bottom: 0.5em;
+  }
+}
+
+
+// 2.0 FLEXBOX GRID
+.row {
+  @include display-flex;
+}
+
+// 3.0 NAVIGATION
