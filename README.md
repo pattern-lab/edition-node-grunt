@@ -1,3 +1,7 @@
+# AppCivist Pattern Library and Style Guide
+
+This style guide library is designed to provide a central place for the team to document and store front end components like HTML partials and CSS styles. It is based on the [Pattern Lab](https://patternlab.io) tool.
+
 # Pattern Lab Node - Grunt Edition
 
 The Grunt wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node), providing tasks to interact with the core library and move supporting frontend assets.
@@ -97,3 +101,25 @@ To install a specific StarterKit from GitHub type:
     npm install [starterkit-vendor/starterkit-name]
 
     grunt patternlab:loadstarterkit --kit=[starterkit-name]
+
+### Install SASS
+To install Sass:
+`npm install grunt-contrib-sass --save-dev`
+
+In your Gruntfile, add:
+`grunt.loadNpmTasks('grunt-contrib-sass');`
+
+Then run
+`sass --watch source/_scss:public/css`
+
+### Install Compass
+To install Compass:
+`gem install compass`
+
+`cd project/folder`
+`compass create --bare --sass-dir "source/_scss" --css-dir "public/css" --javascripts-dir "source/js" --images-dir "source/images"`
+
+Add the public CSS folder to your Gruntfile watch command:
+`path.resolve(paths().public.css + '**/*.css')`
+
+Then run `compass watch` and `grunt patternlab:serve` to start working.

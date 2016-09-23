@@ -1,14 +1,18 @@
 {
   "key": "value",
   "key2": "use this for variables you want to load globally",
-  "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
+  "title": {
+    "short": "Queso fromage",
+    "medium": "Queso fromage. Taleggio boursin bavarian",
+    "long" : "Queso fromage. Taleggio boursin bavarian bergkase cream cheese when the cheese"
+  },
   "img": {
     "avatar": {
       "src": "http://placeimg.com/100/100/people",
       "alt": "Avatar"
     },
     "square": {
-      "src": "http://placeimg.com/300/300/nature",
+      "src": "http://placeimg.com/300/300/tech",
       "alt": "Square"
     },
     "rectangle": {
@@ -22,6 +26,10 @@
     "landscape-16x9": {
       "src": "http://placeimg.com/640/360/tech",
       "alt": "16x9 Image"
+    },
+    "logo": {
+      "src": "http://placeimg.com/150/150/tech",
+      "alt": "Logo Image"
     }
   },
   "headline": {
@@ -57,9 +65,9 @@
     "short": "Sun"
   },
   "day": {
-    "long": "01",
-    "short": "1",
-    "ordinal": "st"
+    "long": "02",
+    "short": "2",
+    "ordinal": "nd"
   },
   "hour": {
     "long": "06",

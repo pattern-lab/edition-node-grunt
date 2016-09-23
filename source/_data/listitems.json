@@ -1,6 +1,10 @@
 {
   "1": {
-    "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
+    "title": {
+      "short": "Rizzle adipiscing",
+      "medium": "Rizzle adipiscing elizzle. Nullam sapien.",
+      "long" : "Rizzle adipiscing elizzle. Nullam sapien velizzle, shit volutpizzle, my fizzle."
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/people",
@@ -73,7 +77,11 @@
     "seconds": "31"
   },
   "2": {
-    "title": "Veggies sunt bona vobis, proinde vos postulo",
+    "title": {
+      "short": "Postulo esse magis",
+      "medium": "Postulo esse magis azuki bean",
+      "long" : "Postulo esse magis azuki bean burdock brussels sprout quandong komatsun"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/nature",
@@ -146,7 +154,11 @@
     "seconds": "31"
   },
   "3": {
-    "title": "Bacon ipsum dolor sit amet turducken strip steak beef ribs shank",
+    "title": {
+      "short": "Tail jerky rump",
+      "medium": "Tail jerky rump shoulder t-bone meatball meatloaf",
+      "long" : "Tail jerky rump shoulder t-bone meatball meatloaf salami filet mignon shank t-bone venison"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/tech",
@@ -219,7 +231,11 @@
     "seconds": "11"
   },
   "4": {
-    "title": "Whatever swag accusamus occupy, gentrify butcher tote bag",
+    "title": {
+      "short": "Golf quis +1",
+      "medium": "Golf quis +1, Wes Anderson church-key lo-fi",
+      "long" : "Golf quis +1, Wes Anderson church-key lo-fi keffiyeh selvage culpa authentic Brooklyn fap"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/animals",
@@ -292,7 +308,11 @@
     "seconds": "52"
   },
   "5": {
-    "title": "Marshall McLuhan Colbert bump backpack journalist vast wasteland Romenesko CPM",
+    "title": {
+      "short": "Square tabloid Andy",
+      "medium": "Square tabloid Andy Carvin stupid commenters",
+      "long" : "Square tabloid Andy Carvin stupid commenters, Nick Denton mathewi semip"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/people/grayscale",
@@ -365,7 +385,11 @@
     "seconds": "24"
   },
   "6": {
-    "title": "Thunder, thunder, thundercats, Ho!",
+    "title": {
+      "short": "Hong Kong Phooey",
+      "medium": "Hong Kong Phooey, quicker than the human eye.",
+      "long" : "Hong Kong Phooey, quicker than the human eye. He's got style, a groovy"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/arch",
@@ -438,7 +462,11 @@
     "seconds": "33"
   },
   "7": {
-    "title": "Yeah, I like animals better than people sometimes",
+    "title": {
+      "short": "Who I am. I'm not a mistake!",
+      "medium": "Who I am. I'm not a mistake! It all makes sense!",
+      "long" : "Who I am. I'm not a mistake! It all makes sense! In a comic, you know"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/any",
@@ -511,7 +539,11 @@
     "seconds": "47"
   },
   "8": {
-    "title": "Webtwo ipsum dolor sit amet, eskobo chumby doostang bebo",
+    "title": {
+      "short": "Chumby doostang",
+      "medium": "Chumby doostang bebo. Wakoopa oooj",
+      "long" : "Chumby doostang bebo. Wakoopa oooj geni zoho loopt eskobo sifteo chart"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/any/grayscale",
@@ -584,7 +616,11 @@
     "seconds": "21"
   },
   "9": {
-    "title": "Rebel Mission to Ord Mantell",
+    "title": {
+      "short": "You don't believe",
+      "medium": "You don't believe in the Force, do you?",
+      "long" : "You don't believe in the Force, do you? The Force is strong with this one"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/any/sepia",
@@ -657,7 +693,11 @@
     "seconds": "37"
   },
   "10": {
-    "title": "Help, help, I'm being repressed!",
+    "title": {
+      "short": "On second thoughts",
+      "medium": "On second thoughts, let's not go there.",
+      "long" : "On second thoughts, let's not go there. It is a silly place. You don't"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/tech/grayscale",
@@ -730,7 +770,11 @@
     "second": "19"
   },
   "11": {
-    "title": "Danish danish candy canes bonbon cheesecake danish marzipan",
+    "title": {
+      "short": "Pie powder lemon",
+      "medium": "Pie powder lemon drops sesame snaps cake",
+      "long" : "Pie powder lemon drops sesame snaps cake brownie. Biscuit ice cream gin"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/tech/sepia",
@@ -803,7 +847,11 @@
     "seconds": "12"
   },
   "12": {
-    "title": "Cottage cheese brie lancashire. Boursin when the cheese comes out.",
+    "title": {
+      "short": "Queso fromage",
+      "medium": "Queso fromage. Taleggio boursin bavarian",
+      "long" : "Queso fromage. Taleggio boursin bavarian bergkase cream cheese when the cheese"
+    },
     "img": {
       "avatar": {
         "src": "http://placeimg.com/100/100/people/sepia",
