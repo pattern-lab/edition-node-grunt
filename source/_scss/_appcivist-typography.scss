@@ -14,7 +14,7 @@ TABLE OF CONTENTS
 
 // 1.0 GENERAL
 body {
-  font: 100%/1.5 $typography__font-stack--system;
+  font-family: $typography__font-stack--system;
   -webkit-text-size-adjust: 100%;
   min-height: 100vh;
 }
@@ -27,29 +27,37 @@ a {
 // 2.0 HEADINGS
 .heading--mega {
   font-size: $typography__heading--mega;
+  line-height: 1.1em;
 }
 .heading--jumbo {
   font-size: $typography__heading--jumbo;
+  line-height: 1.1em;
 }
 .heading--display {
   font-size: $typography__heading--display;
+  line-height: 1.2em;
 }
 .heading--headline {
   font-size: $typography__heading--headline;
+  line-height: 1.2em;
 }
 .heading--title {
   font-size: $typography__heading--title;
+  line-height: 1.2em;
 }
 .heading--subheader {
   font-size: $typography__heading--subheader;
+  line-height: 1.2em;
 }
 
 // 3.0 BODY TEXT
 p {
   font-size: $typography__heading--bodycopy;
+  line-height: 1.8em;
 }
 small {
   font-size: $typography__heading--small;
+  line-height: 1em;
 }
 blockquote {
   font-size: $typography__heading--subheader;
