@@ -1,15 +1,16 @@
 {{> molecules-primary-nav }}
-<h1>Hi {{ name.first }}</h1>
-<section>
-  <h2>Notifications & Recent Activity</h2>
-  {{> molecules-activity-stream }}
-</section>
-<section>
-  <h2>My Proposals</h2>
-  {{> molecules-proposal-card }}
-</seciton>
-<section>
-  <h2>My Ideas</h2>
-  {{> atoms-definition-list-item }}
-</seciton>
-<!-- FIXME ADD FOOTER -->
+<h1 class="heading--jumbo">Hi {{ name.first }}</h1>
+<div class="row">
+	<div class="columns-8">
+    <h2 class="heading--display">Notifications & Recent Activity</h2>
+    {{> molecules-activity-stream }}
+    <h2 class="heading--display">My Proposals</h2>
+    {{> molecules-proposal-card }}
+    <h2 class="heading--display">My Ideas</h2>
+    {{> atoms-definition-list-item }}
+  </div>
+	<div class="columns-4">
+    <h2 class="heading--display">My Ideas</h2>
+    {{> atoms-definition-list-item }}
+  </div>
+</div>

@@ -23,8 +23,44 @@ figure {
   @include display-flex;
   @include justify-content(space-around);
 }
-.column {
+.column, .columns {
   @include flex-grow(1);
+  &-1 {
+    @include flex-grow(1);
+  }
+  &-2 {
+    @include flex-grow(2);
+  }
+  &-3 {
+    @include flex-grow(3);
+  }
+  &-4 {
+    @include flex-grow(4);
+  }
+  &-5 {
+    @include flex-grow(5);
+  }
+  &-6 {
+    @include flex-grow(6);
+  }
+  &-7 {
+    @include flex-grow(7);
+  }
+  &-8 {
+    @include flex-grow(8);
+  }
+  &-9 {
+    @include flex-grow(9);
+  }
+  &-10 {
+    @include flex-grow(10);
+  }
+  &-11 {
+    @include flex-grow(11);
+  }
+  &-12 {
+    @include flex-grow(12);
+  }
 }
 
 // 3.0 NAVIGATION
