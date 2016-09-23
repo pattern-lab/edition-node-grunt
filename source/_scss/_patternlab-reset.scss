@@ -30,7 +30,7 @@ fieldset {
 label {
   display: block;
   padding-bottom: 0.2rem;
-  font-weight: bold; }
+}
 
 /**
  * Form button, input, select, and text area base styles
@@ -113,7 +113,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Completely remove from the flow but leave available to screen readers.
  */
-.is-vishidden {
+.is-visually-hidden {
   position: absolute !important;
   overflow: hidden;
   width: 1px;
@@ -161,29 +161,7 @@ input[type="search"]::-webkit-search-decoration {
   .hide-large {
     display: none; } }
 
-/**
- * Show valid text color
- */
-.valid {
-  color: #03804d; }
 
-/**
- * Show error text color
- */
-.error {
-  color: #b12a0b; }
-
-/**
- * Show warning text color
- */
-.warning {
-  color: #a59b15; }
-
-/**
- * Show informational text color
- */
-.information {
-  color: #0192d0; }
 
 /*------------------------------------*\
     #LINKS
@@ -192,11 +170,9 @@ input[type="search"]::-webkit-search-decoration {
  * Links
  */
 a {
-  color: #808080;
   outline: 0;
-  transition: all 0.2s ease; }
-  a:hover, a:focus {
-    color: #444444; }
+  }
+
 
 /*------------------------------------*\
     #LINKS
@@ -219,8 +195,6 @@ dl {
 /**
  * Terms/Names base styles
  */
-dt {
-  font-weight: bold; }
 
 /**
  * Definition list description base styles
@@ -252,23 +226,6 @@ img, video, object {
  */
 iframe {
   margin-bottom: 1em; }
-
-/**
- * Figure base styles
- */
-figure {
-  margin-bottom: 1em;
-  /**
-   * Figure image base styles
-   */ }
-  figure img {
-    margin-bottom: 0.5em; }
-
-/**
- * Figure caption base styles
- */
-figcaption {
-  font-style: italic; }
 
 /*------------------------------------*\
     #RESET
@@ -334,9 +291,7 @@ p {
  * Blockquote base styles
  */
 blockquote {
-  font-style: italic;
   border-left: 1px solid #808080;
-  color: #808080;
   padding-left: 1em;
   margin-bottom: 1em; }
 
@@ -1137,43 +1092,14 @@ abbr {
  * Alert
  */
 .alert {
-  text-align: center;
+  //text-align: center;
   padding: 0 1rem;
-  background: #f7f9f9;
   overflow: hidden;
-  font-size: 1em;
+  //font-size: 1em;
   animation: slideDown 2s forwards; }
   .alert a {
-    color: inherit;
-    text-decoration: underline; }
-
-/**
- * Error alert
- */
-.alert--error {
-  color: #b12a0b;
-  background: #fdded8; }
-
-/**
- * Success alert
- */
-.alert--success {
-  color: #03804d;
-  background: #d4f3e6; }
-
-/**
- * Warning alert
- */
-.alert--warning {
-  color: #a59b15;
-  background: #fffecf; }
-
-/**
- * Info alert
- */
-.alert--info {
-  color: #0192d0;
-  background: #d3f2ff; }
+    //text-decoration: underline;
+  }
 
 /**
  * Slidedown animation

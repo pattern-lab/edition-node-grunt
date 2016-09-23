@@ -1,0 +1,48 @@
+/*--------------------------------------
+This file contains all color styles
+in use throughout the AppCivist Sass files
+
+TABLE OF CONTENTS
+1.0 GENERAL
+2.0 ALERTS
+/--------------------------------------*/
+
+
+// 1.0 GENERAL
+a {
+  color: $color__link--active;
+  &:hover, &:focus {
+    color:$color__link--hover;
+  }
+}
+
+blockquote {
+  color: $color__text;
+}
+
+// 2.0 ALERTS
+.alert {
+  background: $color__alert-background;
+  & a {
+    color: inherit;
+  }
+  &-valid {
+    color: $color__valid;
+  }
+  &--error {
+    color: $color__error;
+    background: $color__error-background;
+  }
+  &--success {
+    color: $color__success;
+    background: $color__success-background;
+  }
+  &--warning {
+    color: $color__warning;
+    background: $color__warning-background;
+  }
+  &--information {
+    color: $color__information;
+    background: $color__information-background;
+  }
+}

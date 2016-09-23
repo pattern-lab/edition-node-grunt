@@ -1,9 +1,47 @@
 /*--------------------------------------
-This file contains all variables in use throughout the AppCivist Sass files
+This file contains all variables in use
+throughout the AppCivist Sass files
 
 TABLE OF CONTENTS
-1.0 typography
-2.0 layout
-3.0 color
-4.0 timing
+1.0 TYPOGRAPHY
+2.0 LAYOUT
+3.0 COLOR
+4.0 TIMING
 /--------------------------------------*/
+
+
+// 1.0 TYPOGRAPHY
+$typography__font-stack--system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$typography__heading--mega: 72px;
+$typography__heading--jumbo: 48px;
+$typography__heading--display: 36px;
+$typography__heading--headline: 24px;
+$typography__heading--title: 21px;
+$typography__heading--subheader: 16px;
+$typography__heading--bodycopy: 14px;
+$typography__heading--caption: 12px;
+$typography__heading--small: 10px;
+
+// 2.0 LAYOUT
+
+// 3.0 COLOR
+$color__text: #000000;
+$color__link--active: blue;
+$color__link--hover: purple;
+
+$color__brand--primary: #000000;
+$color__brand--secondary: #000000;
+
+$color__valid: #03804d;
+$color__alert: inherit;
+$color__alert-background: #f7f9f9;
+$color__error: #b12a0b;
+$color__error-background: #fdded8;
+$color__success: #03804d;
+$color__success-background: #d4f3e6;
+$color__warning: #a59b15;
+$color__warning-background: #fffecf;
+$color__information: #0192d0;
+$color__information-background: #d3f2ff;
+
+// 4.0 TIMING
