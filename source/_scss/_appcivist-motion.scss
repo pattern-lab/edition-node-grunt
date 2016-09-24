@@ -17,20 +17,34 @@ a {
   @include transition-timing-function(ease);
 }
 
-.mainmenu {
-  input:checked ~ .submenu {
-    @include transition-property(max-height);
-    @include transition-duration(.5s);
+header {
+  label {
+    @include transition-property(background);
+    @include transition-duration(.3s);
     @include transition-timing-function(ease);
   }
+  label:after {
+    transition:border-bottom .1s, border-top .1s .1s;
+    }
+  input:checked ~ label:after {
+    transition:border-top .1s, border-bottom .1s .1s;
+  }
+  input:checked ~ ul.submenu {
+    @include transition-property(max-height);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease-in);
+  }
+  ul.submenu {
+    @include transition-property(max-height);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease-out);
+    div li a, li a {
+      @include transition-property(background);
+      @include transition-duration(.3s);
+      @include transition-timing-function(ease);
+    }
+  }
 }
-
-.submenu {
-  @include transition-property(max-height);
-  @include transition-duration(.5s);
-  @include transition-timing-function(ease);
-}
-
 // 2.0 ANIMATIONS
 
 

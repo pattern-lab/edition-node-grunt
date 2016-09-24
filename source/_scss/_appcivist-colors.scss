@@ -16,14 +16,23 @@ a {
   }
 }
 
-header {
-  @extend .grey.lighten-2;
-}
-
 blockquote {
   color: $color__text;
 }
 
+header {
+  ul#menu {
+    background:#333;
+    color:#eee;
+  }
+  ul.submenu {
+    background:#444;
+    box-shadow:0 0 1px rgba(0,0,0,.3);
+    & li a {
+      color:#ddd;
+    }
+  }
+}
 // 2.0 ALERTS
 .alert {
   background: $color__alert-background;

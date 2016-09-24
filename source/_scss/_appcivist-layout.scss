@@ -64,34 +64,84 @@ figure {
 }
 
 // 3.0 NAVIGATION
+/*Style for the first level menu bar*/
 header {
-  max-height: 60px;
-  overflow: visible;
-  padding: 5px;
-  .brand {
-    @include flex-grow(1);
-    @include align-self(center);
+  ul#menu {
+    /*position:fixed;*/
+    //top:0;
+    @include justify-content(space-around);
+    width:100%;
+    height:3em;
+    margin:0;
+    padding:0 10px;
   }
-  .main-menu {
-    min-height: 55px;
-    max-width: 240px;
-    @include flex-grow(2);
-    label {
-      padding-top: .3em;
-      cursor: pointer;
+
+  ul#menu > li{
+    list-style-type:none;
+    position:relative;
+  }
+
+  label, .logo {
+    position:relative;
+    display:block;
+    padding:0 18px 0 12px;
+    line-height:3em;
+    cursor:pointer;
+  }
+
+  label:after{
+    content:"";
+    position:absolute;
+    display:block;
+    top:50%;
+    right:5px;
+    width:0;
+    height:0;
+    border-top:4px solid rgba(255,255,255,.5);
+    border-bottom:0 solid rgba(255,255,255,.5);
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
     }
-    ul {
-      max-height: 35px;
-      overflow: hidden;
-    }
-    ul, li {
-      padding: .7em;
-    }
-    input {
-      display: none;
-      &:checked {
-        max-height: 300px;
+
+  label:hover,
+  input:checked ~ label{background:rgba(0,0,0,.3);}
+
+  input:checked ~ label:after{
+    border-top:0 solid rgba(255,255,255,.5);
+    border-bottom:4px solid rgba(255,255,255,.5);
+  }
+
+  /*hide the inputs*/
+  input {
+    display: none;
+  }
+
+  /*show the second levele menu of the selected voice*/
+  input:checked ~ ul.submenu{
+    max-height:3000px;
+  }
+
+  /*style for the second level menu*/
+  ul.submenu{
+    max-height:0;
+    padding:0;
+    overflow:hidden;
+    list-style-type:none;
+    position:absolute;
+    min-width:240px;
+    div li a, li a {
+      display:block;
+      text-decoration:none;
+      white-space:nowrap;
+      &:hover{
+        background:rgba(0,0,0,.3);
       }
+    }
+    li a, h1 {
+      padding: 12px;
+    }
+    div li a {
+      padding: 12px 12px 12px 24px;
     }
   }
 }
