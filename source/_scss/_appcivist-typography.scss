@@ -53,11 +53,11 @@ a {
 
 // 3.0 BODY TEXT
 p {
-  font-size: $typography__heading--bodycopy;
+  font-size: $typography__body--bodycopy;
   line-height: 1.8em;
 }
 small {
-  font-size: $typography__heading--small;
+  font-size: $typography__body--small;
   line-height: 1em;
 }
 blockquote {
@@ -65,10 +65,10 @@ blockquote {
   font-style: italic;
 }
 time {
-  font-size: $typography__heading--caption;
+  font-size: $typography__body--caption;
 }
 figcaption {
-  font-size: $typography__heading--caption;
+  font-size: $typography__body--caption;
   font-style: italic;
 }
 

@@ -34,15 +34,16 @@ header {
     @include transition-duration(.5s);
     @include transition-timing-function(ease-in);
   }
-  ul.submenu {
-    @include transition-property(max-height);
-    @include transition-duration(.5s);
-    @include transition-timing-function(ease-out);
-    div li a, li a {
-      @include transition-property(background);
-      @include transition-duration(.3s);
-      @include transition-timing-function(ease);
-    }
+}
+
+ul.submenu {
+  @include transition-property(max-height);
+  @include transition-duration(.5s);
+  @include transition-timing-function(ease-out);
+  div li a, li a {
+    @include transition-property(background);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease);
   }
 }
 // 2.0 ANIMATIONS

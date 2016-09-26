@@ -5,7 +5,30 @@ in use throughout the AppCivist Sass files
 TABLE OF CONTENTS
 1.0 GENERAL
 2.0 ALERTS
+3.0 NAVIGATION
 /--------------------------------------*/
+
+.color__brand-primary {
+  background: $color__brand-primary;
+}
+.color__brand-primary--light {
+  background: $color__brand-primary--light;
+}
+.color__brand-primary--dark {
+  background: $color__brand-primary--dark;
+}
+.color__brand-accent {
+  background: $color__brand-accent;
+}
+.color__text--primary {
+  background: $color__text--primary;
+}
+.color__text--secondary {
+  background: $color__text--secondary;
+}
+.color__borders {
+  background: $color__borders;
+}
 
 
 // 1.0 GENERAL
@@ -17,19 +40,27 @@ a {
 }
 
 blockquote {
-  color: $color__text;
+  color: $color__text--primary;
+}
+
+.submenu {
+  background:$color__text--primary;
+  box-shadow:0 0 1px $color__borders;
+  & li a {
+    color:$color__link--active;
+  }
 }
 
 header {
   ul#menu {
-    background:#333;
-    color:#eee;
+    background: $color__brand-primary;
+    color: $color__text--reverse;
   }
   ul.submenu {
-    background:#444;
-    box-shadow:0 0 1px rgba(0,0,0,.3);
+    background: $color__brand-primary;
+    //box-shadow:0 0 1px rgba(0,0,0,.3);
     & li a {
-      color:#ddd;
+      color: $color__text--reverse;
     }
   }
 }
@@ -57,5 +88,31 @@ header {
   &--information {
     color: $color__information;
     background: $color__information-background;
+  }
+}
+
+// 3.0 NAVIGATION
+header {
+  label:after{
+    border-top:4px solid $color__text--reverse;
+    border-bottom:0 solid $color__text--reverse;
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
+    }
+  label:hover, input:checked ~ label {
+    background:$color__brand-primary--dark;
+  }
+  input:checked ~ label:after{
+    border-top:0 solid $color__text--reverse;
+    border-bottom:4px solid $color__text--reverse;
+  }
+}
+
+/*style for the second level menu*/
+ul.submenu{
+  div li a, li a {
+    &:hover{
+      background: $color__brand-primary--dark;
+    }
   }
 }

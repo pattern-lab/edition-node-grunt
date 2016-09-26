@@ -18,19 +18,27 @@ $typography__heading--display: 36px;
 $typography__heading--headline: 24px;
 $typography__heading--title: 21px;
 $typography__heading--subheader: 16px;
-$typography__heading--bodycopy: 14px;
-$typography__heading--caption: 12px;
-$typography__heading--small: 10px;
+$typography__body--bodycopy: 14px;
+$typography__body--caption: 12px;
+$typography__body--small: 10px;
 
 // 2.0 LAYOUT
 
 // 3.0 COLOR
-$color__text: black;
-$color__link--active: blue;
-$color__link--hover: purple;
+$color__brand-primary: #2196F3;
+$color__brand-primary--light: #BBDEFB;
+$color__brand-primary--dark: #1976D2;
 
-$color__brand--primary: #FF4000;
-$color__brand--secondary: #002C7C;
+$color__brand-accent: #FF5252;
+
+$color__text--primary: #212121;
+$color__text--secondary: #757575;
+$color__text--reverse: #ffffff;
+
+$color__borders: #BDBDBD;
+
+$color__link--active: $color__brand-accent;
+$color__link--hover: darken($color__link--active, 30%);
 
 $color__ui-background: white;
 $color__ui-background--dark: gray;

@@ -6,6 +6,7 @@ TABLE OF CONTENTS
 1.0 GENERAL
 2.0 NAVIGATION
 3.0 GRID
+4.0 CARDS
 /--------------------------------------*/
 
 
@@ -97,19 +98,7 @@ header {
     right:5px;
     width:0;
     height:0;
-    border-top:4px solid rgba(255,255,255,.5);
-    border-bottom:0 solid rgba(255,255,255,.5);
-    border-left:4px solid transparent;
-    border-right:4px solid transparent;
     }
-
-  label:hover,
-  input:checked ~ label{background:rgba(0,0,0,.3);}
-
-  input:checked ~ label:after{
-    border-top:0 solid rgba(255,255,255,.5);
-    border-bottom:4px solid rgba(255,255,255,.5);
-  }
 
   /*hide the inputs*/
   input {
@@ -120,28 +109,40 @@ header {
   input:checked ~ ul.submenu{
     max-height:3000px;
   }
+}
 
-  /*style for the second level menu*/
-  ul.submenu{
-    max-height:0;
-    padding:0;
-    overflow:hidden;
-    list-style-type:none;
-    position:absolute;
-    min-width:240px;
-    div li a, li a {
-      display:block;
-      text-decoration:none;
-      white-space:nowrap;
-      &:hover{
-        background:rgba(0,0,0,.3);
-      }
-    }
-    li a, h1 {
-      padding: 12px;
-    }
-    div li a {
-      padding: 12px 12px 12px 24px;
-    }
+.user-menu label {
+  text-align: right;
+}
+
+/*style for the second level menu*/
+ul.submenu{
+  max-height:0;
+  padding:0;
+  overflow:hidden;
+  list-style-type:none;
+  position:absolute;
+  min-width:240px;
+  div li a, li a {
+    display:block;
+    text-decoration:none;
+    white-space:nowrap;
   }
+  li a, h1 {
+    padding: 12px;
+  }
+  div li a {
+    padding: 12px 12px 12px 24px;
+  }
+}
+
+// 4.0 CARDS
+
+.card {
+  @include display-flex;
+  @include justify-content(space-between);
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid $color__ui-background--dark;
+  border-radius: 4px;
 }
