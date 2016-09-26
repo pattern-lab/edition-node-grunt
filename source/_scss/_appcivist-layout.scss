@@ -11,11 +11,19 @@ TABLE OF CONTENTS
 
 
 // 1.0 GENERAL
+main {
+  padding: 1em;
+}
+
 figure {
   margin-bottom: 1em;
   & img {
     margin-bottom: 0.5em;
   }
+}
+
+.tags ul {
+
 }
 
 
@@ -111,8 +119,8 @@ header {
   }
 }
 
-.user-menu label {
-  text-align: right;
+.user-menu {
+  max-width: 240px;
 }
 
 /*style for the second level menu*/
@@ -121,7 +129,7 @@ ul.submenu{
   padding:0;
   overflow:hidden;
   list-style-type:none;
-  position:absolute;
+  //position:absolute;
   min-width:240px;
   div li a, li a {
     display:block;
@@ -139,10 +147,14 @@ ul.submenu{
 // 4.0 CARDS
 
 .card {
-  @include display-flex;
-  @include justify-content(space-between);
   margin: 1em;
   padding: 1em;
-  border: 1px solid $color__ui-background--dark;
   border-radius: 4px;
+  &-with-menu {
+    @include display-flex;
+    @include justify-content(space-between);
+    margin: 1em;
+    padding: 1em;
+    border-radius: 4px;
+  }
 }

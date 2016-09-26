@@ -20,6 +20,14 @@ body {
   min-height: 100vh;
 }
 
+header {
+  text-align: center;
+  h1, p {
+    max-width: 40em;
+    margin: 0 auto;
+  }
+}
+
 a {
   &:focus {
   }
@@ -83,4 +91,15 @@ strong {
 em {
 }
 
-// 6.0 ALERTS
+// 6.0 NAVIGATION
+.logo {
+  text-align: left;
+}
+
+.user-menu label {
+  text-align: right;
+}
+
+.submenu {
+  text-align: right;
+}

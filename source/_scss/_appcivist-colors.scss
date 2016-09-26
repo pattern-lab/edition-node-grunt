@@ -32,6 +32,7 @@ TABLE OF CONTENTS
 
 
 // 1.0 GENERAL
+
 a {
   color: $color__link--active;
   &:hover, &:focus {
@@ -115,4 +116,8 @@ ul.submenu{
       background: $color__brand-primary--dark;
     }
   }
+}
+
+.card {
+  border: 1px solid $color__borders;
 }
