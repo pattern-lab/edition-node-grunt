@@ -1,0 +1,105 @@
+/*--------------------------------------
+This file contains all typographic styles
+in use throughout the AppCivist Sass files
+
+TABLE OF CONTENTS
+1.0 GENERAL
+2.0 HEADINGS
+3.0 BODY TEXT
+4.0 LISTS
+5.0 INLINE STYLES
+6.0 ALERTS
+/--------------------------------------*/
+
+
+// 1.0 GENERAL
+body {
+  font-family: $typography__font-stack--system;
+  line-height: 1.2em;
+  -webkit-text-size-adjust: 100%;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  h1, p {
+    max-width: 40em;
+    margin: 0 auto;
+  }
+}
+
+a {
+  &:focus {
+  }
+}
+
+// 2.0 HEADINGS
+.heading--mega {
+  font-size: $typography__heading--mega;
+  line-height: 1.1em;
+}
+.heading--jumbo {
+  font-size: $typography__heading--jumbo;
+  line-height: 1.1em;
+}
+.heading--display {
+  font-size: $typography__heading--display;
+  line-height: 1.2em;
+}
+.heading--headline {
+  font-size: $typography__heading--headline;
+  line-height: 1.2em;
+}
+.heading--title {
+  font-size: $typography__heading--title;
+  line-height: 1.2em;
+}
+.heading--subheader {
+  font-size: $typography__heading--subheader;
+  line-height: 1.2em;
+}
+
+// 3.0 BODY TEXT
+p {
+  font-size: $typography__body--bodycopy;
+  line-height: 1.8em;
+}
+small {
+  font-size: $typography__body--small;
+  line-height: 1em;
+}
+blockquote {
+  font-size: $typography__heading--subheader;
+  font-style: italic;
+}
+time {
+  font-size: $typography__body--caption;
+}
+figcaption {
+  font-size: $typography__body--caption;
+  font-style: italic;
+}
+
+// 4.0 LISTS
+dt {
+  font-weight: bold;
+}
+
+// 5.0 INLINE STYLES
+strong {
+}
+em {
+}
+
+// 6.0 NAVIGATION
+.logo {
+  text-align: left;
+}
+
+.user-menu label {
+  text-align: right;
+}
+
+.submenu {
+  text-align: right;
+}

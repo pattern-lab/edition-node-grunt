@@ -13,6 +13,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   /******************************************************
    * PATTERN LAB CONFIGURATION
@@ -48,11 +49,11 @@ module.exports = function (grunt) {
       pl.help();
     }
 
-    if (arg && arg === "liststarterkits") {
+    if (arg && arg === "starterkit-list") {
       pl.liststarterkits();
     }
 
-    if (arg && arg === "loadstarterkit") {
+    if (arg && arg === "starterkit-load") {
       pl.loadstarterkit(argv.kit);
     }
 
@@ -63,6 +64,21 @@ module.exports = function (grunt) {
 
 
   grunt.initConfig({
+
+    sass: {
+      dist: {
+        options: {
+          compass: true
+        },
+        files: [{
+          expand: true,
+          cwd: './source/_scss/',
+          src: ['*.scss'],
+          dest: './public/css/',
+          ext: '.css'
+        }]
+      }
+    },
 
     /******************************************************
      * COPY TASKS
@@ -75,9 +91,7 @@ module.exports = function (grunt) {
           { expand: true, cwd: path.resolve(paths().source.images), src: '*', dest: path.resolve(paths().public.images) },
           { expand: true, cwd: path.resolve(paths().source.fonts), src: '*', dest: path.resolve(paths().public.fonts) },
           { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
-          { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*', '**'], dest: path.resolve(paths().public.root) },
-          // slightly inefficient to do this again - I am not a grunt glob master. someone fix
-          { expand: true, flatten: true, cwd: path.resolve(paths().source.styleguide, 'styleguide', 'css', 'custom'), src: '*.css)', dest: path.resolve(paths().public.styleguide, 'css') }
+          { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*', '**'], dest: path.resolve(paths().public.root) }
         ]
       }
     },
@@ -87,8 +101,7 @@ module.exports = function (grunt) {
     watch: {
       all: {
         files: [
-          path.resolve(paths().source.css + '**/*.css'),
-          path.resolve(paths().source.styleguide + 'css/*.css'),
+          'source/_scss/**/*.scss',
           path.resolve(paths().source.patterns + '**/*'),
           path.resolve(paths().source.fonts + '/*'),
           path.resolve(paths().source.images + '/*'),
@@ -150,9 +163,9 @@ module.exports = function (grunt) {
    * COMPOUND TASKS
   ******************************************************/
 
-  grunt.registerTask('default', ['patternlab', 'copy:main']);
-  grunt.registerTask('patternlab:build', ['patternlab', 'copy:main']);
-  grunt.registerTask('patternlab:watch', ['patternlab', 'copy:main', 'watch:all']);
-  grunt.registerTask('patternlab:serve', ['patternlab', 'copy:main', 'browserSync', 'watch:all']);
+  grunt.registerTask('default', ['patternlab', 'sass', 'copy:main']);
+  grunt.registerTask('patternlab:watch', ['patternlab', 'sass', 'copy:main', 'watch:all']);
+  grunt.registerTask('patternlab:serve', ['patternlab', 'sass', 'copy:main', 'browserSync', 'watch:all']);
+  grunt.registerTask('patternlab:buildserve', ['patternlab', 'patternlab:build', 'copy:main', 'browserSync', 'watch:all']);
 
 };

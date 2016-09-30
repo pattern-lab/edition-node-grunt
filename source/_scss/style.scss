@@ -1,0 +1,28 @@
+/*--------------------------------------
+This is the principal style file for
+the Appcivist PatternLab instance.
+This is the only file that should be
+compiled into production.
+/--------------------------------------*/
+
+//--------------------------------------
+// FRAMEWORKS AND DEPENDENCIES
+@import "compass/reset";
+@import "compass/css3";
+@import "color";
+
+//--------------------------------------
+// PATTERNLAB STYLES
+@import "pattern-scaffolding";
+@import "patternlab-reset";
+
+//--------------------------------------
+// APPCIVIST STYLES
+@import "appcivist-variables";
+@import "appcivist-typography";
+@import "appcivist-layout";
+@import "appcivist-colors";
+@import "appcivist-motion";
+
+
+// SCRATCHPAD — this is for Junk CSS
