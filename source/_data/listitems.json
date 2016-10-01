@@ -74,7 +74,40 @@
       "long": "20",
       "short": "20"
     },
-    "seconds": "31"
+    "seconds": "31",
+
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Parks and Recreation",
+      "description": "Budget Delegate Committee for Parks and Recreation"
+    },
+
+    "idea": {
+      "title": "Cooperative Garden",
+      "summary": "Re-imagine the city central square as cooperative garden"
+    },
+
+    "proposal": {
+      "title": "Cooperative Garden Project",
+      "summary": "A cooperative garden, run by members of the community and oriented to the youth as an educational experience",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Parks and Recreation"
+    }
+
   },
   "2": {
     "title": {
@@ -151,7 +184,39 @@
       "long": "20",
       "short": "20"
     },
-    "seconds": "31"
+    "seconds": "31",
+
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Quality of Life Committee",
+      "description": "Budget Delegate Committee for Quality of Life"
+    },
+
+    "idea": {
+      "title": "Community Library",
+      "summary": "A community library for children in main street"
+    },
+
+    "proposal": {
+      "title": "Community Library Project",
+      "summary": "A community library for children that lends kindle for childre to read",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Quality of Life"
+    }
   },
   "3": {
     "title": {
@@ -228,7 +293,39 @@
       "long": "45",
       "short": "45"
     },
-    "seconds": "11"
+    "seconds": "11",
+
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Public Infrastructure",
+      "description": "Budget Delegate Committee for Public Infrastructure"
+    },
+
+    "idea": {
+      "title": "Interactive Street Lights",
+      "summary": "What if we could influence the ligths of the city with our way of walking?"
+    },
+
+    "proposal": {
+      "title": "Interactive Street Lights Project",
+      "summary": "What if we could influence the ligths of the city with our way of walking?",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Public Infrastructure"
+    }
   },
   "4": {
     "title": {
@@ -305,7 +402,39 @@
       "long": "14",
       "short": "14"
     },
-    "seconds": "52"
+    "seconds": "52",
+
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Public Infrastructure",
+      "description": "Budget Delegate Committee for Public Infrastructure"
+    },
+
+    "idea": {
+      "title": "Interactive Street Lights",
+      "summary": "What if we could influence the ligths of the city with our way of walking?"
+    },
+
+    "proposal": {
+      "title": "Interactive Street Lights Project",
+      "summary": "What if we could influence the ligths of the city with our way of walking?",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Public Infrastructure"
+    }
   },
   "5": {
     "title": {
@@ -382,7 +511,39 @@
       "long": "37",
       "short": "37"
     },
-    "seconds": "24"
+    "seconds": "24",
+
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Quality of Life Committee",
+      "description": "Budget Delegate Committee for Quality of Life"
+    },
+
+    "idea": {
+      "title": "Community Library",
+      "summary": "A community library for children in main street"
+    },
+
+    "proposal": {
+      "title": "Community Library Project",
+      "summary": "A community library for children that lends kindle for childre to read",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Quality of Life"
+    }
   },
   "6": {
     "title": {
@@ -459,7 +620,39 @@
       "long": "37",
       "short": "37"
     },
-    "seconds": "33"
+    "seconds": "33",
+
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Parks and Recreation",
+      "description": "Budget Delegate Committee for Parks and Recreation"
+    },
+
+    "idea": {
+      "title": "Cooperative Garden",
+      "summary": "Re-imagine the city central square as cooperative garden"
+    },
+
+    "proposal": {
+      "title": "Cooperative Garden Project",
+      "summary": "A cooperative garden, run by members of the community and oriented to the youth as an educational experience",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Parks and Recreation"
+    }
   },
   "7": {
     "title": {
@@ -536,7 +729,38 @@
       "long": "12",
       "short": "12"
     },
-    "seconds": "47"
+    "seconds": "47",
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Quality of Life Committee",
+      "description": "Budget Delegate Committee for Quality of Life"
+    },
+
+    "idea": {
+      "title": "Community Library",
+      "summary": "A community library for children in main street"
+    },
+
+    "proposal": {
+      "title": "Community Library Project",
+      "summary": "A community library for children that lends kindle for childre to read",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Quality of Life"
+    }
   },
   "8": {
     "title": {
@@ -613,7 +837,39 @@
       "long": "42",
       "short": "42"
     },
-    "seconds": "21"
+    "seconds": "21",
+
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Public Infrastructure",
+      "description": "Budget Delegate Committee for Public Infrastructure"
+    },
+
+    "idea": {
+      "title": "Interactive Street Lights",
+      "summary": "What if we could influence the ligths of the city with our way of walking?"
+    },
+
+    "proposal": {
+      "title": "Interactive Street Lights Project",
+      "summary": "What if we could influence the ligths of the city with our way of walking?",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Public Infrastructure"
+    }
   },
   "9": {
     "title": {
@@ -767,7 +1023,39 @@
       "long": "51",
       "short": "51"
     },
-    "second": "19"
+    "second": "19",
+
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Quality of Life Committee",
+      "description": "Budget Delegate Committee for Quality of Life"
+    },
+
+    "idea": {
+      "title": "Community Library",
+      "summary": "A community library for children in main street"
+    },
+
+    "proposal": {
+      "title": "Community Library Project",
+      "summary": "A community library for children that lends kindle for childre to read",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Quality of Life"
+    }
   },
   "11": {
     "title": {
@@ -844,7 +1132,39 @@
       "long": "55",
       "short": "55"
     },
-    "seconds": "12"
+    "seconds": "12",
+
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Parks and Recreation",
+      "description": "Budget Delegate Committee for Parks and Recreation"
+    },
+
+    "idea": {
+      "title": "Cooperative Garden",
+      "summary": "Re-imagine the city central square as cooperative garden"
+    },
+
+    "proposal": {
+      "title": "Cooperative Garden Project",
+      "summary": "A cooperative garden, run by members of the community and oriented to the youth as an educational experience",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Parks and Recreation"
+    }
   },
   "12": {
     "title": {
@@ -921,6 +1241,38 @@
       "long": "34",
       "short": "34"
     },
-    "seconds": "56"
+    "seconds": "56",
+
+    "assembly": {
+      "name": "City of Vallejo",
+      "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+    },
+
+    "campaign": {
+      "name": "PB Cycle 4",
+      "description": "Participatory Budgeting cycle 4, years 2016/2017"
+    },
+
+    "group": {
+      "name": "Parks and Recreation",
+      "description": "Budget Delegate Committee for Parks and Recreation"
+    },
+
+    "idea": {
+      "title": "Cooperative Garden",
+      "summary": "Re-imagine the city central square as cooperative garden"
+    },
+
+    "proposal": {
+      "title": "Cooperative Garden Project",
+      "summary": "A cooperative garden, run by members of the community and oriented to the youth as an educational experience",
+      "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+      "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+      "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+    },
+
+    "tag" : {
+      "title" : "Parks and Recreation"
+    }
   }
 }

@@ -79,5 +79,33 @@
     "long": "20",
     "short": "20"
   },
-  "seconds": "31"
+  "seconds": "31",
+
+  "assembly": {
+    "name": "City of Vallejo",
+    "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+  },
+
+  "campaign": {
+    "name": "PB Cycle 4",
+    "description": "Participatory Budgeting cycle 4, years 2016/2017"
+  },
+
+  "group": {
+    "name": "Parks and Recreation",
+    "description": "Budget Delegate Committee for Parks and Recreation"
+  },
+
+  "idea": {
+    "title": "Cooperative Garden",
+    "summary": "Re-imagine the city central square as cooperative garden"
+  },
+
+  "proposal": {
+    "title": "Cooperative Garden Project",
+    "summary": "A cooperative garden, run by members of the community and oriented to the youth as an educational experience",
+    "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+    "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+    "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+  }
 }
