@@ -33,6 +33,11 @@ a {
   }
 }
 
+.tags {
+  text-transform: uppercase;
+  font-size: $typography__body--small;
+}
+
 // 2.0 HEADINGS
 .heading--mega {
   font-size: $typography__heading--mega;

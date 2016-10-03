@@ -74,7 +74,10 @@
       "long": "20",
       "short": "20"
     },
-    "seconds": "31"
+    "seconds": "31",
+    "tag": {
+      "title": "quick-fixes"
+    }
   },
   "2": {
     "title": {
@@ -151,7 +154,10 @@
       "long": "20",
       "short": "20"
     },
-    "seconds": "31"
+    "seconds": "31",
+    "tag": {
+      "title": "provide space"
+    }
   },
   "3": {
     "title": {
@@ -228,7 +234,10 @@
       "long": "45",
       "short": "45"
     },
-    "seconds": "11"
+    "seconds": "11",
+    "tag": {
+      "title": "schools"
+    }
   },
   "4": {
     "title": {
@@ -305,7 +314,10 @@
       "long": "14",
       "short": "14"
     },
-    "seconds": "52"
+    "seconds": "52",
+    "tag": {
+      "title": "street improvements]"
+    }
   },
   "5": {
     "title": {
@@ -382,7 +394,10 @@
       "long": "37",
       "short": "37"
     },
-    "seconds": "24"
+    "seconds": "24",
+    "tag": {
+      "title": "waterfront"
+    }
   },
   "6": {
     "title": {
@@ -459,7 +474,10 @@
       "long": "37",
       "short": "37"
     },
-    "seconds": "33"
+    "seconds": "33",
+    "tag": {
+      "title": "library"
+    }
   },
   "7": {
     "title": {
@@ -536,7 +554,10 @@
       "long": "12",
       "short": "12"
     },
-    "seconds": "47"
+    "seconds": "47",
+    "tag": {
+      "title": "traffic"
+    }
   },
   "8": {
     "title": {
@@ -613,7 +634,10 @@
       "long": "42",
       "short": "42"
     },
-    "seconds": "21"
+    "seconds": "21",
+    "tag": {
+      "title": "water"
+    }
   },
   "9": {
     "title": {
@@ -690,7 +714,10 @@
       "long": "04",
       "short": "4"
     },
-    "seconds": "37"
+    "seconds": "37",
+    "tag": {
+      "title": "landscaping"
+    }
   },
   "10": {
     "title": {
@@ -767,7 +794,10 @@
       "long": "51",
       "short": "51"
     },
-    "second": "19"
+    "second": "19",
+    "tag": {
+      "title": "green spaces"
+    }
   },
   "11": {
     "title": {
@@ -844,7 +874,10 @@
       "long": "55",
       "short": "55"
     },
-    "seconds": "12"
+    "seconds": "12",
+    "tag": {
+      "title": "city services"
+    }
   },
   "12": {
     "title": {
@@ -921,6 +954,9 @@
       "long": "34",
       "short": "34"
     },
-    "seconds": "56"
+    "seconds": "56",
+    "tag": {
+      "title": "seasonal"
+    }
   }
 }

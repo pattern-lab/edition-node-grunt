@@ -7,6 +7,7 @@ TABLE OF CONTENTS
 2.0 NAVIGATION
 3.0 GRID
 4.0 CARDS
+// 5.0 MODALS
 /--------------------------------------*/
 
 
@@ -22,8 +23,19 @@ figure {
   }
 }
 
-.tags ul {
-
+.tags {
+  @include display-flex;
+  @include justify-content(center);
+  ul {
+    margin-bottom: 6em;
+    li {
+      padding: 1em 0 1em 1em;
+      &:after {
+        content: '|';
+        padding-left: 1em;
+      }
+    }
+  }
 }
 
 
@@ -150,11 +162,25 @@ ul.submenu{
   margin: 1em;
   padding: 1em;
   border-radius: 4px;
+  max-width: 35em;
   &-with-menu {
     @include display-flex;
     @include justify-content(space-between);
     margin: 1em;
     padding: 1em;
     border-radius: 4px;
+  }
+}
+
+// 5.0 MODALS
+.modal {
+  padding: 2em;
+  border: 10px solid $color__borders;
+  header {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .close {
+    float: right;
   }
 }
