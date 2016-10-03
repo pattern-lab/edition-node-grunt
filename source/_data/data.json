@@ -8,27 +8,27 @@
   },
   "img": {
     "avatar": {
-      "src": "http://placeimg.com/100/100/people",
+      "src": "/images/avatar.png",
       "alt": "Avatar"
     },
     "square": {
-      "src": "http://placeimg.com/300/300/tech",
+      "src": "/images/square.png",
       "alt": "Square"
     },
     "rectangle": {
-      "src": "http://placeimg.com/400/300/tech",
+      "src": "/images/landscape_4x3.png",
       "alt": "Rectangle"
     },
     "landscape-4x3": {
-      "src": "http://placeimg.com/400/300/tech",
+      "src": "/images/landscape_4x3.png",
       "alt": "4x3 Image"
     },
     "landscape-16x9": {
-      "src": "http://placeimg.com/640/360/tech",
+      "src": "/images/landscape_16x9.png",
       "alt": "16x9 Image"
     },
     "logo": {
-      "src": "http://placeimg.com/150/150/tech",
+      "src": "/images/logo.png",
       "alt": "Logo Image"
     }
   },
