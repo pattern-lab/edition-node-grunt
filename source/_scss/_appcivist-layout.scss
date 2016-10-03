@@ -50,6 +50,7 @@ figure {
 .row {
   @include display-flex;
   @include justify-content(space-around);
+  @include flex-wrap(wrap);
 }
 .column, .columns {
   @include flex-grow(1);
