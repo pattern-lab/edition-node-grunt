@@ -106,6 +106,6 @@ em {
   text-align: right;
 }
 
-.submenu {
-  //text-align: right;
+.submenu div li {
+  font-size: $typography__body--caption;
 }

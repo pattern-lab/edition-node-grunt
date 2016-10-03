@@ -1,8 +1,7 @@
 {{> molecules-primary-nav }}
 <main>
 	<h1 class="heading--jumbo">Hi {{ name.first }}</h1>
-	<div class="row">
-		<div class="columns-8">
+		<div>
 	    <h2 class="heading--headline">Notifications & Recent Activity</h2>
 	    <div class="card">
 				{{# listItems.three }}
@@ -15,12 +14,5 @@
 			<div class="card">
 				{{> atoms-definition-list-item }}
 			</div>
-	  </div>
-		<div class="columns-4">
-	    <h2 class="heading--headline">My Ideas</h2>
-			<div class="card">
-		    {{> atoms-definition-list-item }}
-			</div>
-	  </div>
 	</div>
 </main>
