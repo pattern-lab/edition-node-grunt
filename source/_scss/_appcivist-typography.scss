@@ -21,9 +21,9 @@ body {
 }
 
 header {
-  text-align: center;
+  //text-align: center;
   h1, p {
-    max-width: 40em;
+    //max-width: 40em;
     margin: 0 auto;
   }
 }
@@ -62,6 +62,7 @@ a {
 .heading--subheader {
   font-size: $typography__heading--subheader;
   line-height: 1.2em;
+  text-transform: uppercase;
 }
 
 // 3.0 BODY TEXT

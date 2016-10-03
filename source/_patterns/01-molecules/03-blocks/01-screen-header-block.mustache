@@ -1,7 +1,7 @@
 <header>
-  <p class="heading--subheader">Proposal</p>
-  <h1 class="heading--display">{{ title.short }}</h1>
-  <p class="heading--headline">{{ excerpt.short }}</p>
-  <p>In the <a href="{{ url }}" class="b-inner">$Working-group-name</a> in the <a href="{{ url }}" class="b-inner">$Campaign-name Campaign</a></p>
+  <p class="heading--subheader">{{ type }}</p>
+  <h1 class="heading--display">{{ title }}</h1>
+  <p class="heading--headline">{{ excerpt }}</p>
+  <p>In the <a href="{{ url }}" class="b-inner">{{ group }}</a> Working Group in the <a href="{{ url }}" class="b-inner">{{ campaign }}</a> Campaign</p>
   {{> molecules-tags }}
 </header>

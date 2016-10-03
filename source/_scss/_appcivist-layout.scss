@@ -25,14 +25,15 @@ figure {
 
 .tags {
   @include display-flex;
-  @include justify-content(center);
+  @include justify-content(flex-start);
   ul {
     margin-bottom: 6em;
     li {
-      padding: 1em 0 1em 1em;
+      padding: 1em 0 1em 0em;
       &:after {
         content: '|';
         padding-left: 1em;
+        padding-right: 1em;
       }
     }
   }
@@ -161,7 +162,7 @@ ul.submenu{
 .card {
   margin: 1em;
   padding: 1em;
-  border-radius: 4px;
+  border-radius: $layout__border-radius;
   max-width: 35em;
   &-with-menu {
     @include display-flex;
@@ -172,15 +173,27 @@ ul.submenu{
   }
 }
 
+.panel {
+  margin: 1em;
+  padding: 1em;
+  border-radius: $layout__border-radius;
+}
+
 // 5.0 MODALS
 .modal {
   padding: 2em;
+  max-width: 56em;
+  margin: 0 auto;
   border: 10px solid $color__borders;
   header {
     max-width: 600px;
     margin: 0 auto;
   }
+  .column-1 {
+    @include flex-direction(column);
+    text-align: right;
+  }
   .close {
-    float: right;
+    margin-bottom: 2em;
   }
 }
