@@ -34,6 +34,18 @@ a {
   font-size: $typography__body--small;
 }
 
+// BUTTONS
+button, .button {
+  text-transform: uppercase;
+}
+.tiny.button {
+  font-size: ms(-1);
+}
+.large.button {
+  font-size: ms(2);
+}
+
+
 // 2.0 HEADINGS
 .heading--mega {
   font-size: $typography__heading--mega;

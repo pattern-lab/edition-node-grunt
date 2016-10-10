@@ -17,6 +17,12 @@ a {
   @include transition-timing-function(ease);
 }
 
+button, .button {
+  @include transition-property(background-color);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease);
+}
+
 header {
   label {
     @include transition-property(background);

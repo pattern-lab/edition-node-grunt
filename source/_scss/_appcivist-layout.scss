@@ -5,7 +5,7 @@ in use throughout the AppCivist Sass files
 TABLE OF CONTENTS
 1.0 GENERAL
 2.0 NAVIGATION
-3.0 GRID
+3.0 BUTTONS
 4.0 PANELS & CARDS
 5.0 MODALS
 /--------------------------------------*/
@@ -48,14 +48,51 @@ figure {
   }
 }
 
-// 2.0 FLEXBOX GRID
+// 2.0 BUTTONS
+button, .button {
+  border-radius: $layout__border-radius;
+  padding: ms(1);
+  border: 1px solid;
+}
+
+.tiny.button {
+  padding: ms(-2) ms(1);
+}
+.small.button {
+  padding: ms(-1) ms(1);
+}
+.large.button {
+  padding: ms(1) ms(2);
+}
+
+.upvote {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  width: 50px;
+}
+.downvote {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top: 0;
+  width: 50px;
+}
+.voting-module {
+  width: 50px;
+}
+
+.add-button, .close-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
 
 // 3.0 NAVIGATION
 /*Style for the first level menu bar*/
 header {
   ul#menu {
-    position:fixed;
-    top:0;
+    //position:fixed;
+    //top:0;
     width:100%;
     height:3em;
     margin:0;
@@ -105,8 +142,8 @@ header {
   max-width: 240px;
   margin-right: 0;
   figure {
-    position: fixed;
-    top: 9px;
+    //position: fixed;
+    margin-top: -38px;
     margin-left: 10px;
     border-radius: 50px;
     overflow: hidden;
@@ -160,18 +197,18 @@ ul.submenu{
   @include breakpoint(laptop) {
     @include gallery(4 of 12);
   }
-  .main {
-    @include span(3 of 4);
-  }
-  .action {
-    //@include span(1 of 4);
-  }
-  .tags {
-    @include span(1 of 1);
-  }
   h1 {
     margin: 0 0 ms(-2) 0;
   }
+}
+.main {
+  @include span(3 of 4);
+}
+.action {
+  float: right;
+}
+.tags {
+  @include span(1 of 1);
 }
 
 .timeline {
