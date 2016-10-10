@@ -9,7 +9,9 @@ compiled into production.
 // FRAMEWORKS AND DEPENDENCIES
 @import "compass/reset";
 @import "compass/css3";
+@import "compass/utilities/general/clearfix";
 @import "color";
+@import "susy";
 
 //--------------------------------------
 // LOCAL TOOLS

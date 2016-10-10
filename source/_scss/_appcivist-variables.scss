@@ -6,9 +6,8 @@ TABLE OF CONTENTS
 1.0 TYPOGRAPHY
 2.0 LAYOUT
 3.0 COLOR
-4.0 TIMING
+4.0 BREAKPOINTS
 /--------------------------------------*/
-
 
 // 1.0 TYPOGRAPHY
 //Modular Scale
@@ -27,6 +26,15 @@ $typography__body--caption: ms(1);
 $typography__body--small: ms(-1);
 
 // 2.0 LAYOUT
+
+$susy: (
+  columns: 12,
+  container: 1200px,
+  gutters: 1/12,
+  global-box-sizing: border-box,
+  debug: (image: show)
+);
+
 $layout__border-radius: 4px;
 
 // 3.0 COLOR
@@ -57,4 +65,22 @@ $color__warning-background: #fffecf;
 $color__information: #0192d0;
 $color__information-background: #d3f2ff;
 
-// 4.0 TIMING
+// 4.0 BREAKPOINTS
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 70em) { @content ; }
+ }
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
+ }
+   @else if $point == tablet {
+    @media (min-width: 50em) { @content ; }
+ }
+  @else if $point == phablet {
+    @media (min-width: 37.5em)  { @content ; }
+ }
+ @else if $point == mobileonly {
+    @media (max-width: 37.5em)  { @content ; }
+
+ }
+}

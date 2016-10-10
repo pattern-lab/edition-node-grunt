@@ -21,11 +21,8 @@ body {
 }
 
 header {
-  //text-align: center;
-  h1, p {
-    //max-width: 40em;
-    margin: 0 auto;
-  }
+  text-align: center;
+
 }
 
 a {
@@ -89,6 +86,10 @@ figcaption {
 // 4.0 LISTS
 dt {
   font-weight: bold;
+}
+.timeline {
+  text-align: center;
+  text-transform: uppercase;
 }
 
 // 5.0 INLINE STYLES

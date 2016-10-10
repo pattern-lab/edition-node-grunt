@@ -118,6 +118,25 @@ ul.submenu{
   }
 }
 
-.card , .panel{
+.panel{
+  //border: 1px solid $color__borders;
+}
+.card, .timeline-item {
   border: 1px solid $color__borders;
+}
+
+.inactive {
+  color: lighten($color__text--secondary, 10%);
+  background-color: lighten($color__text--secondary, 40%);
+  border: 1px solid lighten($color__text--secondary, 30%);
+}
+.active {
+  color: $color__text--reverse;
+  background-color: $color__text--secondary;
+  border: 1px solid $color__text--secondary;
+}
+.future {
+  color: lighten($color__text--secondary, 30%);
+  background-color: $color__text--reverse;
+  border: 1px solid lighten($color__text--secondary, 30%);
 }

@@ -2,21 +2,21 @@
 <main>
 	<header>
 	  <p class="heading--subheader">Campaign</p>
-	  <h1 class="heading--display">Participatory Budgeting Project Ideas - Cycle 4</h1>
+	  <h1 class="heading--display">Participatory Budgeting - Cycle 4</h1>
 	  <p class="heading--title">It's that time again - the City is collecting ideas for the fourth cycle of Participatory Budgeting (PB) in Vallejo. Share your ideas on how you want to use Measure B tax dollars to make Vallejo even better.</p>
 	</header>
-	<div class="panel columns-12">
-		<h2 class="heading--title">Campaigns Status</h2>
-		<div class="timeline row">
-			<div>Proposals</div>
-			<div>Deliberation</div>
-			<div>Voting</div>
-			<div>Implementation</div>
+	<div class="panel">
+		<h1 class="heading--title">Campaigns Status</h2>
+		<div class="timeline">
+			<div class="timeline-item inactive">Proposals</div>
+			<div class="timeline-item inactive">Deliberation</div>
+			<div class="timeline-item active">Voting</div>
+			<div class="timeline-item future">Implementation</div>
 		</div>
 	</div>
-	<div class="panel columns-12">
-		<h2 class="heading--title">Proposals</h2>
-		<div class="row">
+	<div class="panel">
+		<h1 class="heading--title">Proposals</h2>
+		<div>
 			{{> molecules-proposal-card }}
 			{{> molecules-proposal-card }}
 			{{> molecules-proposal-card }}
@@ -24,7 +24,7 @@
 		</div>
 	</div>
 	<div>
-		<h2 class="heading--title">Conversations in this {{ type }} (Forum)</h2>
+		<h1 class="heading--title">Conversations in this {{ type }} (Forum)</h2>
 		<div class="panel">
 			{{> organisms-comment-thread }}
 		</div>

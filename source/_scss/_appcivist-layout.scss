@@ -6,14 +6,25 @@ TABLE OF CONTENTS
 1.0 GENERAL
 2.0 NAVIGATION
 3.0 GRID
-4.0 CARDS
-// 5.0 MODALS
+4.0 PANELS & CARDS
+5.0 MODALS
 /--------------------------------------*/
 
 
 // 1.0 GENERAL
 main {
   padding: ms(1);
+  header {
+      margin: 0 auto ms(2);
+      max-width: ms(14);
+      p {
+        margin-bottom: 0;
+        margin-top: ms(1);
+      }
+      h1 {
+        margin: 0;
+      }
+    }
 }
 
 figure {
@@ -24,12 +35,11 @@ figure {
 }
 
 .tags {
-  @include display-flex;
-  @include justify-content(flex-start);
   ul {
     margin-bottom: 6em;
     li {
-      padding: ms(1) 0 ms(1) 0em;
+      float: left;
+      //padding: ms(1) 0 ms(1) 0em;
       &:after {
         content: '|';
         padding-left: ms(1);
@@ -39,60 +49,7 @@ figure {
   }
 }
 
-header,
-
-.timeline {
-  div {
-    padding: ms(1) 3em;
-  }
-}
-
-
 // 2.0 FLEXBOX GRID
-.row {
-  @include display-flex;
-  @include justify-content(space-around);
-  @include flex-wrap(wrap);
-}
-.column, .columns {
-  @include flex-grow(1);
-  &-1 {
-    @include flex-grow(1);
-  }
-  &-2 {
-    @include flex-grow(2);
-  }
-  &-3 {
-    @include flex-grow(3);
-  }
-  &-4 {
-    @include flex-grow(4);
-  }
-  &-5 {
-    @include flex-grow(5);
-  }
-  &-6 {
-    @include flex-grow(6);
-  }
-  &-7 {
-    @include flex-grow(7);
-  }
-  &-8 {
-    @include flex-grow(8);
-  }
-  &-9 {
-    @include flex-grow(9);
-  }
-  &-10 {
-    @include flex-grow(10);
-  }
-  &-11 {
-    @include flex-grow(11);
-  }
-  &-12 {
-    @include flex-grow(12);
-  }
-}
 
 // 3.0 NAVIGATION
 /*Style for the first level menu bar*/
@@ -166,26 +123,34 @@ ul.submenu{
   }
 }
 
-// 4.0 CARDS
+// 4.0 PANELS & CARDS
 
-.card {
-  margin: ms(1);
-  padding: ms(1);
-  border-radius: $layout__border-radius;
-  max-width: 35em;
-  &-with-menu {
-    @include display-flex;
-    @include justify-content(space-between);
-    margin: ms(1);
-    padding: ms(1);
-    border-radius: 4px;
+.panel {
+  @include clearfix;
+  h1 {
+    margin: ms(1) 0;
+    @include span(12);
   }
 }
 
-.panel {
-  margin: ms(1);;
+.card {
   padding: ms(1);
   border-radius: $layout__border-radius;
+  @include breakpoint(phablet) {
+    @include gallery(6 of 12);
+    margin-bottom: gutter(12);
+  }
+  @include breakpoint(laptop) {
+    @include gallery(4 of 12);
+  }
+}
+
+.timeline {
+  &-item {
+    @include gallery(1 of 4);
+    padding: ms(1);
+    border-radius: $layout__border-radius;
+  }
 }
 
 // 5.0 MODALS
