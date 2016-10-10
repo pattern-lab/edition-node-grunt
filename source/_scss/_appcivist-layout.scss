@@ -15,7 +15,7 @@ TABLE OF CONTENTS
 main {
   padding: ms(1);
   header {
-      margin: 0 auto ms(2);
+      margin: ms(5) auto ms(2);
       max-width: ms(14);
       p {
         margin-bottom: 0;
@@ -36,7 +36,6 @@ figure {
 
 .tags {
   ul {
-    margin-bottom: 6em;
     li {
       float: left;
       //padding: ms(1) 0 ms(1) 0em;
@@ -55,23 +54,23 @@ figure {
 /*Style for the first level menu bar*/
 header {
   ul#menu {
-    /*position:fixed;*/
-    //top:0;
-    @include justify-content(space-around);
+    position:fixed;
+    top:0;
     width:100%;
     height:3em;
     margin:0;
     padding:0 10px;
-  }
+}
 
   ul#menu > li{
     list-style-type:none;
     position:relative;
   }
 
+  .logo {
+    @include span(3 of 12);
+  }
   label, .logo {
-    position:relative;
-    display:block;
     padding:0 18px 0 12px;
     line-height:3em;
     cursor:pointer;
@@ -97,16 +96,33 @@ header {
     max-height:3000px;
   }
 }
-
+.bar {
+  @include span(6 of 12);
+}
 .user-menu {
+  @include span(3 of 12);
+  float: right;
   max-width: 240px;
+  margin-right: 0;
+  figure {
+    position: fixed;
+    top: 9px;
+    margin-left: 10px;
+    border-radius: 50px;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    img {
+      width: 30px;
+    }
+  }
 }
 
 /*style for the second level menu*/
 ul.submenu{
   max-height:0;
-  padding:0;
-  overflow:hidden;
+  padding: 0;
+  overflow: hidden;
   list-style-type:none;
   //position:absolute;
   min-width:240px;
@@ -119,7 +135,7 @@ ul.submenu{
     padding: 12px;
   }
   div li a {
-    padding: 6px 12px 6px 24px;
+    padding: ms(-1) ms(1);
   }
 }
 
@@ -136,12 +152,22 @@ ul.submenu{
 .card {
   padding: ms(1);
   border-radius: $layout__border-radius;
+  @include clearfix;
   @include breakpoint(phablet) {
     @include gallery(6 of 12);
     margin-bottom: gutter(12);
   }
   @include breakpoint(laptop) {
     @include gallery(4 of 12);
+  }
+  .main {
+    @include span(3 of 4);
+  }
+  .action {
+    //@include span(1 of 4);
+  }
+  .tags {
+    @include span(1 of 1);
   }
 }
 

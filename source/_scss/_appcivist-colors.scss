@@ -107,6 +107,9 @@ header {
     border-top:0 solid $color__text--reverse;
     border-bottom:4px solid $color__text--reverse;
   }
+  figure {
+    border: 1px solid $color__text--reverse;
+  }
 }
 
 /*style for the second level menu*/
@@ -139,4 +142,9 @@ ul.submenu{
   color: lighten($color__text--secondary, 30%);
   background-color: $color__text--reverse;
   border: 1px solid lighten($color__text--secondary, 30%);
+}
+
+// 4.0 TYPE
+.heading--subheader {
+  color: $color__text--secondary;
 }

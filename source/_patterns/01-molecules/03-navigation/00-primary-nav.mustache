@@ -1,12 +1,16 @@
 <header>
-	<ul class="row top-nav-menu" id="menu">
-	  <li class="columns-10">
-	    <div class="logo">Appcivist</div>
+	<ul class="top-nav-menu" id="menu">
+	  <li class="logo">
+	    <div>Appcivist</div>
 	  </li>
-	  <li class="columns-2 user-menu">
+		<li class="bar"></li>
+	  <li class="user-menu">
 	    <input id="check02" type="checkbox" name="menu"/>
-	    <label for="check02">User Name</label>
-	    {{> molecules-user-menu }}
+			<label for="check02">User Name</label>
+			<figure>
+				{{> atoms-avatar }}
+			</figure>
+			{{> molecules-user-menu }}
 	  </li>
 	</ul>
 </header>
