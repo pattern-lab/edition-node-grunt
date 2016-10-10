@@ -65,7 +65,6 @@ a {
 // 3.0 BODY TEXT
 p {
   font-size: $typography__body--bodycopy;
-  line-height: ms(1);
 }
 small {
   font-size: $typography__body--small;
@@ -108,4 +107,13 @@ em {
 }
 .submenu {
   text-align: left;
+}
+
+.card {
+  small {
+    text-transform: uppercase;
+  }
+  p {
+    font-size: ms(1);
+  }
 }

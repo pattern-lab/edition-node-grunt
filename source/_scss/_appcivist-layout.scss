@@ -80,7 +80,7 @@ header {
     content:"";
     position:absolute;
     display:block;
-    top:50%;
+    top: 25px;
     right:5px;
     width:0;
     height:0;
@@ -168,6 +168,9 @@ ul.submenu{
   }
   .tags {
     @include span(1 of 1);
+  }
+  h1 {
+    margin: 0 0 ms(-2) 0;
   }
 }
 
