@@ -13,11 +13,11 @@ TABLE OF CONTENTS
 
 // 1.0 GENERAL
 main {
-  padding: 1em;
+  padding: ms(1);
 }
 
 figure {
-  margin-bottom: 1em;
+  margin-bottom: ms(1);
   & img {
     margin-bottom: 0.5em;
   }
@@ -29,19 +29,21 @@ figure {
   ul {
     margin-bottom: 6em;
     li {
-      padding: 1em 0 1em 0em;
+      padding: ms(1) 0 ms(1) 0em;
       &:after {
         content: '|';
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: ms(1);
+        padding-right: ms(1);
       }
     }
   }
 }
 
+header,
+
 .timeline {
   div {
-    padding: 1em 3em;
+    padding: ms(1) 3em;
   }
 }
 
@@ -167,22 +169,22 @@ ul.submenu{
 // 4.0 CARDS
 
 .card {
-  margin: 1em;
-  padding: 1em;
+  margin: ms(1);
+  padding: ms(1);
   border-radius: $layout__border-radius;
   max-width: 35em;
   &-with-menu {
     @include display-flex;
     @include justify-content(space-between);
-    margin: 1em;
-    padding: 1em;
+    margin: ms(1);
+    padding: ms(1);
     border-radius: 4px;
   }
 }
 
 .panel {
-  margin: 1em;
-  padding: 1em;
+  margin: ms(1);;
+  padding: ms(1);
   border-radius: $layout__border-radius;
 }
 
