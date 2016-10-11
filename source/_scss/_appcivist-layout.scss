@@ -15,7 +15,7 @@ TABLE OF CONTENTS
 main {
   padding: ms(1);
   header {
-      margin: ms(5) auto ms(2);
+      margin: ms(2) auto ms(2);
       max-width: ms(14);
       p {
         margin-bottom: 0;
@@ -182,7 +182,11 @@ ul.submenu{
   @include clearfix;
   h1 {
     margin: ms(1) 0;
-    @include span(12);
+    @include span(10 of 12);
+  }
+  .add-button {
+    float: right;
+    margin-top: ms(1);
   }
 }
 
@@ -199,6 +203,7 @@ ul.submenu{
   }
   h1 {
     margin: 0 0 ms(-2) 0;
+    @include span(12 of 12);
   }
 }
 .main {
