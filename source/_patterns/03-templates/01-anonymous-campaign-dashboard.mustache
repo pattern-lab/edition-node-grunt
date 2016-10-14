@@ -1,0 +1,42 @@
+{{> molecules-primary-nav-anon }}
+<main>
+	<section class="panel header">
+	  <p class="heading--subheader">Campaign</p>
+	  <h1 class="heading--display">Participatory Budgeting - Cycle 4</h1>
+	  <p class="heading--title">It's that time again - the City is collecting ideas for the fourth cycle of Participatory Budgeting (PB) in Vallejo. Share your ideas on how you want to use Measure B tax dollars to make Vallejo even better.</p>
+	</section>
+	<section class="panel">
+		<h1 class="heading--title">Campaigns Status</h1>
+			<div class="timeline">
+				<div class="timeline-item inactive">Proposals</div>
+				<div class="timeline-item inactive">Deliberation</div>
+				<div class="timeline-item active">Voting</div>
+				<div class="timeline-item future">Implementation</div>
+			</div>
+	</section>
+	<section class="panel ideas-and-proposals">
+		<section class="list--proposal">
+			<h1 class="heading--title">Proposals <span><a href="#">See More</a></span></h1>
+			{{# listItems.four }}
+			{{> molecules-proposal-card }}
+			{{/ listItems.four }}
+		</section>
+		<section class="list--idea">
+			<h1 class="heading--title">Ideas <span><a href="#">See More</a></span></h1>
+				{{# listItems.seven }}
+		    {{> molecules-idea-card }}
+		    {{/ listItems.seven }}
+		</section>
+	</section>
+	<section class="panel conversation-thread">
+		<h1 class="heading--title">Conversations</h1>
+		{{> molecules-single-conversation }}
+	</section>
+	<div class="panel reply-field">
+		<h1 class="heading--title">Start a Conversation</h1>
+		{{> molecules-comment-form-user }}
+	</div>
+</main>
+<footer>
+	footer
+</footer>

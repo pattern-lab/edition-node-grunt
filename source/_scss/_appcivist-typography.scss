@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
 }
 
-header {
+.header {
   text-align: center;
 }
 
@@ -65,10 +65,15 @@ button, .button {
 }
 .heading--title {
   font-size: $typography__heading--title;
-  line-height: ms(2);
+  line-height: ms(1);
 }
 .heading--subheader {
   font-size: $typography__heading--subheader;
+  line-height: ms(1);
+  text-transform: uppercase;
+}
+.heading--subheader-small {
+  font-size: $typography__body--small;
   line-height: ms(1);
   text-transform: uppercase;
 }
@@ -127,4 +132,9 @@ em {
   p {
     font-size: ms(1);
   }
+}
+
+.panel span, .list-array span {
+  font-size: ms(-1);
+  text-align: right;
 }

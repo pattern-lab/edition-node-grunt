@@ -15,15 +15,13 @@
 		</div>
 	</div>
 	<div class="panel">
-		<h1 class="heading--title">Proposals</h2>{{> atoms-add-button }}
-		<div>
-			{{# listItems.four }}
-			{{> molecules-proposal-card }}
-			{{/ listItems.four }}
-		</div>
+		{{> molecules-proposals-panel }}
+		{{> molecules-ideas-panel }}
 	</div>
-	<div class="panel">
-		<h1 class="heading--title">Conversations in this {{ type }} (Forum)</h2>
+	<div class="panel full-panel">
+		<div class="panel-head">
+			<h1 class="heading--title">5 Conversations in this Campaign <span><a href="#">Add New</a></span></h2>
+		</div>
 		<div>
 			{{> organisms-comment-thread }}
 		</div>

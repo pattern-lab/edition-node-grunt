@@ -8,6 +8,7 @@ TABLE OF CONTENTS
 3.0 BUTTONS
 4.0 PANELS & CARDS
 5.0 MODALS
+6.0 COMMENTS
 /--------------------------------------*/
 
 
@@ -46,6 +47,10 @@ figure {
       }
     }
   }
+}
+
+li {
+  list-style: none;
 }
 
 // 2.0 BUTTONS
@@ -178,15 +183,13 @@ ul.submenu{
 
 // 4.0 PANELS & CARDS
 
-.panel {
-  @include clearfix;
+
+
+.conversation-container {
+  padding: ms(1);
+  border-radius: $layout__border-radius;
   h1 {
-    margin: ms(1) 0;
-    @include span(10 of 12);
-  }
-  .add-button {
-    float: right;
-    margin-top: ms(1);
+    width: 100%;
   }
 }
 
@@ -194,13 +197,7 @@ ul.submenu{
   padding: ms(1);
   border-radius: $layout__border-radius;
   @include clearfix;
-  @include breakpoint(phablet) {
-    @include gallery(6 of 12);
-    margin-bottom: gutter(12);
-  }
-  @include breakpoint(laptop) {
-    @include gallery(4 of 12);
-  }
+  margin-bottom: ms(-1);
   h1 {
     margin: 0 0 ms(-2) 0;
     @include span(12 of 12);
@@ -241,4 +238,104 @@ ul.submenu{
   .close {
     margin-bottom: 2em;
   }
+}
+
+// 6.0 COMMENTS
+.comment-meta {
+  @include span(10 of 12);
+  @include clearfix;
+  h1 {
+    margin: ms(-1) 0;
+  }
+  h2 {
+    @include span(12 of 12);
+    padding-bottom: ms(2);
+  }
+  img {
+    @include span(1 of 12);
+    max-width: ms(2);
+  }
+  h4 {
+    @include span(6 of 12);
+    margin-left: ms(-1);
+  }
+}
+.comment-text {
+  @include span(10 of 12);
+  p {
+    margin-top: ms(-1);
+  }
+}
+.comment-voting {
+  float: right;
+}
+.comment-reply-controls {
+  @include span(12 of 12);
+  a.reply-count {
+    margin-top: ms(2);
+  }
+  button.reply, a.reply {
+    float: right;
+  }
+}
+
+.comment-form {
+  //padding: ms(1);
+  margin: ms(1);
+  label {
+    padding: ms(1) 0;
+  }
+  .comment-meta {
+    @include span(9 of 12);
+  }
+  input {
+    @include span(3 of 12);
+    float: right;
+  }
+}
+
+.threaded-comments {
+  @include span(12 of 12);
+  margin-left: ms(2);
+}
+
+// temp styles
+.panel {
+  border: 1px dotted blue;
+  min-height: 50px;
+  max-width: 55em;
+  margin: 0 auto;
+  padding: ms(2);
+  @include clearfix;
+  h1 {
+    margin-bottom: ms(-1);
+    & span {
+      padding-left: ms(2);
+    }
+  }
+}
+.ideas-and-proposals section, .activity-and-members section {
+  @include breakpoint(phablet) {
+    @include gallery(3 of 6);
+  }
+}
+
+
+.member-card {
+  @include display-flex;
+  figure {
+    border-radius: 50px;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+  //  margin-right: ms(1);
+    img {
+      width: 50px;
+    }
+  }
+}
+.temp-array {
+  border: 1px dotted green;
+  min-height: 50px;
+  padding: 0;
 }

@@ -4,8 +4,9 @@ in use throughout the AppCivist Sass files
 
 TABLE OF CONTENTS
 1.0 GENERAL
-2.0 ALERTS
-3.0 NAVIGATION
+2.0 BUTTONS
+3.0 ALERTS
+4.0 NAVIGATION
 /--------------------------------------*/
 
 .color__brand-primary {
@@ -176,6 +177,12 @@ ul.submenu{
 
 .panel{
   //border: 1px solid $color__borders;
+  &.comment-container {
+    border-top: 1px solid $color__borders;
+  }
+  &.conversation-container {
+    border: 1px solid $color__borders;
+  }
 }
 .card, .timeline-item {
   border: 1px solid $color__borders;
@@ -199,5 +206,5 @@ ul.submenu{
 
 // 5.0 TYPE
 .heading--subheader {
-  color: $color__text--secondary;
+  //color: $color__text--secondary;
 }

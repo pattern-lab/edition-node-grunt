@@ -1,4 +1,4 @@
-<li class="panel comment-container">
+<li class="panel conversation-container">
 	<div class="comment-meta">
 		<h2 class="comment-timestamp heading--subheader-small">Yesterday in <a href="#">Housing and Urban Development (HUD) Funds</a></h2>
 		{{> atoms-avatar }}
@@ -14,4 +14,9 @@
 		<a class="heading--subheader reply-count">2 Replies</a>
 		<a class="heading--subheader reply-count reply">Reply to this comment</a>
 	</div>
+	<ul class="threaded-comments">
+		{{> molecules-single-comment }}
+		{{> molecules-single-comment }}
+		{{> molecules-single-comment }}
+	</ul>
 </li>

@@ -1,5 +1,7 @@
-<dl>
-	<img src={{ img.avatar.src }} alt={{ img.avatar.alt }}/>
-	<dt>{{ name.first }} {{ name.last }}</dt>
+<dl class="member-card">
+	<figure>
+		{{> atoms-avatar }}
+	</figure>
+	<h4><a href="#">{{ name.first }} {{ name.last }}</a></h4>
 	{{> atoms-more-menu-button }}
 </dl>
