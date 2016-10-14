@@ -67,6 +67,10 @@ header {
   }
 }
 
+.overlay-background {
+  background-color: $color__text--primary;
+}
+
 // 2.0 BUTTONS
 button, .button {
   color: darken($color__brand-accent, 50%);
@@ -177,6 +181,7 @@ ul.submenu{
 
 .panel{
   //border: 1px solid $color__borders;
+  background-color: $color__background;
   &.comment-container {
     border-top: 1px solid $color__borders;
   }

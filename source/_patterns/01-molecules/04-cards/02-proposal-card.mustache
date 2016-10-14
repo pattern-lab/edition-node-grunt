@@ -1,8 +1,7 @@
 <div class="card">
   <div class="main">
-    <small>In the <a href="{{ url }}">{{ group.name }}</a> working group.</small>
-    <h1 class="heading--title">{{ title.short }}</h1>
-    <p>{{ excerpt.short }}</p>
+    <small>In the <a href="{{ url }}">{{ group.name }}</a> working group</small>
+    <h1 class="heading--title"><a href="{{ link.templates-single-proposal }}">{{ title.short }}</a></h1>
   </div>
   <div class="action">
     {{> molecules-voting-module }}

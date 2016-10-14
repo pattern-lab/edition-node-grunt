@@ -2,6 +2,8 @@
 	<figure>
 		{{> atoms-avatar }}
 	</figure>
-	<h4><a href="#">{{ name.first }} {{ name.last }}</a></h4>
+	<div class="user-name">
+		<h4><a href="{{ link.template-member-profile }}">{{ name.first }} {{ name.last }}</a></h4>
+	</div>
 	{{> atoms-more-menu-button }}
 </dl>

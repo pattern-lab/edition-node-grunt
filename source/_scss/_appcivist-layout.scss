@@ -223,20 +223,10 @@ ul.submenu{
 
 // 5.0 MODALS
 .modal {
-  padding: 2em;
-  max-width: 56em;
-  margin: 0 auto;
-  border: 10px solid $color__borders;
-  header {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .column-1 {
-    @include flex-direction(column);
-    text-align: right;
-  }
-  .close {
-    margin-bottom: 2em;
+  margin: ms(2) auto;
+  max-width: 60em;
+  .close-button {
+    margin-bottom: ms(1);
   }
 }
 
@@ -301,7 +291,7 @@ ul.submenu{
 
 // temp styles
 .panel {
-  border: 1px dotted blue;
+  //border: 1px dotted blue;
   min-height: 50px;
   max-width: 55em;
   margin: 0 auto;
@@ -314,28 +304,35 @@ ul.submenu{
     }
   }
 }
-.ideas-and-proposals section, .activity-and-members section {
+.ideas-and-proposals section, .activity-and-members section, .text-created-attachments-similar section {
   @include breakpoint(phablet) {
     @include gallery(3 of 6);
   }
 }
 
-
 .member-card {
+  max-width: 250px;
+  border-bottom: 1px solid $color__borders;
+  margin: ms(-1) 0;
   @include display-flex;
+  @include justify-content(space-between);
   figure {
-    border-radius: 50px;
+    border-radius: 60px;
     overflow: hidden;
-    width: 50px;
+    max-width: 50px;
     height: 50px;
-  //  margin-right: ms(1);
+    flex-grow: 0;
+    margin: ms(-2) 0;
     img {
       width: 50px;
     }
   }
-}
-.temp-array {
-  border: 1px dotted green;
-  min-height: 50px;
-  padding: 0;
+  .user-name {
+    margin: ms(1) ms(1);
+    flex-grow: 4;
+  }
+  .more-menu {
+    max-width: 4px;
+    flex-grow: 2;
+  }
 }

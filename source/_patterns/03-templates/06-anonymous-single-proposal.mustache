@@ -1,0 +1,45 @@
+{{> molecules-primary-nav-anon }}
+<main class="overlay-background">
+	<section class="modal">
+		<section class="panel header">
+		  <div class="main">
+				<p class="heading--subheader">Proposal</p>
+			  <h1 class="heading--display">{{ title.short }}</h1>
+			  <p class="heading--title">{{ excerpt.short }}</p>
+				<small>In the <a href="{{ url }}">{{ group.name }}</a> working group.</small>
+				{{> molecules-tags }}
+			</div>
+			<div class="action">
+				{{> atoms-close-button }}
+				{{> molecules-voting-module }}
+			</div>
+		</section>
+		<section class="panel text-created-attachments-similar">
+			<section class="temp-array proposal-text">
+				<h1 class="heading--title">Proposal Text</h1>
+				ETHERPAD GOES HERE
+			</section>
+			<section class="temp-array created-attachments-similar">
+				<h1 class="heading--title">Created by</h1>
+				{{# listItems.one }}
+				{{> atoms-list-item-user-with-menu }}
+				{{/ listItems.one }}
+				<h1 class="heading--title">Attachments <span><a href="#">Add New</a></span></h1>
+				{{# listItems.one }}
+				{{> atoms-list-item-user-with-menu }}
+				{{/ listItems.one }}
+				<h1 class="heading--title">Similar Proposals</h1>
+				{{# listItems.three }}
+				{{> atoms-definition-list-item }}
+				{{/ listItems.three }}
+			</section>
+		</section>
+		<section class="panel conversation-thread" id="prototype-only-anchor-link-for-comment">
+			<h1 class="heading--title">Conversations <span><a href="#">Start a conversation</a></span></h1>
+			{{> molecules-single-conversation }}
+		</section>
+		<div class="panel reply-field">
+			<h1 class="heading--title">Start a Conversation</h1>
+			{{> molecules-comment-form-user }}
+		</div>
+	</main>
