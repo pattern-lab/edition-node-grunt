@@ -34,6 +34,10 @@ TABLE OF CONTENTS
 
 // 1.0 GENERAL
 
+body {
+  background-color: darken($color__background, 10%);
+}
+
 a {
   color: $color__link--active;
   &:hover, &:focus {
@@ -103,7 +107,7 @@ button, .button {
     background-color: darken($color__alert-background, 20%);
   }
 }
-.add-button, .close-button, .more-menu, .upvote, .downvote {
+.add-button, .close-button, .more-menu, .action-button, .upvote, .downvote {
   svg g {
      fill: darken($color__brand-accent, 50%);
   }
@@ -115,13 +119,7 @@ button, .button {
     background-color: lighten($color__brand-accent, 30%);
   }
 }
-.more-menu {
-  background-color: lighten($color__brand-accent, 100%);
-  border-color: lighten($color__brand-accent, 100%);
-  &:hover {
-    background-color: lighten($color__brand-accent, 30%);
-  }
-}
+
 
 // 3.0 ALERTS
 .alert {
@@ -191,6 +189,11 @@ ul.submenu{
 }
 .card, .timeline-item {
   border: 1px solid $color__borders;
+  background-color: $color__background;
+}
+
+.card-list {
+  background-color: $color__background;
 }
 
 .inactive {

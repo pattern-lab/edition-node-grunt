@@ -15,7 +15,7 @@ TABLE OF CONTENTS
 // 1.0 GENERAL
 body {
   font-family: $typography__font-stack--system;
-  line-height: 1.2em;
+  line-height: ms(1.8);
   -webkit-text-size-adjust: 100%;
   min-height: 100vh;
 }
@@ -65,7 +65,7 @@ button, .button {
 }
 .heading--title {
   font-size: $typography__heading--title;
-  line-height: ms(1);
+  line-height: ms(1.5);
 }
 .heading--subheader {
   font-size: $typography__heading--subheader;
@@ -99,9 +99,7 @@ figcaption {
 }
 
 // 4.0 LISTS
-dt {
-  font-weight: bold;
-}
+
 .timeline {
   text-align: center;
   text-transform: uppercase;

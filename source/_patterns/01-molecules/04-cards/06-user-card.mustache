@@ -1,14 +1,7 @@
-<div class="card">
-  <div class="card-info">
-    <h1 class="heading--title"><a href="{{ link.templates-single-proposal }}">{{ title.short }}</a></h1>
-  </div>
-  <div class="action-bar">
-    <div class="voting-button upvote">
-      <a href="#">+ 8888</a>
-    </div>
-    <div class="voting-button downvote">
-      <a href="#">- 8888</a>
-    </div>
+<div class="card-list">
+  <div class="action-bar small-card member-card">
+		<figure>{{> atoms-avatar }}</figure>
+		<h4><a href="{{ link.template-member-profile }}">{{ name.first }} {{ name.last }}</a></h4>
     <div class="action-button">
       <input id="menu04" type="checkbox" name="menu" />
       <svg width="4px" height="16px" viewBox="0 0 4 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -21,9 +14,8 @@
           </g>
       </svg>
       <ul class="action-menu">
-          <li><a href="#">Edit</a></li>
-          <li><a href="#">Exclude</a></li>
-          <li><a href="#">Archive</a></li>
+          <li><a href="#">Message this user</a></li>
+          <li><a href="#">Remove this user</a></li>
       </ul>
     </div>
   </div>

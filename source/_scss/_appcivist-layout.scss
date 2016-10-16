@@ -36,14 +36,16 @@ figure {
 }
 
 .tags {
-  ul {
-    li {
-      float: left;
-      //padding: ms(1) 0 ms(1) 0em;
+  span {
+    line-height: 0;
+    &:after {
+      content: '|';
+      padding-left: ms(-1);
+      padding-right: ms(-2);
+    }
+    &:last-of-type {
       &:after {
-        content: '|';
-        padding-left: ms(1);
-        padding-right: ms(1);
+        content:'';
       }
     }
   }
@@ -102,7 +104,7 @@ header {
     height:3em;
     margin:0;
     padding:0 10px;
-}
+  }
 
   ul#menu > li{
     list-style-type:none;
@@ -194,23 +196,15 @@ ul.submenu{
 }
 
 .card {
-  padding: ms(1);
   border-radius: $layout__border-radius;
-  @include clearfix;
   margin-bottom: ms(-1);
-  h1 {
-    margin: 0 0 ms(-2) 0;
-    @include span(12 of 12);
-  }
+  overflow: hidden;
 }
-.main {
-  @include span(3 of 4);
-}
-.action {
-  float: right;
-}
-.tags {
-  @include span(1 of 1);
+
+.card-list {
+  border-radius: 0;
+  margin-bottom: ms(-1);
+  overflow: hidden;
 }
 
 .timeline {
@@ -227,6 +221,12 @@ ul.submenu{
   max-width: 60em;
   .close-button {
     margin-bottom: ms(1);
+    float: right;
+  }
+  .header {
+    .action-bar {
+      border-bottom: 1px solid $color__borders;
+    }
   }
 }
 
@@ -291,7 +291,6 @@ ul.submenu{
 
 // temp styles
 .panel {
-  //border: 1px dotted blue;
   min-height: 50px;
   max-width: 55em;
   margin: 0 auto;
@@ -304,35 +303,124 @@ ul.submenu{
     }
   }
 }
-.ideas-and-proposals section, .activity-and-members section, .text-created-attachments-similar section {
+.ideas-and-proposals section, .text-created-attachments-similar section {
   @include breakpoint(phablet) {
     @include gallery(3 of 6);
   }
 }
 
-.member-card {
-  max-width: 250px;
-  border-bottom: 1px solid $color__borders;
-  margin: ms(-1) 0;
+.activity-and-members {
   @include display-flex;
   @include justify-content(space-between);
+}
+
+.member-card {
   figure {
     border-radius: 60px;
     overflow: hidden;
-    max-width: 50px;
-    height: 50px;
+    max-width: 40px;
+    height: 40px;
     flex-grow: 0;
-    margin: ms(-2) 0;
+    margin: ms(-2);
     img {
-      width: 50px;
+      width: 40px;
     }
   }
-  .user-name {
-    margin: ms(1) ms(1);
+  h4 {
     flex-grow: 4;
+    padding: ms(1);
   }
-  .more-menu {
-    max-width: 4px;
-    flex-grow: 2;
+}
+
+.file-card {
+  figure {
+    border-radius: 0px;
+    overflow: visible;
+    flex-grow: 0;
+    margin: ms(-2) ms(-1) 0 ms(1);
+    img {
+      max-width: 30px;
+    }
+  }
+  h4 {
+    flex-grow: 4;
+    padding: ms(1);
+  }
+}
+
+.activity-stream-item {
+  border-bottom: 1px solid $color__borders;
+  margin: ms(-1) 0;
+  padding: ms(-1) 0 ms(1);
+  .heading--subheader-small {
+    padding-bottom: ms(-1);
+  }
+}
+
+
+.card-info {
+  padding: ms(-1);
+  h1 {
+    margin: ms(-4) 0 ms(-2);
+  }
+}
+.action-bar {
+  border-top: 1px solid $color__borders;
+  @include display-flex;
+  @include justify-content(space-between);
+  .voting-button {
+    text-align: center;
+    flex-grow: 4;
+    padding: ms(-1);
+    z-index: 100;
+  }
+  .action-button {
+    text-align: right;
+    padding: ms(-1) ms(1) ms(-1) 0;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0;
+    overflow:visible;
+    max-width: 50px;
+  }
+  input {
+    display: hidden;
+  }
+  input:checked ~ .action-menu {
+    max-height:3000px;
+    margin: 1em 0 0 -10em;
+    li {
+      opacity: 1;
+    }
+  }
+}
+.small-card {
+  border-top: 0;
+  h1 {
+    padding: ms(-4) 0 ms(-2) ms(-1);
+  }
+}
+
+ul.action-menu {
+  max-height: 0px;
+  //min-width: 200px;
+  li {
+    border-top: 1px solid $color__borders;
+    z-index: 999999;
+    padding: ms(-1);
+    opacity: 0;
+    &:first-of-type {
+      border-top: 0;
+    }
+  }
+}
+.upvote {
+  &:before {
+    content:'';
+  }
+}
+.downvote {
+  &:before {
+    content:'';
   }
 }

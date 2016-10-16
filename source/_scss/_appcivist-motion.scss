@@ -42,6 +42,14 @@ header {
   }
 }
 
+.action-bar {
+  input:checked ~ ul.action-menu {
+    @include transition-property(max-height);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease-in);
+  }
+}
+
 ul.submenu {
   @include transition-property(max-height);
   @include transition-duration(.5s);

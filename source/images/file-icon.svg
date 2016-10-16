@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="33px" viewBox="0 0 24 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Appcivist/Icon/File</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Modals" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Appcivist/Modal/Full-Proposal" transform="translate(-502.000000, -343.000000)" fill="#B1B1B1">
+            <g id="Group-5" transform="translate(23.000000, 26.000000)">
+                <g id="Group" transform="translate(471.000000, 269.000000)">
+                    <g id="Appcivist/List-Item/File" transform="translate(0.000000, 40.000000)">
+                        <g id="Appcivist/Icon/File" transform="translate(8.000000, 8.000000)">
+                            <g id="512">
+                                <path d="M31.9341639,15.4866885 L16.4646995,0.017136612 L15.1364372,0.017136612 L14.6439344,0.017136612 L0.0776393443,0.017136612 L0.0776393443,43.715847 L31.9412459,43.715847 L31.9412459,15.4893989 L31.9341639,15.4866885 L31.9341639,15.4866885 Z M16.4646995,2.59191257 L28.4562186,14.5833443 L16.4646995,14.5833443 L16.4646995,2.59191257 L16.4646995,2.59191257 Z M1.89840437,41.895082 L1.89840437,1.83790164 L14.6439344,1.83790164 L14.6439344,16.4041093 L30.1205683,16.4041093 L30.1205683,41.8949945 L1.89840437,41.8949945 L1.89840437,41.895082 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

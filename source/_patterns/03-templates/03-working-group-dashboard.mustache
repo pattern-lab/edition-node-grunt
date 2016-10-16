@@ -6,16 +6,16 @@
 	  <p class="heading--title">This is the working group dedicated to looking out for the general wellbeing of our citizens.</p>
 	</section>
 	<section class="panel activity-and-members">
-		<section class="latest-activity temp-array">
+		<section class="latest-activity">
 			<h1 class="heading--title">Latest Activity</h1>
 			{{# listItems.ten }}
 			{{> atoms-activity-stream-list-item }}
 			{{/ listItems.ten }}
 		</section>
-		<section class="members-list temp-array">
-			<h1 class="heading--title">Members <span><a href="#">Add New</a></span></h1>
+		<section>
+			<h1 class="heading--title">Members <span><a href="#">See More</a> | <a href="#">Add New</a></span></h1>
 			{{# listItems.nine }}
-			{{> atoms-list-item-user-with-menu }}
+			{{> molecules-user-card }}
 			{{/ listItems.nine }}
 		</section>
 	</section>
