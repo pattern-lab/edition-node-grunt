@@ -34,8 +34,12 @@ TABLE OF CONTENTS
 
 // 1.0 GENERAL
 
+html, .sg-main {
+  background-color: $color__text--reverse;
+}
+
 body {
-  background-color: darken($color__background, 10%);
+  background-color: $color__background;
 }
 
 a {
@@ -179,7 +183,7 @@ ul.submenu{
 
 .panel{
   //border: 1px solid $color__borders;
-  background-color: $color__background;
+  background-color: $color__text--reverse;
   &.comment-container {
     border-top: 1px solid $color__borders;
   }
@@ -189,11 +193,11 @@ ul.submenu{
 }
 .card, .timeline-item {
   border: 1px solid $color__borders;
-  background-color: $color__background;
+  background-color: $color__text--reverse;
 }
 
 .card-list {
-  background-color: $color__background;
+  background-color: $color__text--reverse;
 }
 
 .inactive {

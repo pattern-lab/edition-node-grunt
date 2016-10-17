@@ -49,7 +49,7 @@ button, .button {
 // 2.0 HEADINGS
 .heading--mega {
   font-size: $typography__heading--mega;
-  line-height: ms(1);
+  line-height: ms(2);
 }
 .heading--jumbo {
   font-size: $typography__heading--jumbo;
@@ -57,7 +57,7 @@ button, .button {
 }
 .heading--display {
   font-size: $typography__heading--display;
-  line-height: ms(1);
+  line-height: ms(1.8);
 }
 .heading--headline {
   font-size: $typography__heading--headline;
@@ -118,6 +118,7 @@ em {
 
 .submenu div li {
   font-size: $typography__body--caption;
+  font-weight: normal;
 }
 .submenu {
   text-align: left;

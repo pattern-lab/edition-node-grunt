@@ -115,7 +115,7 @@ header {
     @include span(3 of 12);
   }
   label, .logo {
-    padding:0 18px 0 12px;
+    padding:0 18px 0 50px;
     line-height:3em;
     cursor:pointer;
   }
@@ -152,6 +152,7 @@ header {
     //position: fixed;
     margin-top: -38px;
     margin-left: 10px;
+    margin-bottom: ms(-2);
     border-radius: 50px;
     overflow: hidden;
     width: 30px;
@@ -168,7 +169,7 @@ ul.submenu{
   padding: 0;
   overflow: hidden;
   list-style-type:none;
-  //position:absolute;
+  position:absolute;
   min-width:240px;
   div li a, li a {
     display:block;
@@ -384,7 +385,7 @@ ul.submenu{
     max-width: 50px;
   }
   input {
-    display: hidden;
+    //display: none;
   }
   input:checked ~ .action-menu {
     max-height:3000px;

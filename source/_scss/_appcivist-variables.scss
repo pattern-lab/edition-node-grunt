@@ -38,17 +38,17 @@ $susy: (
 $layout__border-radius: 4px;
 
 // 3.0 COLOR
-$color__brand-primary: #2196F3;
-$color__brand-primary--light: #BBDEFB;
-$color__brand-primary--dark: #1976D2;
+$color__brand-primary: #607D8B;
+$color__brand-primary--light: #CFD8DC;
+$color__brand-primary--dark: #455A64;
 
-$color__brand-accent: #FF5252;
+$color__brand-accent: #536DFE;
 
 $color__text--primary: #212121;
 $color__text--secondary: #757575;
 $color__text--reverse: #ffffff;
 
-$color__background: $color__text--reverse;
+$color__background: $color__brand-primary--light;
 $color__borders: #BDBDBD;
 
 $color__link--active: $color__brand-accent;
