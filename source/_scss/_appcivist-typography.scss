@@ -20,6 +20,10 @@ body {
   min-height: 100vh;
 }
 
+.body--bodycopy {
+  font-size: $typography__body--bodycopy;
+}
+
 .header {
   //text-align: center;
 }
@@ -136,4 +140,8 @@ em {
 .panel span, .list-array span {
   font-size: ms(-1);
   text-align: right;
+}
+
+footer {
+  text-align: center;
 }

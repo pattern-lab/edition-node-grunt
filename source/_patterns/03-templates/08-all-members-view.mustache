@@ -1,0 +1,34 @@
+{{> molecules-primary-nav }}
+<main>
+	<section class="panel header">
+	  <h1 class="heading--display">All Members</h1>
+	  <p class="heading--title">in the <a href="{{ link.templates-working-group-dashboard }}">{{ group.name }}</a> Working Group.</p>
+		{{> atoms-add-button }} Add a new member
+	</section>
+	<section class="panel">
+		{{> molecules-pagination }}
+	</section>
+	<section class="panel">
+		<section class="list--idea all-ideas">
+				{{# listItems.ten }}
+		    {{> molecules-user-card }}
+		    {{/ listItems.ten }}
+				{{# listItems.ten }}
+		    {{> molecules-user-card }}
+		    {{/ listItems.ten }}
+				{{# listItems.ten }}
+		    {{> molecules-user-card }}
+		    {{/ listItems.ten }}
+				{{# listItems.ten }}
+		    {{> molecules-user-card }}
+		    {{/ listItems.ten }}
+				{{# listItems.ten }}
+		    {{> molecules-user-card }}
+		    {{/ listItems.ten }}
+		</section>
+	</section>
+	<section class="panel">
+		{{> molecules-pagination }}
+	</section>
+</main>
+{{> organisms-footer }}

@@ -209,10 +209,18 @@ ul.submenu{
 }
 
 .timeline {
+  @include display-flex;
+  @include justify-content(center);
+  margin-top: ms(2);
   &-item {
-    @include gallery(1 of 4);
-    padding: ms(1);
-    border-radius: $layout__border-radius;
+    padding: 0 ms(1);
+  }
+  .marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 60px;
+    background-color: $color__borders;
+    margin: -.7em auto ms(-1);
   }
 }
 
@@ -313,6 +321,20 @@ ul.submenu{
 .activity-and-members {
   @include display-flex;
   @include justify-content(space-between);
+}
+
+.all-ideas div {
+  @include breakpoint(phablet) {
+    @include gallery(4 of 8);
+  }
+}
+
+.all-proposals {
+  .card {
+    @include breakpoint(phablet) {
+      @include gallery(4 of 8);
+    }
+  }
 }
 
 .member-card {
@@ -423,5 +445,17 @@ ul.action-menu {
 .downvote {
   &:before {
     content:'';
+  }
+}
+
+ol.pagination {
+  @include display-flex;
+  @include justify-content(center);
+}
+
+footer {
+  padding: ms(2);
+  p {
+    margin-bottom: ms(-1);
   }
 }

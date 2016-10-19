@@ -39,7 +39,7 @@ html, .sg-main {
 }
 
 body {
-  background-color: $color__background;
+  background-color: $color__brand-primary;
 }
 
 a {
@@ -191,7 +191,7 @@ ul.submenu{
     border: 1px solid $color__borders;
   }
 }
-.card, .timeline-item {
+.card {
   border: 1px solid $color__borders;
   background-color: $color__text--reverse;
 }
@@ -200,23 +200,32 @@ ul.submenu{
   background-color: $color__text--reverse;
 }
 
+.timeline-item {
+  border-top: 1px solid $color__borders;
+}
 .inactive {
-  color: lighten($color__text--secondary, 10%);
-  background-color: lighten($color__text--secondary, 40%);
-  border: 1px solid lighten($color__text--secondary, 30%);
+  color: lighten($color__text--secondary, 30%);
+  .marker {
+    background-color: lighten($color__text--secondary, 30%);
+  }
 }
 .active {
-  color: $color__text--reverse;
-  background-color: $color__text--secondary;
-  border: 1px solid $color__text--secondary;
+  color: $color__brand-primary;
+  .marker {
+    background-color: $color__brand-primary;
+    }
 }
 .future {
-  color: lighten($color__text--secondary, 30%);
-  background-color: $color__text--reverse;
-  border: 1px solid lighten($color__text--secondary, 30%);
+  color: $color__brand-primary--light;
+  .marker {
+    background-color: $color__brand-primary--light;
+  }
 }
-
 // 5.0 TYPE
 .heading--subheader {
   //color: $color__text--secondary;
+}
+
+footer, footer a {
+  color: $color__text--reverse;
 }
