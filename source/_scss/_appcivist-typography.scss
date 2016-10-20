@@ -15,16 +15,17 @@ TABLE OF CONTENTS
 // 1.0 GENERAL
 body {
   font-family: $typography__font-stack--system;
-  line-height: ms(1.8);
+  font-size: $typography__body;
   -webkit-text-size-adjust: 100%;
   min-height: 100vh;
 }
 
 .body--bodycopy {
-  font-size: $typography__body--bodycopy;
+  font-size: $typography__body;
 }
 
 a {
+  text-decoration: none;
   &:focus {
   }
 }
@@ -35,7 +36,7 @@ nav a {
 
 .tags {
   text-transform: uppercase;
-  font-size: $typography__body--small;
+  font-size: $typography__tiny;
 }
 
 // BUTTONS
@@ -43,62 +44,59 @@ button, .button {
   text-transform: uppercase;
 }
 .tiny.button {
-  font-size: ms(-1);
+  font-size: $typography__tiny;
 }
 .large.button {
-  font-size: ms(2);
+  font-size: $typography__tiny;
 }
 
 
-// 2.0 HEADINGS
-.heading--mega {
-  font-size: $typography__heading--mega;
-  line-height: ms(2);
-}
-.heading--jumbo {
-  font-size: $typography__heading--jumbo;
-  line-height: ms(1);
-}
-.heading--display {
-  font-size: $typography__heading--display;
-  line-height: ms(1.8);
+// 2.0 BASE SIZES
+
+.heading--title {
+  font-size: $typography__title;
 }
 .heading--headline {
-  font-size: $typography__heading--headline;
+  font-size: $typography__headline;
   line-height: ms(1);
+  span {
+    font-weight: lighter;
+  }
 }
-.heading--title {
-  font-size: $typography__heading--title;
-  line-height: ms(1.5);
+p {
+  font-size: $typography__body;
+}
+small, .heading--small {
+  font-size: $typography__small;
+  line-height: -ms(1);
+}
+.heading--header {
+  font-size: $typography__header;
+  line-height: ms(1);
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .heading--subheader {
-  font-size: $typography__heading--subheader;
+  font-size: $typography__subheader;
   line-height: ms(1);
   text-transform: uppercase;
 }
-.heading--subheader-small {
-  font-size: $typography__body--small;
-  line-height: ms(1);
-  text-transform: uppercase;
+.tiny {
+  font-size: $typography__tiny;
 }
 
 // 3.0 BODY TEXT
-p {
-  font-size: $typography__body--bodycopy;
-}
-small {
-  font-size: $typography__body--small;
-  line-height: -ms(1);
-}
+
+
 blockquote {
-  font-size: $typography__heading--subheader;
+  font-size: $typography__headline;
   font-style: italic;
 }
 time {
-  font-size: $typography__body--caption;
+  font-size: $typography__subheader;
 }
 figcaption {
-  font-size: $typography__body--caption;
+  font-size: $typography__small;
   font-style: italic;
 }
 
@@ -114,14 +112,19 @@ figcaption {
   small {
     text-transform: uppercase;
   }
-  p {
-    font-size: ms(1);
-  }
 }
 
 .panel span, .list-array span {
-  font-size: ms(-1);
   text-align: right;
+}
+
+.panel {
+  &-heading {
+      margin-bottom: ms(-1);
+      p {
+         margin-bottom: 0;
+      }
+  }
 }
 
 footer {

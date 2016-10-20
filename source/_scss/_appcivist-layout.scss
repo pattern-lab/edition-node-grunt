@@ -262,15 +262,12 @@ button, .button {
 // temp styles
 .panel {
   min-height: 50px;
-  //max-width: 55em;
   margin: 0;
   padding: ms(2);
   @include clearfix;
-  h1 {
-    margin-bottom: ms(-1);
-    & span {
-      padding-left: ms(2);
-    }
+  .panel-heading {
+    @include display-flex;
+    @include justify-content(space-between);
   }
 }
 .anonymous {

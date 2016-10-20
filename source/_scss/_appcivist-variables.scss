@@ -11,19 +11,17 @@ TABLE OF CONTENTS
 
 // 1.0 TYPOGRAPHY
 //Modular Scale
-$ms-base: .8em;
-$ms-ratio: 1.333;
+$ms-base: 16px;
+$ms-ratio: 1.125;
 
 $typography__font-stack--system: 'open sans', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-$typography__heading--mega: ms(6);
-$typography__heading--jumbo: ms(5);
-$typography__heading--display: ms(4);
-$typography__heading--headline: ms(3);
-$typography__heading--title: ms(2);
-$typography__heading--subheader: ms(1);
-$typography__body--bodycopy: ms(1);
-$typography__body--caption: ms(1);
-$typography__body--small: ms(-1);
+$typography__title: ms(4); // 25.629px
+$typography__headline: ms(2); // 20.25px
+$typography__body: ms(1); // 16px
+$typography__small: ms(-1); // 14.222px
+$typography__header: ms(-1); // 14.222px
+$typography__subheader: ms(-3); // 11.237px
+$typography__tiny: ms(-4); // 9.989px
 
 // 2.0 LAYOUT
 
