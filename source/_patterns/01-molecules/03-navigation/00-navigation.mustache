@@ -1,0 +1,30 @@
+<div class="app-container">
+	<nav class="navigation-logged-in">
+		<div class="logo">
+	    <h1>City of Vallejo
+			<span>Participatory Budgeting</span></h1>
+			<h3>Powered by Appcivist</h3>
+	  </div>
+		<div class="user">
+			<div class="member-card">
+				<figure>{{> atoms-avatar }}</figure>
+				<h4><a href="{{ link.template-member-profile }}">{{ name.first }} {{ name.last }}</a><span><a href="{{ link.templates-member-dashboard }}">My Settings</a> | 
+				<a href="{{ link.templates-anonymous-homepage }}">Log Out</a></span></h4>
+			</div>
+		</div>
+	  <ul class="submenu-working-groups">
+			<h1>My Working Groups</h1>
+			<li>
+				<a href="{{ link.templates-single-working-group }}">Sacramento Streetscape Improvement Project</a>
+			</li>
+			<li>
+				<a href="{{ link.templates-single-working-group }}">Five Year Community Development and Affordable Housing Goals</a>
+			</li>
+		</ul>
+		<ul class="submenu-campaigns">
+			<h1>My Campaigns</h1>
+			<li>
+				<a href="{{ link.templates-single-campaign }}">Submit Participatory Budgeting Project Ideas - Cycle 4</a>
+			</li>
+		</ul>
+	</nav>

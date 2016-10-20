@@ -1,29 +1,31 @@
-{{> molecules-navigation }}
-<main class="app-main">
-	<section class="panel header">
-	  <h1 class="heading--display">All Ideas</h1>
+{{> molecules-navigation-anonymous }}
+<main class="app-main anonymous">
+	<section class="panel  header">
+	  <h1 class="heading--display">All Proposals</h1>
 	  <p class="heading--title">in the <a href="{{ link.templates-working-group-dashboard }}">{{ group.name }}</a> Working Group.</p>
-		{{> atoms-add-button }} Add a new idea
 	</section>
 	<section class="panel">
 		{{> molecules-pagination }}
 	</section>
 	<section class="panel">
-		<section class="list--idea all-ideas">
+		<section class="list--idea all-proposals">
 				{{# listItems.ten }}
-		    {{> molecules-idea-card }}
+		    {{> molecules-proposal-card }}
 		    {{/ listItems.ten }}
 				{{# listItems.ten }}
-		    {{> molecules-idea-card }}
+		    {{> molecules-proposal-card }}
 		    {{/ listItems.ten }}
 				{{# listItems.ten }}
-		    {{> molecules-idea-card }}
+		    {{> molecules-proposal-card }}
 		    {{/ listItems.ten }}
 				{{# listItems.ten }}
-		    {{> molecules-idea-card }}
+		    {{> molecules-proposal-card }}
 		    {{/ listItems.ten }}
 				{{# listItems.ten }}
-		    {{> molecules-idea-card }}
+		    {{> molecules-proposal-card }}
+		    {{/ listItems.ten }}
+				{{# listItems.ten }}
+		    {{> molecules-proposal-card }}
 		    {{/ listItems.ten }}
 		</section>
 	</section>

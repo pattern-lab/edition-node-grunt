@@ -14,7 +14,7 @@ TABLE OF CONTENTS
 
 // 1.0 GENERAL
 main {
-  padding: ms(1);
+  //padding: ms(1);
   header {
       margin: ms(2) auto ms(2);
       max-width: ms(14);
@@ -95,94 +95,70 @@ button, .button {
 
 
 // 3.0 NAVIGATION
-/*Style for the first level menu bar*/
-header {
-  ul#menu {
-    //position:fixed;
-    //top:0;
-    width:100%;
-    height:3em;
-    margin:0;
-    padding:0 10px;
-  }
 
-  ul#menu > li{
-    list-style-type:none;
-    position:relative;
-  }
 
-  .logo {
-    @include span(3 of 12);
-  }
-  label, .logo {
-    padding:0 18px 0 50px;
-    line-height:3em;
-    cursor:pointer;
-  }
+//NEW NAVIGATION
+.app-container {
+  height: 100%;
+  @include flexbox((display: box, box-orient: horizontal));
+  @include flex-direction(row);
+}
 
-  label:after{
-    content:"";
-    position:absolute;
-    display:block;
-    top: 25px;
-    right:5px;
-    width:0;
-    height:0;
+.navigation {
+  &-logged-in {
+    width: 250px;
+    @include display-flex(0);
+    padding: ms(1);
+    .logo {
+      padding-top: 0;
+      padding-bottom: ms(1);
+      span {
+        display:block;
+      }
     }
-
-  /*hide the inputs*/
-  input {
-    display: none;
+    .member-card {
+      @include display-flex;
+      padding: 0;
+      figure {
+        margin-top: ms(1);
+      }
+      span {
+        display: block;
+        font-size: 12px;
+      }
+    }
+    ul {
+      padding: ms(-1) 0;
+      li {
+        padding: ms(-1) 0 ms(-1) ms(1);
+        &:last-of-type {
+          padding-bottom: 0;
+        }
+      }
+    }
   }
-
-  /*show the second levele menu of the selected voice*/
-  input:checked ~ ul.submenu{
-    max-height:3000px;
-  }
-}
-.bar {
-  @include span(6 of 12);
-}
-.user-menu {
-  @include span(3 of 12);
-  float: right;
-  max-width: 240px;
-  margin-right: 0;
-  figure {
-    //position: fixed;
-    margin-top: -38px;
-    margin-left: 10px;
-    margin-bottom: ms(-2);
-    border-radius: 50px;
-    overflow: hidden;
-    width: 30px;
-    height: 30px;
-    img {
-      width: 30px;
+  &-anonymous {
+    @include display-flex;
+    @include justify-content(space-between);
+    .logo {
+      padding: ms(-1);
+    }
+    .sign-up {
+      right: 0;
+      position: absolute;
+      padding: ms(1);
     }
   }
 }
-
-/*style for the second level menu*/
-ul.submenu{
-  max-height:0;
-  padding: 0;
-  overflow: hidden;
-  list-style-type:none;
-  position:absolute;
-  min-width:240px;
-  div li a, li a {
-    display:block;
-    text-decoration:none;
-    //white-space:nowrap;
-  }
-  li a, h1 {
-    padding: 12px;
-  }
-  div li a {
-    padding: ms(-1) ms(1);
-  }
+.app-main {
+   @include display-flex(1);
+   padding-right: 250px;
+   &.anonymous {
+     padding: 0;
+   }
 }
+
+
 
 // 4.0 PANELS & CARDS
 
@@ -219,25 +195,10 @@ ul.submenu{
     width: 20px;
     height: 20px;
     border-radius: 60px;
-    background-color: $color__borders;
     margin: -.7em auto ms(-1);
   }
 }
 
-// 5.0 MODALS
-.modal {
-  margin: ms(2) auto;
-  max-width: 60em;
-  .close-button {
-    margin-bottom: ms(1);
-    float: right;
-  }
-  .header {
-    .action-bar {
-      border-bottom: 1px solid $color__borders;
-    }
-  }
-}
 
 // 6.0 COMMENTS
 .comment-meta {
@@ -301,8 +262,8 @@ ul.submenu{
 // temp styles
 .panel {
   min-height: 50px;
-  max-width: 55em;
-  margin: 0 auto;
+  //max-width: 55em;
+  margin: 0;
   padding: ms(2);
   @include clearfix;
   h1 {
@@ -310,6 +271,12 @@ ul.submenu{
     & span {
       padding-left: ms(2);
     }
+  }
+}
+.anonymous {
+  .panel {
+    max-width: 55em;
+    margin: 0 auto;
   }
 }
 .ideas-and-proposals section, .text-created-attachments-similar section {
@@ -334,6 +301,12 @@ ul.submenu{
     @include breakpoint(phablet) {
       @include gallery(4 of 8);
     }
+  }
+}
+
+.all-members div {
+  @include breakpoint(phablet) {
+    @include gallery(1 of 2);
   }
 }
 
@@ -372,7 +345,6 @@ ul.submenu{
 }
 
 .activity-stream-item {
-  border-bottom: 1px solid $color__borders;
   margin: ms(-1) 0;
   padding: ms(-1) 0 ms(1);
   .heading--subheader-small {
@@ -388,7 +360,6 @@ ul.submenu{
   }
 }
 .action-bar {
-  border-top: 1px solid $color__borders;
   @include display-flex;
   @include justify-content(space-between);
   .voting-button {
@@ -428,7 +399,6 @@ ul.action-menu {
   max-height: 0px;
   //min-width: 200px;
   li {
-    border-top: 1px solid $color__borders;
     z-index: 999999;
     padding: ms(-1);
     opacity: 0;

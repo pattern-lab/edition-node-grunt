@@ -24,13 +24,13 @@ body {
   font-size: $typography__body--bodycopy;
 }
 
-.header {
-  //text-align: center;
-}
-
 a {
   &:focus {
   }
+}
+
+nav a {
+  text-decoration: none;
 }
 
 .tags {
@@ -110,24 +110,6 @@ figcaption {
 }
 
 // 5.0 INLINE STYLES
-strong {
-}
-em {
-}
-
-// 6.0 NAVIGATION
-.logo {
-  text-align: left;
-}
-
-.submenu div li {
-  font-size: $typography__body--caption;
-  font-weight: normal;
-}
-.submenu {
-  text-align: left;
-}
-
 .card {
   small {
     text-transform: uppercase;

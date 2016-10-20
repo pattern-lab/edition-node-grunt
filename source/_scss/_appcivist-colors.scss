@@ -53,30 +53,20 @@ blockquote {
   color: $color__text--primary;
 }
 
-.submenu {
-  background:$color__text--primary;
-  box-shadow:0 0 1px $color__borders;
-  & li a {
-    color:$color__link--active;
-  }
-}
-
-header {
-  ul#menu {
-    background: $color__brand-primary;
-    color: $color__text--reverse;
-  }
-  ul.submenu {
-    background: $color__brand-primary;
-    //box-shadow:0 0 1px rgba(0,0,0,.3);
-    & li a {
-      color: $color__text--reverse;
-    }
-  }
+nav, nav a {
+  color: $color__text--reverse;
 }
 
 .overlay-background {
   background-color: $color__text--primary;
+}
+
+.activity-stream-item {
+  border-bottom: 1px solid $color__borders;
+}
+
+.action-bar {
+  border-top: 1px solid $color__borders;
 }
 
 // 2.0 BUTTONS
@@ -153,33 +143,14 @@ button, .button {
 }
 
 // 4.0 NAVIGATION
-header {
-  label:after{
-    border-top:4px solid $color__text--reverse;
-    border-bottom:0 solid $color__text--reverse;
-    border-left:4px solid transparent;
-    border-right:4px solid transparent;
+.navigation {
+  &-logged-in {
+    .logo {
+      border-bottom: 1px solid $color__text--reverse;
     }
-  label:hover, input:checked ~ label {
-    background:$color__brand-primary--dark;
-  }
-  input:checked ~ label:after{
-    border-top:0 solid $color__text--reverse;
-    border-bottom:4px solid $color__text--reverse;
-  }
-  figure {
-    border: 1px solid $color__text--reverse;
   }
 }
 
-/*style for the second level menu*/
-ul.submenu{
-  div li a, li a {
-    &:hover{
-      background: $color__brand-primary--dark;
-    }
-  }
-}
 
 .panel{
   //border: 1px solid $color__borders;
@@ -193,7 +164,8 @@ ul.submenu{
 }
 .card {
   border: 1px solid $color__borders;
-  background-color: $color__text--reverse;
+  background-color: lighten($color__text--reverse, 20%);
+  color: $color__text--secondary;
 }
 
 .card-list {
@@ -202,6 +174,11 @@ ul.submenu{
 
 .timeline-item {
   border-top: 1px solid $color__borders;
+}
+.timeline {
+  .marker {
+    background-color: $color__borders;
+  }
 }
 .inactive {
   color: lighten($color__text--secondary, 30%);
