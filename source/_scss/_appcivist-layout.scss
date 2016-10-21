@@ -97,14 +97,14 @@ button, .button {
 // 3.0 NAVIGATION
 .app-container {
   height: 100%;
-  @include flexbox((display: box, box-orient: horizontal));
-  @include flex-direction(row);
+  @include breakpoint(phablet) {
+    @include flexbox((display: box, box-orient: horizontal));
+    @include flex-direction(row);
+  }
 }
 
 .navigation {
   &-logged-in {
-    width: 250px;
-    @include display-flex(0);
     padding: ms(1);
     .logo {
       padding-top: 0;
@@ -153,12 +153,56 @@ button, .button {
     }
   }
 }
+
+.navigation-logged-in.small-screen-nav {
+  width: 100%;
+  display: block;
+  @include display-flex;
+  @include justify-content(space-between);
+  @include breakpoint(phablet) {
+    display: none;
+  }
+  .logo {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+    span {
+      display:inline;
+    }
+  }
+}
+
+#small-menu {
+  margin-top: 300px;
+  @include breakpoint(phablet) {
+    display: none;
+  }
+}
+
+.large-screen-nav {
+  display: none;
+  @include breakpoint(phablet) {
+    display: block;
+    width: 250px;
+    @include display-flex(0);
+  }
+}
+
 .app-main {
-   @include display-flex(1);
-   padding-right: 250px;
+   @include breakpoint(phablet) {
+     @include display-flex(1);
+     padding-right: 250px;
+   }
    &.anonymous {
      padding: 0;
    }
+}
+
+.small-nav-button {
+  width: 50px;
+  height: 50px;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 

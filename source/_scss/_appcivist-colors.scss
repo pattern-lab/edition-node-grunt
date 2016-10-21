@@ -103,7 +103,10 @@ button, .button {
 }
 .add-button, .close-button, .more-menu, .action-button, .upvote, .downvote {
   svg g {
-     fill: darken($color__brand-accent, 50%);
+     fill: $color__brand-accent;
+     &:hover {
+       fill: darken($color__brand-accent, 30%);
+     }
   }
 }
 .close-button {
@@ -114,6 +117,14 @@ button, .button {
   }
 }
 
+.small-screen-nav {
+  svg g {
+     fill: $color__text--reverse;
+     &:hover {
+       fill: $color__brand-primary--light;
+     }
+  }
+}
 
 // 3.0 ALERTS
 .alert {
@@ -148,6 +159,11 @@ button, .button {
     .logo {
       border-bottom: 1px solid $color__text--reverse;
     }
+  }
+}
+.submenu {
+  h1 {
+    color: $color__text--reverse;
   }
 }
 
