@@ -1,19 +1,23 @@
 {{> molecules-navigation }}
 <main class="app-main">
-	<section class="panel header">
-	  <p class="heading--subheader">Working Group</p>
-	  <h1 class="heading--display">Quality of Life</h1>
-	  <p class="heading--title">This is the working group dedicated to looking out for the general wellbeing of our citizens.</p>
+	<section class="panel intro">
+	  <p class="heading--header">Working Group</p>
+	  <h1 class="heading--title">Quality of Life</h1>
+	  <p>This is the working group dedicated to looking out for the general wellbeing of our citizens.</p>
 	</section>
 	<section class="panel activity-and-members">
 		<section class="latest-activity">
-			<h1 class="heading--title">Latest Activity</h1>
+			<div class="panel-heading">
+				<h1 class="heading--header">Latest Activity</h1><p class="heading--small"><a href="{{ link.templates-all-proposals-view }}">See All</a></p>
+			</div>
 			{{# listItems.ten }}
 			{{> atoms-activity-stream-list-item }}
 			{{/ listItems.ten }}
 		</section>
 		<section>
-			<h1 class="heading--title">Members <span><a href="#">See More</a> | <a href="#">Add New</a></span></h1>
+			<div class="panel-heading">
+				<h1 class="heading--header">Members</h1><p class="heading--small"><a href="{{ link.templates-all-proposals-view }}">See All</a> | <a href="#">Add New</a></p>
+			</div>
 			{{# listItems.nine }}
 			{{> molecules-user-card }}
 			{{/ listItems.nine }}
@@ -21,20 +25,24 @@
 	</section>
 	<section class="panel ideas-and-proposals">
 		<section class="list--proposal">
-			<h1 class="heading--title">Proposals <span><a href="{{ link.templates-all-proposals-view }}">See All</a> | <a href="#">Add New</a></span></h1>
+			<div class="panel-heading">
+				<h1 class="heading--header">Proposals</h1><p class="heading--small"><a href="{{ link.templates-all-proposals-view }}">See All</a> | <a href="#">Add New</a></p>
+			</div>
 			{{# listItems.four }}
 			{{> molecules-proposal-card }}
 			{{/ listItems.four }}
 		</section>
 		<section class="list--idea">
-			<h1 class="heading--title">Ideas <span><a href="{{ link.templates-all-ideas-view }}">See All</a> | <a href="#">Add New</a></span></h1>
-				{{# listItems.seven }}
-		    {{> molecules-idea-card }}
-		    {{/ listItems.seven }}
+			<div class="panel-heading">
+				<h1 class="heading--header">Ideas</h1><p class="heading--small"><a href="{{ link.templates-all-proposals-view }}">See All</a> | <a href="#">Add New</a></p>
+			</div>
+			{{# listItems.seven }}
+	    {{> molecules-idea-card }}
+	    {{/ listItems.seven }}
 		</section>
 	</section>
 	<section class="panel conversation-thread">
-		<h1 class="heading--title">Conversations <span><a href="#">Start a conversation</a></span></h1>
+		<h1 class="heading--header">Conversations</h1><p class="heading--small"><a href="#">Start a conversation</a></p>
 		{{> molecules-single-conversation }}
 	</section>
 	<div class="panel reply-field">

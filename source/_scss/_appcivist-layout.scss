@@ -13,19 +13,14 @@ TABLE OF CONTENTS
 
 
 // 1.0 GENERAL
-main {
-  //padding: ms(1);
-  header {
-      margin: ms(2) auto ms(2);
-      max-width: ms(14);
-      p {
-        margin-bottom: 0;
-        margin-top: ms(1);
-      }
-      h1 {
-        margin: 0;
-      }
-    }
+.intro {
+  padding-bottom: 0;
+  h1 {
+    margin-bottom: ms(1);
+  }
+  p {
+    margin: 0;
+  }
 }
 
 figure {
@@ -36,6 +31,7 @@ figure {
 }
 
 .tags {
+  margin: ms(1) auto;
   span {
     line-height: 0;
     &:after {
@@ -233,9 +229,11 @@ button, .button {
 
 .timeline {
   @include display-flex;
-  @include justify-content(center);
+  @include justify-content(space-around);
   margin-top: ms(2);
+  overflow-x: scroll;
   &-item {
+    margin-top: ms(2);
     padding: 0 ms(1);
   }
   .marker {
@@ -306,7 +304,6 @@ button, .button {
   margin-left: ms(2);
 }
 
-// temp styles
 .panel {
   min-height: 50px;
   margin: 0;

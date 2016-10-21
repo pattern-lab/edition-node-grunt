@@ -1,13 +1,13 @@
 {{> molecules-navigation-anonymous }}
 <main class="app-main anonymous">
-		<section class="panel header">
-			<div class="card-info">
-				<p class="heading--subheader">Proposal</p>
-				<h1 class="heading--display">{{ title.short }}</h1>
-				<p class="heading--title">{{ excerpt.short }}</p>
-				<p>In the <a href="{{ link.templates-working-group-dashboard }}">{{ group.name }}</a> working group.</p>
-				{{> molecules-tags }}
-			</div>
+	<section class="panel intro">
+		<div class="card-info">
+			<p class="heading--header">Proposal</p>
+			<h1 class="heading--title">{{ title.short }}</h1>
+			<p>{{ excerpt.short }}</p>
+			<p>In the <a href="{{ link.templates-working-group-dashboard }}">{{ group.name }}</a> working group.</p>
+			{{> molecules-tags }}
+		</div>
 			<div class="action-bar">
 				<div class="voting-button upvote">
 					<a href="#">+ 8888</a>

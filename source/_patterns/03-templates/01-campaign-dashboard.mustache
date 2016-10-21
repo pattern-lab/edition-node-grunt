@@ -1,39 +1,36 @@
 {{> molecules-navigation }}
 <main class="app-main">
-	<section class="panel header">
-	  <p class="heading--subheader">Campaign</p>
-	  <h1 class="heading--display">Participatory Budgeting - Cycle 4</h1>
+	<section class="panel intro">
+	  <p class="heading--header">Campaign</p>
+	  <h1 class="heading--title">Participatory Budgeting - Cycle 4</h1>
 	  <p>It's that time again - the City is collecting ideas for the fourth cycle of Participatory Budgeting (PB) in Vallejo. Share your ideas on how you want to use Measure B tax dollars to make Vallejo even better.</p>
 	</section>
 	<section class="panel">
-		<h1 class="heading--subheader">Campaigns Status</h1>
+		<h1 class="heading--header">Campaigns Status</h1>
 		{{> molecules-timeline }}
-	</section>
-	<section class="panel">
-		<h1 class="heading--subheader">Voting Results</h2>
 	</section>
 	<section class="panel ideas-and-proposals">
 		<section class="list--proposal">
 			<div class="panel-heading">
-				<h1 class="heading--subheader">Proposals </h1><p class="#"><a href="{{ link.templates-all-proposals-view }}">See All</a> | <a href="#">Add New</a></p>
+				<h1 class="heading--header">Proposals</h1><p class="heading--small"><a href="{{ link.templates-all-proposals-view }}">See All</a> | <a href="#">Add New</a></p>
 			</div>
 			{{# listItems.four }}
 			{{> molecules-proposal-card }}
 			{{/ listItems.four }}
 		</section>
 		<section class="list--idea">
-			<h1 class="heading--subheader">Ideas <span><a href="{{ link.templates-all-ideas-view }}">See All</a> | <a href="#">Add New</a></span></h1>
+			<h1 class="heading--header">Ideas</h1><p class="heading--small"><a href="{{ link.templates-all-ideas-view }}">See All</a> | <a href="#">Add New</a></p>
 				{{# listItems.seven }}
 		    {{> molecules-idea-card }}
 		    {{/ listItems.seven }}
 		</section>
 	</section>
 	<section class="panel conversation-thread">
-		<h1 class="heading--subheader">Conversations <span><a href="#">Start a conversation</a></span></h1>
+		<h1 class="heading--header">Conversations</h1><p class="heading--small"><a href="#">Start a conversation</a></p>
 		{{> molecules-single-conversation }}
 	</section>
 	<div class="panel reply-field">
-		<h1 class="heading--subheader">Start a Conversation</h1>
+		<h1 class="heading--header">Start a Conversation</h1>
 		{{> molecules-comment-form-user }}
 	</div>
 </main>
