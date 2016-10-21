@@ -95,9 +95,6 @@ button, .button {
 
 
 // 3.0 NAVIGATION
-
-
-//NEW NAVIGATION
 .app-container {
   height: 100%;
   @include flexbox((display: box, box-orient: horizontal));
@@ -120,19 +117,25 @@ button, .button {
       @include display-flex;
       padding: 0;
       figure {
-        margin-top: ms(1);
+        margin: ms(1) 0 0 0;
+        border: 1px solid $color__text--reverse;
+        img {
+          margin: 0;
+        }
       }
       span {
         display: block;
-        font-size: 12px;
       }
     }
     ul {
-      padding: ms(-1) 0;
+      padding: 0 0 0 0;
+      h1 {
+        padding-bottom: ms(-4);
+      }
       li {
-        padding: ms(-1) 0 ms(-1) ms(1);
+        padding: 0 0 ms(-2) ms(1);
         &:last-of-type {
-          padding-bottom: 0;
+          //padding-bottom: 0;
         }
       }
     }

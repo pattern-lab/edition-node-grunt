@@ -59,9 +59,7 @@ button, .button {
 .heading--headline {
   font-size: $typography__headline;
   line-height: ms(1);
-  span {
-    font-weight: lighter;
-  }
+  font-weight: bold;
 }
 p {
   font-size: $typography__body;
@@ -118,15 +116,37 @@ figcaption {
   text-align: right;
 }
 
-.panel {
-  &-heading {
-      margin-bottom: ms(-1);
-      p {
-         margin-bottom: 0;
-      }
-  }
-}
-
 footer {
   text-align: center;
+}
+
+// 6.0 BRAND AND navigation
+
+.logo {
+  h1{
+    margin-bottom: ms(-6);
+    span {
+      font-weight: 100;
+      margin-top: ms(-6);
+    }
+  }
+  h3 {
+    font-weight: 100;
+  }
+}
+.user {
+  span {
+    margin-top: ms(-6);
+    font-weight: 100;
+  }
+}
+.submenu {
+  h1 {
+    font-weight: 100;
+    color: $color__text--reverse;
+  }
+  li {
+    font-size: $typography__small;
+    line-height: ms(1);
+  }
 }
