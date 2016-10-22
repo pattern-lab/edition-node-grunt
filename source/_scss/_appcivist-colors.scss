@@ -39,7 +39,6 @@ html, .sg-main {
 }
 
 body {
-  background-color: $color__brand-primary;
 }
 
 a {
@@ -53,8 +52,12 @@ blockquote {
   color: $color__text--primary;
 }
 
-nav, nav a {
+nav, nav a, .navigation-anonymous, .navigation-anonymous a {
+  background-color: $color__brand-primary;
   color: $color__text--reverse;
+  &:hover {
+    color: darken($color__text--reverse, 10%);
+  }
 }
 
 .overlay-background {
@@ -65,17 +68,36 @@ nav, nav a {
   border-bottom: 1px solid $color__borders;
 }
 
-.action-bar {
-  border-top: 1px solid $color__borders;
-}
-
 // 2.0 BUTTONS
-button, .button {
-  color: darken($color__brand-accent, 50%);
+button, .button  {
+  color: $color__text--reverse;
   background-color: $color__brand-accent;
-  border-color: darken($color__brand-accent, 30%);
+  border-color: darken($color__link--active, 10%);
   &:hover {
     background-color: darken($color__brand-accent, 20%);
+  }
+}
+
+input, input[type=submit] {
+  color: $color__text--reverse;
+  background: $color__brand-accent;
+  border-color: darken($color__link--active, 10%);
+  &:hover {
+    background-color: darken($color__brand-accent, 20%);
+  }
+}
+
+.vote-button {
+  border-color: $color__brand-accent;
+  color: $color__brand-accent;
+  &:hover {
+    background-color:$color__link--hover;
+    a {
+      color: $color__text--reverse;
+    }
+  }
+  a {
+    color: $color__link--active;
   }
 }
 
@@ -88,8 +110,8 @@ button, .button {
   }
 }
 .secondary.button {
-  color: darken($color__brand-accent, 30%);
-  background-color: lighten($color__brand-accent, 20%);
+  color: $color__brand-accent;
+  background-color: $color__text--reverse;
   &:hover {
     background-color: darken($color__brand-accent, 20%);
   }
@@ -170,12 +192,8 @@ button, .button {
 
 .panel{
   //border: 1px solid $color__borders;
-  background-color: $color__text--reverse;
   &.comment-container {
     border-top: 1px solid $color__borders;
-  }
-  &.conversation-container {
-    border: 1px solid $color__borders;
   }
 }
 .card {
@@ -220,5 +238,5 @@ button, .button {
 }
 
 footer, footer a {
-  color: $color__text--reverse;
+  //color: $color__text--reverse;
 }

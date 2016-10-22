@@ -1,20 +1,13 @@
 {{> molecules-navigation }}
 <main class="app-main">
 	<section class="panel intro">
-	  <div class="card-info">
 	    <p class="heading--header">Proposal</p>
 	    <h1 class="heading--title">{{ title.short }}</h1>
 	    <p>{{ excerpt.short }}</p>
-	    <p>In the <a href="{{ link.templates-working-group-dashboard }}">{{ group.name }}</a> working group.</p>
+	    <p class="heading--subheader">In the <a href="{{ link.templates-working-group-dashboard }}">{{ group.name }}</a> working group</p>
 	    {{> molecules-tags }}
-	  </div>
 	  <div class="action-bar">
-	    <div class="voting-button upvote">
-	      <a href="#">+ 8888</a>
-	    </div>
-	    <div class="voting-button downvote">
-	      <a href="#">- 8888</a>
-	    </div>
+	    {{> molecules-voting-module }}
 	    <div class="action-button">
 	      <input id="menu04" type="checkbox" name="menu" />
 	      <svg width="4px" height="16px" viewBox="0 0 4 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -32,20 +25,30 @@
 	          <li><a href="#">Archive</a></li>
 	      </ul>
 	    </div>
-	  </div>
-	  {{> molecules-idea-timeline }}
+	</section>
+	<section class="panel">
+		<div class="panel-heading">
+			<h1 class="heading--header">Proposal Status</h1>
+		</div>
+		{{> molecules-idea-timeline }}
 	</section>
 	<section class="panel text-created-attachments-similar">
 	  <section class="temp-array proposal-text">
-	    <h1 class="heading--header">Proposal Text</h1>
-	    ETHERPAD GOES HERE
+			<div class="panel-heading">
+		    <h1 class="heading--header">Proposal Text</h1>
+			</div>
+	    [[ETHERPAD iframe GOES HERE]]
 	  </section>
 	  <section class="temp-array created-attachments-similar">
-	    <h1 class="heading--header">Created by</h1>
+			<div class="panel-heading">
+				<h1 class="heading--header">Created by</h1>
+			</div>
 	    {{# listItems.one }}
 	    {{> molecules-user-card }}
 	    {{/ listItems.one }}
-	    <h1 class="heading--header">Attachments <span><a href="#">Add New</a></span></h1>
+			<div class="panel-heading">
+				<h1 class="heading--header">Attachments</h1><p class="heading--small"><a href="#">Add a new file</a></p>
+			</div>
 	    {{> molecules-file-card }}
 	    <h1 class="heading--header">Similar Proposals</h1>
 	    {{# listItems.three }}
@@ -53,13 +56,16 @@
 	    {{/ listItems.three }}
 	  </section>
 	</section>
-	<section class="panel conversation-thread" id="prototype-only-anchor-link-for-comment">
-	  <h1 class="heading--header">Conversations <span><a href="#">Start a conversation</a></span></h1>
-	  {{> molecules-single-conversation }}
+	<section class="panel">
+		<div class="panel-heading">
+			<h1 class="heading--header">Conversations</h1><p class="heading--small"><a href="#">Start a new onversation</a></p>
+		</div>
+		{{> molecules-single-conversation }}
+		{{> molecules-single-conversation }}
 	</section>
 	<div class="panel reply-field">
-	  <h1 class="heading--header">Start a Conversation</h1>
-	  {{> molecules-comment-form-user }}
+		<h1 class="heading--header">Start a Conversation</h1>
+		{{> molecules-comment-form-user }}
 	</div>
 </main>
 {{> organisms-footer }}

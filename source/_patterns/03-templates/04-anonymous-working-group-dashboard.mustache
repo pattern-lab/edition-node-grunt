@@ -41,12 +41,15 @@
 		    {{/ listItems.seven }}
 		</section>
 	</section>
-	<section class="panel conversation-thread">
-		<h1 class="heading--header">Conversations</h1><p class="heading--small"><a href="#">Start a conversation</a></p>
+	<section class="panel">
+		<div class="panel-heading">
+			<h1 class="heading--header">Conversations</h1><p class="heading--small"><a href="#">Start a new onversation</a></p>
+		</div>
+		{{> molecules-single-conversation }}
 		{{> molecules-single-conversation }}
 	</section>
 	<div class="panel reply-field">
-		<h1 class="heading--title">Start a Conversation</h1>
+		<h1 class="heading--header">Start a Conversation</h1>
 		{{> molecules-comment-form-user }}
 	</div>
 </main>

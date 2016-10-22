@@ -1,17 +1,12 @@
 <div class="card">
   <div class="card-info">
-    <small>In the <a href="{{ link.templates-working-group-dashboard }}">{{ group.name }}</a> working group</small>
-    <h1 class="heading--title"><a href="{{ link.templates-single-proposal }}">{{ title.short }}</a></h1>
-    <p>{{ excerpt.short }}</p>
+    <p class="heading--subheader">In the <a href="{{ link.templates-working-group-dashboard }}">{{ group.name }}</a> working group</p>
+    <h1 class="heading--headline"><a href="{{ link.templates-single-proposal }}">{{ title.short }}</a></h1>
+    <small>{{ excerpt.short }}</small>
     {{> molecules-tags }}
   </div>
   <div class="action-bar">
-    <div class="voting-button upvote">
-      <a href="#">+ 8888</a>
-    </div>
-    <div class="voting-button downvote">
-      <a href="#">- 8888</a>
-    </div>
+    {{> molecules-voting-module }}
     <div class="action-button">
       <input id="menu04" type="checkbox" name="menu" />
       <svg width="4px" height="16px" viewBox="0 0 4 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

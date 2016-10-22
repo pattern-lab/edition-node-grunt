@@ -14,15 +14,10 @@ TABLE OF CONTENTS
 
 // 1.0 GENERAL
 .intro {
-  padding-bottom: 0;
   h1 {
-    margin-bottom: ms(1);
-  }
-  p {
-    margin: 0;
+    margin-bottom: ms(-4);
   }
 }
-
 figure {
   margin-bottom: ms(1);
   & img {
@@ -33,7 +28,7 @@ figure {
 .tags {
   margin: ms(1) auto;
   span {
-    line-height: 0;
+    line-height: ms(-1);
     &:after {
       content: '|';
       padding-left: ms(-1);
@@ -68,19 +63,20 @@ button, .button {
   padding: ms(1) ms(2);
 }
 
+.vote-button {
+  min-width: 50px;
+  padding: 3px 5px 6px 1px;
+  border: 1px solid;
+}
+
 .upvote {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  width: 50px;
+  border-top-left-radius: $layout__border-radius;
+  border-bottom-left-radius: $layout__border-radius;
+  border-right: 0;
 }
 .downvote {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  border-top: 0;
-  width: 50px;
-}
-.voting-module {
-  width: 50px;
+  border-top-right-radius: $layout__border-radius;
+  border-bottom-right-radius: $layout__border-radius;
 }
 
 .add-button, .close-button {
@@ -113,7 +109,7 @@ button, .button {
       @include display-flex;
       padding: 0;
       figure {
-        margin: ms(1) 0 0 0;
+        margin: ms(1) ms(1) 0 0;
         border: 1px solid $color__text--reverse;
         img {
           margin: 0;
@@ -137,6 +133,7 @@ button, .button {
     }
   }
   &-anonymous {
+    width: 100%;
     @include display-flex;
     @include justify-content(space-between);
     .logo {
@@ -184,7 +181,7 @@ button, .button {
 }
 
 .app-main {
-   @include breakpoint(phablet) {
+   @include breakpoint(tablet) {
      @include display-flex(1);
      padding-right: 250px;
    }
@@ -208,17 +205,14 @@ button, .button {
 
 
 .conversation-container {
-  padding: ms(1);
-  border-radius: $layout__border-radius;
-  h1 {
-    width: 100%;
-  }
+  margin-bottom: ms(1);
 }
 
 .card {
   border-radius: $layout__border-radius;
   margin-bottom: ms(-1);
   overflow: hidden;
+  padding: ms(-3);
 }
 
 .card-list {
@@ -227,9 +221,13 @@ button, .button {
   overflow: hidden;
 }
 
+.idea-title {
+  margin-bottom: 0;
+}
+
 .timeline {
   @include display-flex;
-  @include justify-content(space-around);
+  @include justify-content(center);
   margin-top: ms(2);
   overflow-x: scroll;
   &-item {
@@ -247,22 +245,8 @@ button, .button {
 
 // 6.0 COMMENTS
 .comment-meta {
-  @include span(10 of 12);
-  @include clearfix;
-  h1 {
-    margin: ms(-1) 0;
-  }
-  h2 {
-    @include span(12 of 12);
-    padding-bottom: ms(2);
-  }
-  img {
-    @include span(1 of 12);
-    max-width: ms(2);
-  }
-  h4 {
-    @include span(6 of 12);
-    margin-left: ms(-1);
+  .member-card {
+    @include display-flex;
   }
 }
 .comment-text {
@@ -271,16 +255,22 @@ button, .button {
     margin-top: ms(-1);
   }
 }
-.comment-voting {
-  float: right;
-}
 .comment-reply-controls {
   @include span(12 of 12);
+  @include display-flex;
+  @include justify-content(space-between);
+  margin: ms(1) 0;
   a.reply-count {
-    margin-top: ms(2);
+    margin: 0 ms(2) 0 0;
+    padding-top: 6px;
   }
-  button.reply, a.reply {
-    float: right;
+  .voting-buttons {
+    text-align: center;
+    flex-grow: 4;
+    //padding: ms(-1);
+    z-index: 100;
+    @include display-flex;
+    @include align-items(flex-start);
   }
 }
 
@@ -306,12 +296,16 @@ button, .button {
 
 .panel {
   min-height: 50px;
+  max-width: 800px;
   margin: 0;
   padding: ms(2);
   @include clearfix;
   .panel-heading {
     @include display-flex;
-    @include justify-content(space-between);
+    p {
+      margin: -4px 0 0 ms(2);
+      padding-bottom: 10px;
+    }
   }
 }
 .anonymous {
@@ -321,7 +315,7 @@ button, .button {
   }
 }
 .ideas-and-proposals section, .text-created-attachments-similar section {
-  @include breakpoint(phablet) {
+  @include breakpoint(tablet) {
     @include gallery(3 of 6);
   }
 }
@@ -345,13 +339,17 @@ button, .button {
   }
 }
 
-.all-members div {
-  @include breakpoint(phablet) {
+.all-member-list {
+  @include clearfix;
+  .card-list {
     @include gallery(1 of 2);
+    .action-button {
+      margin-top: ms(1);
+    }
   }
 }
-
 .member-card {
+  @include display-flex;;
   figure {
     border-radius: 60px;
     overflow: hidden;
@@ -365,7 +363,7 @@ button, .button {
   }
   h4 {
     flex-grow: 4;
-    padding: ms(1);
+    padding: ms(2) ms(1) ms(1) 0;
   }
 }
 
@@ -386,32 +384,26 @@ button, .button {
 }
 
 .activity-stream-item {
-  margin: ms(-1) 0;
-  padding: ms(-1) 0 ms(1);
-  .heading--subheader-small {
-    padding-bottom: ms(-1);
-  }
+  margin: 0 0 ms(1) 0;
+  padding:0 0 ms(1) 0;
 }
 
 
-.card-info {
-  padding: ms(-1);
-  h1 {
-    margin: ms(-4) 0 ms(-2);
-  }
-}
+
 .action-bar {
   @include display-flex;
   @include justify-content(space-between);
-  .voting-button {
+  .voting-buttons {
     text-align: center;
     flex-grow: 4;
-    padding: ms(-1);
+    //padding: ms(-1);
     z-index: 100;
+    @include display-flex;
+    @include align-items(flex-start);
   }
   .action-button {
     text-align: right;
-    padding: ms(-1) ms(1) ms(-1) 0;
+    padding: 5px ms(1) ms(-1) 0;
     cursor: pointer;
     border: 0;
     border-radius: 0;
@@ -429,16 +421,9 @@ button, .button {
     }
   }
 }
-.small-card {
-  border-top: 0;
-  h1 {
-    padding: ms(-4) 0 ms(-2) ms(-1);
-  }
-}
 
 ul.action-menu {
   max-height: 0px;
-  //min-width: 200px;
   li {
     z-index: 999999;
     padding: ms(-1);

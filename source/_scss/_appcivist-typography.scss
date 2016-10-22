@@ -26,23 +26,18 @@ body {
 
 a {
   text-decoration: none;
-  &:focus {
-  }
 }
 
 nav a {
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .tags {
   text-transform: uppercase;
   font-size: $typography__tiny;
-}
-
-.intro {
-  p {
-    line-height: ms(2);
-  }
 }
 
 // BUTTONS
@@ -56,6 +51,10 @@ button, .button {
   font-size: $typography__tiny;
 }
 
+.vote-button {
+  font-weight: bold;
+}
+
 
 // 2.0 BASE SIZES
 
@@ -64,16 +63,14 @@ button, .button {
 }
 .heading--headline {
   font-size: $typography__headline;
-  line-height: ms(1);
   font-weight: bold;
 }
 p {
   font-size: $typography__body;
-  line-height: ms(2);
+  line-height: ms(4);
 }
 small, .heading--small {
   font-size: $typography__small;
-  //line-height: -ms(1);
 }
 .heading--header {
   font-size: $typography__header;
@@ -149,5 +146,16 @@ footer {
   li {
     font-size: $typography__small;
     line-height: ms(1);
+  }
+}
+
+// CARDS
+.card-info {
+  h1 {
+    line-height: ms(3);
+  }
+  p {
+    line-height: ms(-1);
+    margin-bottom: ms(-4);
   }
 }

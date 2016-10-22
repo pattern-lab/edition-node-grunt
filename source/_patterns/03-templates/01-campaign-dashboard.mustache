@@ -19,14 +19,19 @@
 			{{/ listItems.four }}
 		</section>
 		<section class="list--idea">
-			<h1 class="heading--header">Ideas</h1><p class="heading--small"><a href="{{ link.templates-all-ideas-view }}">See All</a> | <a href="#">Add New</a></p>
+			<div class="panel-heading">
+				<h1 class="heading--header">Ideas</h1><p class="heading--small"><a href="{{ link.templates-all-ideas-view }}">See All</a> | <a href="#">Add New</a></p>
+			</div>
 				{{# listItems.seven }}
 		    {{> molecules-idea-card }}
 		    {{/ listItems.seven }}
 		</section>
 	</section>
-	<section class="panel conversation-thread">
-		<h1 class="heading--header">Conversations</h1><p class="heading--small"><a href="#">Start a conversation</a></p>
+	<section class="panel">
+		<div class="panel-heading">
+			<h1 class="heading--header">Conversations</h1><p class="heading--small"><a href="#">Start a new onversation</a></p>
+		</div>
+		{{> molecules-single-conversation }}
 		{{> molecules-single-conversation }}
 	</section>
 	<div class="panel reply-field">
