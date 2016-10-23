@@ -264,14 +264,6 @@ button, .button {
     margin: 0 ms(2) 0 0;
     padding-top: 6px;
   }
-  .voting-buttons {
-    text-align: center;
-    flex-grow: 4;
-    //padding: ms(-1);
-    z-index: 100;
-    @include display-flex;
-    @include align-items(flex-start);
-  }
 }
 
 .comment-form {
@@ -388,19 +380,17 @@ button, .button {
   padding:0 0 ms(1) 0;
 }
 
-
-
+.voting-buttons {
+  text-align: center;
+  flex-grow: 4;
+  //padding: ms(-1);
+  z-index: 100;
+  @include display-flex;
+  @include align-items(flex-start);
+}
 .action-bar {
   @include display-flex;
   @include justify-content(space-between);
-  .voting-buttons {
-    text-align: center;
-    flex-grow: 4;
-    //padding: ms(-1);
-    z-index: 100;
-    @include display-flex;
-    @include align-items(flex-start);
-  }
   .action-button {
     text-align: right;
     padding: 5px ms(1) ms(-1) 0;
@@ -450,8 +440,40 @@ ol.pagination {
 }
 
 footer {
+  @include display-flex;
+  small, #small-menu small {
+    line-height: ms(1);
+    display: block;
+    margin-top: ms(1);
+  }
+  div {
+    padding: ms(3) ms(1) 100px ms(1);
+    @include align-self(flex-end);
+  }
+  .large-screen-nav {
+    min-width: 250px;
+  }
+}
+
+.anonymous-footer {
+  display: block;
+  margin: 0 auto;
   padding: ms(2);
-  p {
-    margin-bottom: ms(-1);
+  text-align: center;
+}
+
+.credits {
+  margin-top: ms(4);
+}
+
+
+.breadcrumbs {
+  @include display-flex;
+  li {
+    margin-right: ms(-3);
+    &:after {
+      content:' > ';
+      margin-left: ms(-3);
+    }
   }
 }

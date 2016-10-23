@@ -78,7 +78,7 @@ small, .heading--small {
   text-transform: uppercase;
   font-weight: bold;
 }
-.heading--subheader {
+.heading--subheader, fieldset label {
   font-size: $typography__subheader;
   line-height: ms(1);
   text-transform: uppercase;
@@ -116,7 +116,10 @@ figcaption {
 }
 
 footer {
-  text-align: center;
+  font-size: $typography__tiny;
+  .app-main small {
+    text-align: center;
+  }
 }
 
 // 6.0 BRAND AND NAV

@@ -52,7 +52,11 @@ blockquote {
   color: $color__text--primary;
 }
 
-nav, nav a, .navigation-anonymous, .navigation-anonymous a {
+nav, nav a,
+.navigation-anonymous,
+.navigation-anonymous a,
+footer .large-screen-nav,
+footer .large-screen-nav a {
   background-color: $color__brand-primary;
   color: $color__text--reverse;
   &:hover {
@@ -78,7 +82,7 @@ button, .button  {
   }
 }
 
-input, input[type=submit] {
+input[type=submit] {
   color: $color__text--reverse;
   background: $color__brand-accent;
   border-color: darken($color__link--active, 10%);
@@ -105,22 +109,24 @@ input, input[type=submit] {
   color: lighten($color__text--secondary, 10%);
   background-color: lighten($color__text--secondary, 40%);
   border-color: lighten($color__text--secondary, 30%);
+  cursor: default;
   &:hover {
-    background-color: $color__text--secondary;
+    background-color: lighten($color__text--secondary, 40%);
   }
 }
 .secondary.button {
   color: $color__brand-accent;
   background-color: $color__text--reverse;
   &:hover {
-    background-color: darken($color__brand-accent, 20%);
+    background-color: $color__brand-accent;
+    color: $color__text--reverse;
   }
 }
 .warning.button {
-  color: darken($color__brand-accent, 30%);
-  background-color: $color__alert-background;
+  color: $color__text--reverse;
+  background-color: $color__alert;
   &:hover {
-    background-color: darken($color__alert-background, 20%);
+    background-color: darken($color__alert, 20%);
   }
 }
 .add-button, .close-button, .more-menu, .action-button, .upvote, .downvote {
