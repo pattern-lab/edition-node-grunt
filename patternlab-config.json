@@ -23,6 +23,10 @@
       "images" : "./public/images",
       "fonts" : "./public/fonts",
       "css" : "./public/css"
+    },
+    "dist": {
+      "root" : "./dist",
+      "css": "./dist"
     }
   },
   "styleGuideExcludes": [

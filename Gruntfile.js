@@ -93,6 +93,11 @@ module.exports = function (grunt) {
           { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
           { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*', '**'], dest: path.resolve(paths().public.root) }
         ]
+      },
+      dist: {
+        files: [
+          { expand: true, cwd: path.resolve(paths().public.css), src: '*.css', dest: path.resolve(paths().dist.css) },
+        ]
       }
     },
     /******************************************************
@@ -166,6 +171,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['patternlab', 'sass', 'copy:main']);
   grunt.registerTask('patternlab:watch', ['patternlab', 'sass', 'copy:main', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['patternlab', 'sass', 'copy:main', 'browserSync', 'watch:all']);
+  grunt.registerTask('patternlab:dist', ['patternlab', 'sass', 'patternlab:build', 'copy:dist']);
   grunt.registerTask('patternlab:buildserve', ['patternlab', 'sass', 'patternlab:build', 'copy:main', 'browserSync', 'watch:all']);
 
 };

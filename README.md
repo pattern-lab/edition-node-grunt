@@ -68,3 +68,11 @@ To watch for changes, re-generate the front-end, and server it via a BrowserSync
     grunt patternlab:serve
 
 BrowserSync should open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Generate distribution version
+
+To generate a distributable version of the patternlab just issue the following command:
+
+    grunt patternlab:dist
+
+And the necessary css will be at *dist* folder.
