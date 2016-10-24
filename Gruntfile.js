@@ -97,6 +97,8 @@ module.exports = function (grunt) {
       dist: {
         files: [
           { expand: true, cwd: path.resolve(paths().public.css), src: '*.css', dest: path.resolve(paths().dist.css) },
+          { expand: true, cwd: path.resolve(paths().public.images), src: '*', dest: path.resolve(paths().dist.images) },
+          { expand: true, cwd: path.resolve(paths().public.fonts), src: '*', dest: path.resolve(paths().dist.fonts) },
         ]
       }
     },

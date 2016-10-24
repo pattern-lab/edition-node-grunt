@@ -26,7 +26,9 @@
     },
     "dist": {
       "root" : "./dist",
-      "css": "./dist"
+      "css": "./dist/css",
+      "images" : "./dist/images",
+      "fonts" : "./dist/fonts"
     }
   },
   "styleGuideExcludes": [
