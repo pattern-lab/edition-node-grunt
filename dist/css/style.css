@@ -3916,7 +3916,7 @@ TABLE OF CONTENTS
   background: #313f45; }
 
 .color__brand-accent {
-  background: #B44551; }
+  background: #4a4663; }
 
 .color__text--primary {
   background: #212121; }
@@ -3931,9 +3931,9 @@ html, .sg-main {
   background-color: #F8F8F8; }
 
 a {
-  color: #B44551; }
+  color: #4a4663; }
   a:hover, a:focus {
-    color: #8f3740; }
+    color: #343145; }
 
 blockquote {
   color: #212121; }
@@ -3960,27 +3960,27 @@ footer .large-screen-nav a {
 
 button, .button {
   color: #F8F8F8;
-  background-color: #B44551;
-  border-color: #8f3740; }
+  background-color: #4a4663;
+  border-color: #343145; }
   button:hover, .button:hover {
-    background-color: #6a2930; }
+    background-color: #1d1c27; }
 
 input[type=submit] {
   color: #F8F8F8;
-  background: #B44551;
-  border-color: #8f3740; }
+  background: #4a4663;
+  border-color: #343145; }
   input[type=submit]:hover {
-    background-color: #6a2930; }
+    background-color: #1d1c27; }
 
 .vote-button {
-  border-color: #B44551;
-  color: #B44551; }
+  border-color: #4a4663;
+  color: #4a4663; }
   .vote-button:hover {
-    background-color: #8f3740; }
+    background-color: #343145; }
     .vote-button:hover a {
       color: #F8F8F8; }
   .vote-button a {
-    color: #B44551; }
+    color: #4a4663; }
 
 .disabled.button {
   color: #8f8f8f;
@@ -3991,10 +3991,10 @@ input[type=submit] {
     background-color: #dbdbdb; }
 
 .secondary.button {
-  color: #B44551;
+  color: #4a4663;
   background-color: #F8F8F8; }
   .secondary.button:hover {
-    background-color: #B44551;
+    background-color: #4a4663;
     color: #F8F8F8; }
 
 .warning.button {
@@ -4004,15 +4004,15 @@ input[type=submit] {
     background-color: #7f0a11; }
 
 .add-button svg g, .close-button svg g, .more-menu svg g, .action-button svg g, .upvote svg g, .downvote svg g {
-  fill: #B44551; }
+  fill: #4a4663; }
   .add-button svg g:hover, .close-button svg g:hover, .more-menu svg g:hover, .action-button svg g:hover, .upvote svg g:hover, .downvote svg g:hover {
-    fill: #451b1f; }
+    fill: #070709; }
 
 .close-button {
   background-color: white;
   border-color: black; }
   .close-button:hover {
-    background-color: #e1b1b6; }
+    background-color: #9591b1; }
 
 .small-screen-nav svg g {
   fill: #F8F8F8; }
