@@ -30,7 +30,15 @@ TABLE OF CONTENTS
 .color__borders {
   background: $color__borders;
 }
-
+.color__borders--dark {
+  background: $color__borders--dark;
+}
+.color__borders--accent {
+  background: $color__borders--accent;
+}
+.color__borders--primary {
+  background: $color__borders--primary;
+}
 
 // 1.0 GENERAL
 
@@ -203,9 +211,10 @@ input[type=submit] {
   }
 }
 .card {
-  border: 1px solid $color__borders;
+  border: 1px solid $color__borders--accent;
   background-color: lighten($color__text--reverse, 20%);
   color: $color__text--secondary;
+  clear: both;
 }
 
 .card-list {

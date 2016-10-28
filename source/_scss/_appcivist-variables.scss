@@ -65,6 +65,9 @@ $color__text--reverse: #F8F8F8;
 
 $color__background: $color__brand-primary;
 $color__borders: #E2E2E2;
+$color__borders--dark: darken($color__borders, 20%);
+$color__borders--accent: lighten($color__brand-accent, 20%);
+$color__borders--primary: $color__brand-primary;
 
 $color__link--active: $color__brand-accent;
 $color__link--hover: darken($color__link--active, 10%);
