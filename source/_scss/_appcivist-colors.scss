@@ -64,7 +64,8 @@ nav, nav a,
 .navigation-anonymous,
 .navigation-anonymous a,
 footer .large-screen-nav,
-footer .large-screen-nav a {
+footer .large-screen-nav a,
+.navigation-bar, div[navigation-bar] {
   background-color: $color__brand-primary;
   color: $color__text--reverse;
   &:hover {

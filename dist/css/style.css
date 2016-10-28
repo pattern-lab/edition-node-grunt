@@ -6276,14 +6276,16 @@ nav, nav a,
 .navigation-anonymous,
 .navigation-anonymous a,
 footer .large-screen-nav,
-footer .large-screen-nav a {
+footer .large-screen-nav a,
+.navigation-bar, div[navigation-bar] {
   background-color: #465A63;
   color: #F8F8F8; }
   nav:hover, nav a:hover,
   .navigation-anonymous:hover,
   .navigation-anonymous a:hover,
   footer .large-screen-nav:hover,
-  footer .large-screen-nav a:hover {
+  footer .large-screen-nav a:hover,
+  .navigation-bar:hover, div[navigation-bar]:hover {
     color: #dfdfdf; }
 
 .overlay-background {
