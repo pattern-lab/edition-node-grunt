@@ -256,3 +256,40 @@ input[type=submit] {
 footer, footer a {
   //color: $color__text--reverse;
 }
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+.label-default {
+   background: $color__text--secondary;
+}
+
+.label-primary {
+  background: $color__brand-primary;
+}
+
+.label-info {
+  background: $color__brand-accent;
+}
+
+.label-success {
+  background: lighten($color__brand-accent-green,20%);
+}
+
+.label-danger {
+  background: $color__brand-accent-red;
+}
+
+.label-warning {
+  background: $color__brand-accent-yellow;
+}

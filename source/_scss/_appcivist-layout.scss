@@ -42,6 +42,13 @@ figure {
   }
 }
 
+.labels {
+  margin: ms(1) auto;
+  span {
+    line-height: ms(4);
+  }
+}
+
 li {
   list-style: none;
 }
@@ -77,6 +84,9 @@ button, .button {
 .downvote {
   border-top-right-radius: $layout__border-radius;
   border-bottom-right-radius: $layout__border-radius;
+}
+.middle {
+  border-right: 0;
 }
 
 .add-button, .close-button {
@@ -439,6 +449,11 @@ ul.action-menu {
   }
 }
 .downvote {
+  &:before {
+    content:'';
+  }
+}
+.middle {
   &:before {
     content:'';
   }
