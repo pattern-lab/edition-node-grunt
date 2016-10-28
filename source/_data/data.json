@@ -37,6 +37,14 @@
     "logo": {
       "src": "/images/logo.png",
       "alt": "Logo Image"
+    },
+    "logosvg": {
+      "src": "/images/logo.svg",
+      "alt": "Logo Image"
+    },
+    "logosvg-white": {
+      "src": "/images/logo-white.svg",
+      "alt": "Logo Image"
     }
   },
   "headline": {
