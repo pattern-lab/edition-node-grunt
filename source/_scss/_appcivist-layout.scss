@@ -343,6 +343,15 @@ button, .button {
       float: right;
     }
   }
+
+  .panel-heading-relative {
+    position: relative;
+
+    p {
+      position: absolute;
+      right: 0;
+    }
+  }
 }
 .anonymous {
   .panel {
