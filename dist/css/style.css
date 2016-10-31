@@ -6069,7 +6069,9 @@ button, .button {
     padding-bottom: 10px;
     float: right; }
   .panel .panel-heading-relative {
-    position: relative; }
+    position: relative;
+    padding-left: 0;
+    margin-left: 0; }
     .panel .panel-heading-relative p {
       position: absolute;
       right: 0; }
