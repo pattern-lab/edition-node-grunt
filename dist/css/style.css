@@ -6068,6 +6068,11 @@ button, .button {
     margin: -4px 0 0 20px;
     padding-bottom: 10px;
     float: right; }
+  .panel .panel-heading-relative {
+    position: relative; }
+    .panel .panel-heading-relative p {
+      position: absolute;
+      right: 0; }
 
 .anonymous .panel {
   max-width: 55em;
