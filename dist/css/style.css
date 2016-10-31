@@ -6075,6 +6075,8 @@ button, .button {
     .panel .panel-heading-relative p {
       position: absolute;
       right: 0; }
+  .panel .members-panel {
+    min-width: 36%; }
 
 .anonymous .panel {
   max-width: 55em;
