@@ -173,7 +173,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['patternlab', 'sass', 'copy:main']);
   grunt.registerTask('patternlab:watch', ['patternlab', 'sass', 'copy:main', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['patternlab', 'sass', 'copy:main', 'browserSync', 'watch:all']);
-  grunt.registerTask('patternlab:dist', ['patternlab', 'sass', 'patternlab:build', 'copy:dist']);
+  grunt.registerTask('patternlab:dist', ['patternlab', 'sass', 'patternlab:build', 'copy:main', 'copy:dist']);
   grunt.registerTask('patternlab:buildserve', ['patternlab', 'sass', 'patternlab:build', 'copy:main', 'browserSync', 'watch:all']);
 
 };
