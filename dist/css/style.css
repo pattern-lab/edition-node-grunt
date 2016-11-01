@@ -6078,6 +6078,9 @@ button, .button {
   .panel .members-panel {
     min-width: 36%; }
 
+.latest-activity-relative {
+  min-width: 74%; }
+
 .anonymous .panel {
   max-width: 55em;
   margin: 0 auto; }
