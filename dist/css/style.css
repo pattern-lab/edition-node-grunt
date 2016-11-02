@@ -5817,6 +5817,11 @@ figure {
     .tags span:last-of-type:after {
       content: ''; }
 
+.labels {
+  margin: 18px auto; }
+  .labels span {
+    line-height: 26px; }
+
 li {
   list-style: none; }
 
@@ -5848,6 +5853,9 @@ button, .button {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px; }
 
+.middle {
+  border-right: 0; }
+
 .add-button, .close-button {
   width: 50px;
   height: 50px;
@@ -5871,6 +5879,16 @@ button, .button {
     padding-bottom: 18px; }
     .navigation-logged-in .logo span {
       display: block; }
+  .navigation-logged-in .logo-small img {
+    max-height: 100%;
+    max-width: 100%;
+    height: 22px;
+    width: 22px;
+    vertical-align: middle; }
+  .navigation-logged-in .logo-small span {
+    display: block; }
+  .navigation-logged-in .logo-small strong {
+    vertical-align: middle; }
   .navigation-logged-in .member-card {
     display: -webkit-flex;
     display: flex;
@@ -5896,6 +5914,16 @@ button, .button {
   justify-content: space-between; }
   .navigation-anonymous .logo {
     padding: 14px; }
+  .navigation-anonymous .logo-small img {
+    max-height: 100%;
+    max-width: 100%;
+    height: 22px;
+    width: 22px;
+    vertical-align: middle; }
+  .navigation-anonymous .logo-small span {
+    display: block; }
+  .navigation-anonymous .logo-small strong {
+    vertical-align: middle; }
   .navigation-anonymous .sign-up {
     right: 0;
     position: absolute;
@@ -6038,6 +6066,12 @@ button, .button {
     .panel .panel-heading p {
       margin: -4px 0 0 20px;
       padding-bottom: 10px; }
+  .panel .panel-heading-no-margin h1 {
+    float: left; }
+  .panel .panel-heading-no-margin p {
+    margin: -4px 0 0 20px;
+    padding-bottom: 10px;
+    float: right; }
 
 .anonymous .panel {
   max-width: 55em;
@@ -6181,6 +6215,9 @@ ul.action-menu {
   content: ''; }
 
 .downvote:before {
+  content: ''; }
+
+.middle:before {
   content: ''; }
 
 ol.pagination {
@@ -6386,7 +6423,8 @@ input[type=submit] {
 .card {
   border: 1px solid #79739c;
   background-color: white;
-  color: #757575; }
+  color: #757575;
+  clear: both; }
 
 .card-list {
   background-color: #F8F8F8; }
@@ -6414,6 +6452,36 @@ input[type=submit] {
 
 .heading--header {
   color: #757575; }
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em; }
+
+.label-default {
+  background: #757575; }
+
+.label-primary {
+  background: #465A63; }
+
+.label-info {
+  background: #4a4663; }
+
+.label-success {
+  background: #739c80; }
+
+.label-danger {
+  background: #B44551; }
+
+.label-warning {
+  background: #f0ad4e; }
 
 /*--------------------------------------
 This file contains all keyframes,
