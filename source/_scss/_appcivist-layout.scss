@@ -349,7 +349,27 @@ button, .button {
       float: right;
     }
   }
+
+  .panel-heading-relative {
+    position: relative;
+    padding-left: 0;
+    margin-left: 0;
+
+    p {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .members-panel {
+    min-width: 36%;
+  }
 }
+
+.latest-activity-relative {
+  min-width: 62%;
+}
+
 .anonymous {
   .panel {
     max-width: 55em;
@@ -359,6 +379,17 @@ button, .button {
 .ideas-and-proposals section, .text-created-attachments-similar section {
   @include breakpoint(tablet) {
     @include gallery(3 of 6);
+  }
+}
+
+.text-created-attachments-similar {
+  .proposal-text {
+    min-width: 60%;
+  }
+
+  .created-attachments-similar {
+    max-width: 40%;
+    margin-left: 60% !important;
   }
 }
 

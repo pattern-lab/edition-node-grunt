@@ -6072,6 +6072,18 @@ button, .button {
     margin: -4px 0 0 20px;
     padding-bottom: 10px;
     float: right; }
+  .panel .panel-heading-relative {
+    position: relative;
+    padding-left: 0;
+    margin-left: 0; }
+    .panel .panel-heading-relative p {
+      position: absolute;
+      right: 0; }
+  .panel .members-panel {
+    min-width: 36%; }
+
+.latest-activity-relative {
+  min-width: 62%; }
 
 .anonymous .panel {
   max-width: 55em;
@@ -6090,6 +6102,12 @@ button, .button {
       margin-left: 50.64935%;
       margin-right: -100%;
       clear: none; } }
+
+.text-created-attachments-similar .proposal-text {
+  min-width: 60%; }
+.text-created-attachments-similar .created-attachments-similar {
+  max-width: 40%;
+  margin-left: 60% !important; }
 
 .activity-and-members {
   display: -webkit-flex;
@@ -6137,7 +6155,7 @@ button, .button {
       clear: both;
       margin-left: 0; }
     .all-member-list .card-list:nth-child(2n + 2) {
-      margin-left: 52.0%;
+      margin-left: 52%;
       margin-right: -100%;
       clear: none; }
     .all-member-list .card-list .action-button {
