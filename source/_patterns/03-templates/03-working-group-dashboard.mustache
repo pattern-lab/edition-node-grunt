@@ -23,25 +23,34 @@
 			{{/ listItems.nine }}
 		</section>
 	</section>
-	<section class="panel ideas-and-proposals">
-		<section class="list--proposal">
-			<div class="panel-heading">
-				<h1 class="heading--header">Proposals</h1><p class="heading--small"><a href="{{ link.templates-all-proposals-view }}">See All</a> | <a href="#">Add New</a></p>
-			</div>
-			{{# listItems.four }}
-			{{> molecules-proposal-card }}
-			{{/ listItems.four }}
-		</section>
-		<section class="list--idea">
-			<div class="panel-heading">
-				<h1 class="heading--header">Ideas</h1><p class="heading--small"><a href="{{ link.templates-all-proposals-view }}">See All</a> | <a href="#">Add New</a></p>
-			</div>
-			{{# listItems.seven }}
-	    {{> molecules-idea-card }}
-	    {{/ listItems.seven }}
-		</section>
-	</section>
-	<section class="panel">
+  <section class="panel ideas-and-proposals">
+        <section class="list--proposal">
+            <div class="panel-heading-no-margin">
+                <h1 class="heading--header">Proposals</h1>
+                <p class="heading--small">
+                    <a href="{{ link.templates-all-proposals-view }}"><i class="fa fa-arrows-alt"></i>&nbsp;See All&nbsp;&nbsp;</a>
+                    <a href="#"><i class="fa fa-plus-square"></i>&nbsp;Add New</a>
+                </p>
+            </div>
+          {{# listItems.four }}
+            {{> molecules-proposal-card }}
+          {{/ listItems.four }}
+        </section>
+        <section class="list--idea">
+            <div class="panel-heading-no-margin">
+                <h1 class="heading--header">Ideas</h1>
+                <p class="heading--small">
+                    <a href="{{ link.templates-all-ideas-view }}"><i class="fa fa-arrows-alt"></i>&nbsp;See All&nbsp;&nbsp;</a>
+                    <a href="#"><i class="fa fa-plus-square"></i>&nbsp;Add New</a>
+                </p>
+            </div>
+          {{# listItems.seven }}
+            {{> molecules-idea-card }}
+          {{/ listItems.seven }}
+        </section>
+    </section>
+
+  <section class="panel">
 		<div class="panel-heading">
 			<h1 class="heading--header">Conversations</h1><p class="heading--small"><a href="#">Start a new onversation</a></p>
 		</div>
