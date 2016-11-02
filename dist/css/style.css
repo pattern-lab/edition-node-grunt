@@ -6104,7 +6104,7 @@ button, .button {
       clear: none; } }
 
 .text-created-attachments-similar .proposal-text {
-  min-width: 60%; }
+  min-width: 100%; }
 .text-created-attachments-similar .created-attachments-similar {
   max-width: 40%;
   margin-left: 60% !important; }
