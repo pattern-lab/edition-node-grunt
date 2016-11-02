@@ -11,7 +11,7 @@
 	    <div class="action-button">
 	      <input id="menu04" type="checkbox" name="menu" />
 	      <svg width="4px" height="16px" viewBox="0 0 4 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-	          <title>more</title
+	          <title>more</title>
 	          <defs></defs>
 	          <g id="Icon/Light/More-Vert" transform="translate(-10.000000, -4.000000)" >
 	              <g id="more">
@@ -25,6 +25,7 @@
 	          <li><a href="#">Archive</a></li>
 	      </ul>
 	    </div>
+    </div>
 	</section>
 	<section class="panel">
 		<div class="panel-heading">
@@ -37,26 +38,31 @@
 			<div class="panel-heading">
 		    <h1 class="heading--header">Proposal Text</h1>
 			</div>
-	    [[ETHERPAD iframe GOES HERE]]
-	  </section>
-	  <section class="temp-array created-attachments-similar">
-			<div class="panel-heading">
-				<h1 class="heading--header">Created by</h1>
-			</div>
-	    {{# listItems.one }}
-	    {{> molecules-user-card }}
-	    {{/ listItems.one }}
-			<div class="panel-heading">
-				<h1 class="heading--header">Attachments</h1><p class="heading--small"><a href="#">Add a new file</a></p>
-			</div>
-	    {{> molecules-file-card }}
-	    <h1 class="heading--header">Similar Proposals</h1>
-	    {{# listItems.three }}
-	    {{> atoms-definition-list-item }}
-	    {{/ listItems.three }}
+      <iframe name="embed_readwrite"
+              src="http://etherpad.littlemacondo.com/p/example_pad?showControls=true&showChat=true&showLineNumbers=true&useMonospaceFont=false"
+              width="100%"
+              height=600></iframe>
 	  </section>
 	</section>
-	<section class="panel">
+  <section class="panel tex-created-attachments-similar">
+    <section class="temp-array created-attachments-similar">
+        <div class="panel-heading">
+            <h1 class="heading--header">Created by</h1>
+        </div>
+      {{# listItems.one }}
+        {{> molecules-user-card }}
+      {{/ listItems.one }}
+        <div class="panel-heading">
+            <h1 class="heading--header">Attachments</h1><p class="heading--small"><a href="#">Add a new file</a></p>
+        </div>
+      {{> molecules-file-card }}
+        <h1 class="heading--header">Similar Proposals</h1>
+      {{# listItems.three }}
+        {{> atoms-definition-list-item }}
+      {{/ listItems.three }}
+    </section>
+  </section>
+  <section class="panel">
 		<div class="panel-heading">
 			<h1 class="heading--header">Conversations</h1><p class="heading--small"><a href="#">Start a new onversation</a></p>
 		</div>
