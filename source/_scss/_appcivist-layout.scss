@@ -376,6 +376,17 @@ button, .button {
   }
 }
 
+.text-created-attachments-similar {
+  .proposal-text {
+    min-width: 60%;
+  }
+
+  .created-attachments-similar {
+    max-width: 40%;
+    margin-left: 60% !important;
+  }
+}
+
 .activity-and-members {
   @include display-flex;
   @include justify-content(space-between);

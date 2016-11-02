@@ -6099,6 +6099,12 @@ button, .button {
       margin-right: -100%;
       clear: none; } }
 
+.text-created-attachments-similar .proposal-text {
+  min-width: 60%; }
+.text-created-attachments-similar .created-attachments-similar {
+  max-width: 40%;
+  margin-left: 60% !important; }
+
 .activity-and-members {
   display: -webkit-flex;
   display: flex;
