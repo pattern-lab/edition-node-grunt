@@ -6106,8 +6106,7 @@ button, .button {
 .text-created-attachments-similar .proposal-text {
   min-width: 100%; }
 .text-created-attachments-similar .created-attachments-similar {
-  max-width: 40%;
-  margin-left: 60% !important; }
+  min-width: 100%; }
 
 .activity-and-members {
   display: -webkit-flex;
