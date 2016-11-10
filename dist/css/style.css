@@ -6103,6 +6103,9 @@ button, .button {
       margin-right: -100%;
       clear: none; } }
 
+.ideas-and-proposals .list--proposal, .ideas-and-proposals .list--idea {
+  min-width: 100%; }
+
 .text-created-attachments-similar .proposal-text {
   min-width: 100%; }
 .text-created-attachments-similar .created-attachments-similar {

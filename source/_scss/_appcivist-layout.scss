@@ -382,6 +382,12 @@ button, .button {
   }
 }
 
+.ideas-and-proposals {
+  .list--proposal, .list--idea {
+    min-width: 100%;
+  }
+}
+
 .text-created-attachments-similar {
   .proposal-text {
     min-width: 100%;
