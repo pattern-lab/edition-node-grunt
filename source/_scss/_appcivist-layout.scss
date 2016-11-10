@@ -419,7 +419,7 @@ button, .button {
       float: left; 
     }
 		
-    proposal-card:nth-child(2n + 1) {
+    proposal-card:nth-child(2n + 1) , idea-card:nth-child(2n + 1) {
 			.card {
 				margin-left: 0;
 				margin-right: -100%;
@@ -428,7 +428,7 @@ button, .button {
 			}
   	}
 		
-	  proposal-card:nth-child(2n + 2) {
+	  proposal-card:nth-child(2n + 2) , idea-card:nth-child(2n + 2) {
 			.card {
 			  margin-left: 50.48544%;
         margin-right: -100%;
@@ -437,6 +437,7 @@ button, .button {
   	}
 	}
 }
+
 
 .all-member-list {
   @include clearfix;

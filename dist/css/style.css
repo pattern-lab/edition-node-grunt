@@ -6146,12 +6146,12 @@ button, .button {
   .all-proposals .card {
     width: 49.51456%;
     float: left; }
-  .all-proposals proposal-card:nth-child(2n + 1) .card {
+  .all-proposals proposal-card:nth-child(2n + 1) .card, .all-proposals idea-card:nth-child(2n + 1) .card {
     margin-left: 0;
     margin-right: -100%;
     clear: both;
     margin-left: 0; }
-  .all-proposals proposal-card:nth-child(2n + 2) .card {
+  .all-proposals proposal-card:nth-child(2n + 2) .card, .all-proposals idea-card:nth-child(2n + 2) .card {
     margin-left: 50.48544%;
     margin-right: -100%;
     clear: none; } }
