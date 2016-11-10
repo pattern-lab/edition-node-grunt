@@ -409,6 +409,33 @@ button, .button {
       @include gallery(4 of 8);
     }
   }
+  
+}
+
+@include breakpoint(phablet) {
+ .all-proposals {
+    .card {
+      width: 49.51456%;
+      float: left; 
+    }
+		
+    proposal-card:nth-child(2n + 1) {
+			.card {
+				margin-left: 0;
+				margin-right: -100%;
+				clear: both;
+				margin-left: 0; 
+			}
+  	}
+		
+	  proposal-card:nth-child(2n + 2) {
+			.card {
+			  margin-left: 50.48544%;
+        margin-right: -100%;
+        clear: none;
+      }
+  	}
+	}
 }
 
 .all-member-list {
