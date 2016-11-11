@@ -511,7 +511,6 @@ button, .button {
     border: 0;
     border-radius: 0;
     overflow:visible;
-    max-width: 50px;
   }
   input {
     //display: none;
@@ -529,7 +528,7 @@ ul.action-menu {
   max-height: 0px;
   li {
     z-index: 999999;
-    padding: ms(-1);
+    padding-top: 14px;
     opacity: 0;
     &:first-of-type {
       border-top: 0;

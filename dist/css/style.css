@@ -6227,8 +6227,7 @@ button, .button {
     cursor: pointer;
     border: 0;
     border-radius: 0;
-    overflow: visible;
-    max-width: 50px; }
+    overflow: visible; }
   .action-bar input:checked ~ .action-menu {
     max-height: 3000px;
     margin: 1em 0 0 -10em; }
@@ -6239,7 +6238,7 @@ ul.action-menu {
   max-height: 0px; }
   ul.action-menu li {
     z-index: 999999;
-    padding: 14px;
+    padding-top: 14px;
     opacity: 0; }
     ul.action-menu li:first-of-type {
       border-top: 0; }
