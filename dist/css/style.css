@@ -6271,6 +6271,15 @@ footer {
     align-self: flex-end; }
   footer .large-screen-nav {
     min-width: 250px; }
+  footer a, footer div.large-screen-nav {
+    color: #465A63 !important;
+    background-color: #F8F8F8 !important; }
+  footer div.large-screen-nav {
+    text-align: center;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 25px; }
 
 .anonymous-footer {
   display: block;
