@@ -13,6 +13,7 @@ compiled into production.
 @import "color";
 @import "susy";
 @import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/sass-mq/mq";
 //--------------------------------------
 // LOCAL TOOLS
 @import "modular-scale";

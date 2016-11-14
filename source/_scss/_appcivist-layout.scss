@@ -587,3 +587,117 @@ footer {
     }
   }
 }
+
+
+// bootstrap-like grid system
+// based on https://gist.github.com/Leimi/608d15fbacc95976f96d
+$susy-columns: 12;
+$susy-gutter-width: 15px;
+$susy: (
+  columns: $susy-columns,
+  gutter-position: inside-static, //fixed width gutters like bootstrap
+  //it seems we *have* to set the column width in order to get static gutters
+  // but it is not taken into account when using the span mixin. Must miss something...
+  column-width: 120px,
+  gutter: $susy-gutter-width/120px
+);
+
+// bootstrap compatible breakpoints
+// choose the names you want!
+$mq-breakpoints: (
+  tablet:   768px,
+  desktop:  992px,
+  wide:     1200px,
+);
+
+// common styling applied to any column (class="col-*" in bootstrap)
+// /!\ you should not use this directly and see the column mixin
+%columnDefaultStyles {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  padding-left: $susy-gutter-width;
+  padding-right: $susy-gutter-width;
+}
+
+// common styling applied to any row (class="row" in bootstrap)
+// /!\ you should not use this directly and see the row mixin
+%rowDefaultStyles {
+  @include break;
+  @include susy-clearfix;
+  margin-left: -$susy-gutter-width;
+  margin-right: -$susy-gutter-width;
+}
+
+/// set something to behave as a row (like having a class="row" on your element in a bootstrap project)
+@mixin row() {
+  @extend %rowDefaultStyles;
+}
+
+/// pass a map of [sass-mq compatible breakpoint:column width] to define responsive column sizes
+/// this kinda matches bootstrap columns, and allows for more breakpoints if we want
+/// Instead of writing `<div class="col-xs-12 col-md-6 col-lg-3">` in your HTML,
+/// write `@include column((small: 12, desktop: 6, wide: 3))` in your Sass
+@mixin column($widthList) {
+  @extend %columnDefaultStyles;
+  @each $breakpoint, $width in $widthList {
+    @if ($breakpoint == small) {
+      width: span($width of $susy-columns);
+    } @else {
+      @include mq($from: $breakpoint) {
+        width: span($width of $susy-columns);
+      }
+    }
+  }
+}
+
+///////////////////////////////
+
+// this is made only to easily test if our code is working correctly when copy/pasting some bootstrap html code
+// in the real world this is unnecessary
+@mixin make-bootstrap-breakpoint-classes($class) {
+  @for $i from 1 through $susy-columns {
+    .col-#{$class}-#{$i} {
+      width: span($i of $susy-columns);
+    }
+  }
+}
+
+@mixin make-bootstrap-classes() {
+  .row {
+    @include row();
+  }
+
+  $list: ".col-xs-1, .col-sm-1, .col-md-1, .col-lg-1";
+  @for $i from 2 through $susy-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+    @extend %columnDefaultStyles;
+  }
+
+  @include make-bootstrap-breakpoint-classes('xs');
+
+  @include mq($from: tablet) {
+    @include make-bootstrap-breakpoint-classes('sm');
+  }
+
+  @include mq($from: desktop) {
+    @include make-bootstrap-breakpoint-classes('md');
+  }
+
+  @include mq($from: wide) {
+    @include make-bootstrap-breakpoint-classes('lg');
+  }
+
+  @for $i from 1 through $susy-columns {
+    .col-offset-#{$i} {
+      margin-left: span($i of $susy-columns);
+    }
+  }
+}
+
+// if you want the exact same thing as bootstrap,
+// you will need to insert their "scaffolding code"
+// (normalize.css + default stylings on body, html, etc.)
+@include make-bootstrap-classes();

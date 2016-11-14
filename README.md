@@ -22,7 +22,8 @@ The Pattern Lab Node - Grunt Edition uses [Node](https://nodejs.org) for core pr
 It's also highly recommended that you [install grunt](http://gruntjs.com/getting-started) globally.
 
 ***appcivist-patterns*** asumes that you have compass already installed. In order to install compass, follow the steps found [here](http://compass-style.org/install/).
-Compass plugin [Susy](https://www.safaribooksonline.com/library/view/sass-and-compass/9781849694544/ch05s04.html) is also required.
+Compass plugin [Susy](https://www.safaribooksonline.com/library/view/sass-and-compass/9781849694544/ch05s04.html) 
+and [sass-mq](https://github.com/sass-mq/sass-mq) are also required.
 
 ## Installing
 
