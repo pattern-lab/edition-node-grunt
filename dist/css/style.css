@@ -5961,7 +5961,8 @@ button, .button {
       display: 0; } }
   .large-screen-nav .navigation-content-sticky {
     position: fixed;
-    left: 13px; }
+    left: 13px;
+    max-width: 260px; }
 
 @media (min-width: 50em) {
   .app-main {
