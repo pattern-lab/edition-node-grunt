@@ -6105,15 +6105,15 @@ button, .button {
 
 .ideas-and-proposals .list--proposal, .ideas-and-proposals .list--idea {
   min-width: 100%; }
-  .ideas-and-proposals .list--proposal .proposals proposal-card, .ideas-and-proposals .list--idea .proposals proposal-card {
+  .ideas-and-proposals .list--proposal .proposals contribution-card, .ideas-and-proposals .list--idea .proposals contribution-card {
     width: 49.67742%;
     float: left; }
-    .ideas-and-proposals .list--proposal .proposals proposal-card:nth-child(2n + 1), .ideas-and-proposals .list--idea .proposals proposal-card:nth-child(2n + 1) {
+    .ideas-and-proposals .list--proposal .proposals contribution-card:nth-child(2n + 1), .ideas-and-proposals .list--idea .proposals contribution-card:nth-child(2n + 1) {
       margin-left: 0;
       margin-right: -100%;
       clear: both;
       margin-left: 0; }
-    .ideas-and-proposals .list--proposal .proposals proposal-card:nth-child(2n + 2), .ideas-and-proposals .list--idea .proposals proposal-card:nth-child(2n + 2) {
+    .ideas-and-proposals .list--proposal .proposals contribution-card:nth-child(2n + 2), .ideas-and-proposals .list--idea .proposals contribution-card:nth-child(2n + 2) {
       margin-left: 50.32258%;
       margin-right: -100%;
       clear: none; }

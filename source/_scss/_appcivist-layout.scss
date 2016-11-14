@@ -386,7 +386,7 @@ button, .button {
     min-width: 100%;
 
     .proposals {
-      proposal-card {
+      contribution-card {
         @include gallery(6 of 12);
       }
     }
