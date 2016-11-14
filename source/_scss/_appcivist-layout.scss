@@ -185,6 +185,7 @@ button, .button {
       padding: ms(1);
     }
   }
+
 }
 
 .navigation-logged-in.small-screen-nav {
@@ -215,8 +216,13 @@ button, .button {
   display: none;
   @include breakpoint(phablet) {
     display: block;
-    width: 250px;
+    width: 270px;
     @include display-flex(0);
+  }
+  
+  .navigation-content-sticky {
+    position: fixed;
+    left: 13px;
   }
 }
 
@@ -547,7 +553,7 @@ footer {
     @include align-self(flex-end);
   }
   .large-screen-nav {
-    min-width: 250px;
+    min-width: 270px;
   }
 
   a, div.large-screen-nav {

@@ -5956,9 +5956,12 @@ button, .button {
   @media (min-width: 37.5em) {
     .large-screen-nav {
       display: block;
-      width: 250px;
+      width: 270px;
       display: -webkit-0;
       display: 0; } }
+  .large-screen-nav .navigation-content-sticky {
+    position: fixed;
+    left: 13px; }
 
 @media (min-width: 50em) {
   .app-main {
@@ -6269,7 +6272,7 @@ footer {
     -webkit-align-self: flex-end;
     align-self: flex-end; }
   footer .large-screen-nav {
-    min-width: 250px; }
+    min-width: 270px; }
   footer a, footer div.large-screen-nav {
     color: #465A63 !important;
     background-color: #F8F8F8 !important; }
