@@ -6274,10 +6274,10 @@ footer {
     align-self: flex-end; }
   footer .large-screen-nav {
     min-width: 270px; }
-  footer a, footer div.large-screen-nav {
+  footer a, footer div.large-screen-nav, footer div.small-screen-nav {
     color: #465A63 !important;
     background-color: #F8F8F8 !important; }
-  footer div.large-screen-nav {
+  footer div.large-screen-nav, footer div.small-screen-nav {
     text-align: center;
     width: 100%;
     padding-left: 0;

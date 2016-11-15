@@ -557,12 +557,12 @@ footer {
     min-width: 270px;
   }
 
-  a, div.large-screen-nav {
+  a, div.large-screen-nav, div.small-screen-nav {
     color: #465A63 !important;
     background-color: #F8F8F8 !important;
   }
 
-  div.large-screen-nav {
+  div.large-screen-nav, div.small-screen-nav {
     text-align: center;
     width: 100%;
     padding-left: 0;
