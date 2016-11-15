@@ -5962,7 +5962,7 @@ button, .button {
   .large-screen-nav .navigation-content-sticky {
     position: fixed;
     left: 13px;
-    max-width: 260px; }
+    max-width: 245px; }
 
 @media (min-width: 50em) {
   .app-main {
