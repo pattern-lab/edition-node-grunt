@@ -1,0 +1,69 @@
+/*--------------------------------------
+This file contains all keyframes,
+animations, and other motion styles
+in use throughout the AppCivist Sass files
+
+TABLE OF CONTENTS
+1.0 TRANSITIONS
+2.0 ANIMATIONS
+3.0 KEYFRAMES
+/--------------------------------------*/
+
+
+//1.0 TRANSITIONS
+a {
+  @include transition-property(color);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease);
+}
+
+button, .button {
+  @include transition-property(background-color);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease);
+}
+
+header {
+  label {
+    @include transition-property(background);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease);
+  }
+  label:after {
+    transition:border-bottom .1s, border-top .1s .1s;
+    }
+  input:checked ~ label:after {
+    transition:border-top .1s, border-bottom .1s .1s;
+  }
+  input:checked ~ ul.submenu {
+    @include transition-property(max-height);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease-in);
+  }
+}
+
+.action-bar {
+  input:checked ~ ul.action-menu {
+    @include transition-property(max-height);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease-in);
+  }
+}
+
+ul.submenu {
+  @include transition-property(max-height);
+  @include transition-duration(.5s);
+  @include transition-timing-function(ease-out);
+  div li a, li a {
+    @include transition-property(background);
+    @include transition-duration(.3s);
+    @include transition-timing-function(ease);
+  }
+}
+// 2.0 ANIMATIONS
+
+
+
+
+
+// 3.0 KEYFRAMES

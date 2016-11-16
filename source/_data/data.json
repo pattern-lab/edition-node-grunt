@@ -1,27 +1,50 @@
 {
   "key": "value",
   "key2": "use this for variables you want to load globally",
-  "title": "Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
+  "title": {
+    "short": "Bring Arts to Youth in Vallejo",
+    "medium": "Bring Arts to Youth in Vallejo",
+    "long" : "Bring Arts to Youth in Vallejo"
+  },
+  "group": {
+    "name": "Ad-Hoc City Council Committee on Commissions"
+  },
   "img": {
     "avatar": {
-      "src": "http://placeimg.com/100/100/people",
+      "src": "/images/avatar.png",
       "alt": "Avatar"
     },
+    "file": {
+      "src": "/images/file-icon.png",
+      "alt": "File icon"
+    },
     "square": {
-      "src": "http://placeimg.com/300/300/nature",
+      "src": "/images/square.png",
       "alt": "Square"
     },
     "rectangle": {
-      "src": "http://placeimg.com/400/300/tech",
+      "src": "/images/landscape_4x3.png",
       "alt": "Rectangle"
     },
     "landscape-4x3": {
-      "src": "http://placeimg.com/400/300/tech",
+      "src": "/images/landscape_4x3.png",
       "alt": "4x3 Image"
     },
     "landscape-16x9": {
-      "src": "http://placeimg.com/640/360/tech",
+      "src": "/images/landscape_16x9.png",
       "alt": "16x9 Image"
+    },
+    "logo": {
+      "src": "/images/logo.png",
+      "alt": "Logo Image"
+    },
+    "logosvg": {
+      "src": "/images/logo.svg",
+      "alt": "Logo Image"
+    },
+    "logosvg-white": {
+      "src": "/images/logo-white.svg",
+      "alt": "Logo Image"
     }
   },
   "headline": {
@@ -29,12 +52,12 @@
     "medium": "Rizzle adipiscing elizzle. Nullam sapien velizzle, shit volutpizzle, my"
   },
   "excerpt": {
-    "short": "Shizz fo shizzle mah nizzle fo rizzle, mah home g-dizzle, gravida vizzle, arcu. Pellentesque crunk tortizzle. Sed erizzle. Black izzle sheezy telliv.",
-    "medium": "Izzle crazy tempizzle sizzle. We gonna chung gangsta get down get down fo shizzle turpizzle. Away break it down black. Pellentesque bling bling rhoncus fo shizzle. In hac the bizzle platea dictumst. Black dapibizzle. Crackalackin.",
-    "long": "Curabitizzle fo shizzle diam quizzle nisi nizzle mollizzle. Suspendisse boofron. Morbi odio. Sure pizzle. Crazy orci. Shut the shizzle up maurizzle get down get down, check out this a, go to hizzle sit amizzle, malesuada izzle, pede. Pellentesque gravida. Vestibulizzle check it out mi, volutpat izzle, shiz sed, shiznit sempizzle, da bomb. Funky fresh in ipsum. Da bomb volutpat felis vizzle daahng dawg. Crizzle quis dope izzle fo shizzle my ni."
+    "short": "What steps should Vallejo take to reduce discrimination and further fair housing for current and future residents?",
+    "medium": "What steps should Vallejo take to reduce discrimination and further fair housing for current and future residents?",
+    "long": "What steps should Vallejo take to reduce discrimination and further fair housing for current and future residents?"
   },
   "description": "Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo.",
-  "url": "http://lorizzle.nl/",
+  "url": "#",
   "name": {
     "first": "Junius",
     "firsti": "J",
@@ -57,9 +80,9 @@
     "short": "Sun"
   },
   "day": {
-    "long": "01",
-    "short": "1",
-    "ordinal": "st"
+    "long": "02",
+    "short": "2",
+    "ordinal": "nd"
   },
   "hour": {
     "long": "06",
@@ -71,5 +94,33 @@
     "long": "20",
     "short": "20"
   },
-  "seconds": "31"
+  "seconds": "31",
+
+  "assembly": {
+    "name": "City of Vallejo",
+    "description": "Residents of the City of Vallejo, working together to imagine and build a better community"
+  },
+
+  "campaign": {
+    "name": "PB Cycle 4",
+    "description": "Participatory Budgeting cycle 4, years 2016/2017"
+  },
+
+  "group": {
+    "name": "Parks and Recreation",
+    "description": "Budget Delegate Committee for Parks and Recreation"
+  },
+
+  "idea": {
+    "title": "Cooperative Garden",
+    "summary": "Re-imagine the city central square as cooperative garden"
+  },
+
+  "proposal": {
+    "title": "Cooperative Garden Project",
+    "summary": "A cooperative garden, run by members of the community and oriented to the youth as an educational experience",
+    "pad" : "http://etherpad.littlemacondo.com/p/pattern-proposal-template-example",
+    "padreadonly": "http://etherpad.littlemacondo.com/p/r.e2956be1151e1803efa825fcee2f172e",
+    "cover" : "http://appcivist.littlemacondo.com/assets/images/bg-hands-collaborating.jpg"
+  }
 }

@@ -1,0 +1,710 @@
+/*--------------------------------------
+This file contains all layout styles
+in use throughout the AppCivist Sass files
+
+TABLE OF CONTENTS
+1.0 GENERAL
+2.0 NAVIGATION
+3.0 BUTTONS
+4.0 PANELS & CARDS
+5.0 MODALS
+6.0 COMMENTS
+/--------------------------------------*/
+
+
+// 1.0 GENERAL
+.intro {
+  h1 {
+    margin-bottom: ms(-4);
+  }
+}
+figure {
+  margin-bottom: ms(1);
+  & img {
+    margin-bottom: 0.5em;
+  }
+}
+
+.tags {
+  margin: ms(1) auto;
+  span {
+    line-height: ms(-1);
+    &:after {
+      content: '|';
+      padding-left: ms(-1);
+      padding-right: ms(-2);
+    }
+    &:last-of-type {
+      &:after {
+        content:'';
+      }
+    }
+  }
+}
+
+.labels {
+  margin: ms(1) auto;
+  span {
+    line-height: ms(4);
+  }
+}
+
+li {
+  list-style: none;
+}
+
+// 2.0 BUTTONS
+button, .button {
+  border-radius: $layout__border-radius;
+  padding: ms(1);
+  border: 1px solid;
+}
+
+.tiny.button {
+  padding: ms(-2) ms(1);
+}
+.small.button {
+  padding: ms(-1) ms(1);
+}
+.large.button {
+  padding: ms(1) ms(2);
+}
+
+.vote-button {
+  min-width: 50px;
+  padding: 3px 5px 6px 1px;
+  border: 1px solid;
+}
+
+.upvote {
+  border-top-left-radius: $layout__border-radius;
+  border-bottom-left-radius: $layout__border-radius;
+  border-right: 0;
+}
+.downvote {
+  border-top-right-radius: $layout__border-radius;
+  border-bottom-right-radius: $layout__border-radius;
+}
+.middle {
+  border-right: 0;
+}
+
+.add-button, .close-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+
+// 3.0 NAVIGATION
+.app-container {
+  height: 100%;
+  @include breakpoint(phablet) {
+    @include flexbox((display: box, box-orient: horizontal));
+    @include flex-direction(row);
+  }
+}
+
+.navigation {
+  &-logged-in {
+    padding: ms(1);
+    .logo {
+      padding-top: 0;
+      padding-bottom: ms(1);
+      span {
+        display:block;
+      }
+    }
+    .logo-small {
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        height: 22px;
+        width: 22px;
+        vertical-align: middle;
+      }
+      span {
+        display:block;
+      }
+      strong {
+        vertical-align: middle;
+      }
+    }
+    .member-card {
+      @include display-flex;
+      padding: 0;
+      figure {
+        margin: ms(1) ms(1) 0 0;
+        border: 1px solid $color__text--reverse;
+        img {
+          margin: 0;
+        }
+      }
+      span {
+        display: block;
+      }
+    }
+    ul {
+      padding: 0 0 0 0;
+      h1 {
+        padding-bottom: ms(-4);
+      }
+      li {
+        padding: 0 0 ms(-2) ms(1);
+        &:last-of-type {
+          //padding-bottom: 0;
+        }
+      }
+    }
+  }
+  &-anonymous {
+    width: 100%;
+    @include display-flex;
+    @include justify-content(space-between);
+    .logo {
+      padding: ms(-1);
+    }
+    .logo-small {
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        height: 22px;
+        width: 22px;
+        vertical-align: middle;
+      }
+      span {
+        display:block;
+      }
+      strong {
+        vertical-align: middle;
+      }
+    }
+    .sign-up {
+      right: 0;
+      position: absolute;
+      padding: ms(1);
+    }
+  }
+
+}
+
+.navigation-logged-in.small-screen-nav {
+  width: 100%;
+  display: block;
+  @include display-flex;
+  @include justify-content(space-between);
+  @include breakpoint(phablet) {
+    display: none;
+  }
+  .logo {
+    border-bottom: 0px;
+    padding-bottom: 0px;
+    span {
+      display:inline;
+    }
+  }
+}
+
+#small-menu {
+  margin-top: 300px;
+  @include breakpoint(phablet) {
+    display: none;
+  }
+}
+
+.large-screen-nav {
+  display: none;
+  @include breakpoint(phablet) {
+    display: block;
+    width: 270px;
+    @include display-flex(0);
+  }
+  
+  .navigation-content-sticky {
+    position: fixed;
+    left: 13px;
+    max-width: 245px;
+  }
+}
+
+.app-main {
+   @include breakpoint(tablet) {
+     @include display-flex(1);
+     padding-right: 250px;
+   }
+   &.anonymous {
+     padding: 0;
+   }
+}
+
+.small-nav-button {
+  width: 50px;
+  height: 50px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+
+// 4.0 PANELS & CARDS
+
+
+
+.conversation-container {
+  margin-bottom: ms(1);
+}
+
+.card {
+  border-radius: $layout__border-radius;
+  margin-bottom: ms(-1);
+  overflow: hidden;
+  padding: ms(-3);
+}
+
+.card-list {
+  border-radius: 0;
+  margin-bottom: ms(-1);
+  overflow: hidden;
+}
+
+.idea-title {
+  margin-bottom: 0;
+}
+
+.timeline {
+  @include display-flex;
+  @include justify-content(center);
+  margin-top: ms(2);
+  overflow-x: scroll;
+  &-item {
+    margin-top: ms(2);
+    padding: 0 ms(1);
+  }
+  .marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 60px;
+    margin: -.7em auto ms(-1);
+  }
+}
+
+
+// 6.0 COMMENTS
+.comment-meta {
+  .member-card {
+    @include display-flex;
+  }
+}
+.comment-text {
+  @include span(10 of 12);
+  p {
+    margin-top: ms(-1);
+  }
+}
+.comment-reply-controls {
+  @include span(12 of 12);
+  @include display-flex;
+  @include justify-content(space-between);
+  margin: ms(1) 0;
+  a.reply-count {
+    margin: 0 ms(2) 0 0;
+    padding-top: 6px;
+  }
+}
+
+.comment-form {
+  margin-top: ms(1);
+  label {
+    padding: ms(1) 0;
+  }
+  .comment-meta {
+    @include span(9 of 12);
+  }
+  input {
+    @include span(3 of 12);
+    float: right;
+  }
+}
+
+.threaded-comments {
+  @include span(12 of 12);
+  margin-left: ms(2);
+}
+
+.panel {
+  min-height: 50px;
+  max-width: 800px;
+  margin: 0;
+  padding: ms(2);
+  @include clearfix;
+  .panel-heading {
+    @include display-flex;
+    p {
+      margin: -4px 0 0 ms(2);
+      padding-bottom: 10px;
+    }
+  }
+  .panel-heading-no-margin {
+    h1 {
+      float: left;
+    }
+    p {
+      margin: -4px 0 0 ms(2);
+      padding-bottom: 10px;
+      float: right;
+    }
+  }
+
+  .panel-heading-relative {
+    position: relative;
+    padding-left: 0;
+    margin-left: 0;
+
+    p {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .members-panel {
+    min-width: 36%;
+  }
+}
+
+.latest-activity-relative {
+  min-width: 62%;
+}
+
+.anonymous {
+  .panel {
+    max-width: 55em;
+    margin: 0 auto;
+  }
+}
+.ideas-and-proposals section, .text-created-attachments-similar section {
+  @include breakpoint(tablet) {
+    @include gallery(3 of 6);
+  }
+}
+
+.ideas-and-proposals {
+  .list--proposal, .list--idea {
+    min-width: 100%;
+
+    .proposals {
+      contribution-card {
+        @include gallery(6 of 12);
+      }
+    }
+  }
+}
+
+.text-created-attachments-similar {
+  .proposal-text {
+    min-width: 100%;
+  }
+
+  .created-attachments-similar {
+    min-width: 100%;
+  }
+}
+
+.activity-and-members {
+  @include display-flex;
+  @include justify-content(space-between);
+}
+
+.all-ideas div {
+  @include breakpoint(phablet) {
+    @include gallery(4 of 8);
+  }
+}
+
+.all-proposals {
+  .card {
+    @include breakpoint(phablet) {
+      @include gallery(4 of 8);
+    }
+  }
+  
+}
+
+.all-member-list {
+  @include clearfix;
+  .card-list {
+    @include gallery(1 of 2);
+    .action-button {
+      margin-top: ms(1);
+    }
+  }
+}
+.member-card {
+  @include display-flex;;
+  figure {
+    border-radius: 60px;
+    overflow: hidden;
+    max-width: 40px;
+    height: 40px;
+    flex-grow: 0;
+    margin: ms(-2);
+    img {
+      width: 40px;
+    }
+  }
+  h4 {
+    flex-grow: 4;
+    padding: ms(2) ms(1) ms(1) 0;
+  }
+}
+
+.file-card {
+  figure {
+    border-radius: 0px;
+    overflow: visible;
+    flex-grow: 0;
+    margin: ms(-2) ms(-1) 0 ms(1);
+    img {
+      max-width: 30px;
+    }
+  }
+  h4 {
+    flex-grow: 4;
+    padding: ms(1);
+  }
+}
+
+.activity-stream-item {
+  margin: 0 0 ms(1) 0;
+  padding:0 0 ms(1) 0;
+}
+
+.voting-buttons {
+  text-align: center;
+  flex-grow: 4;
+  //padding: ms(-1);
+  z-index: 100;
+  @include display-flex;
+  @include align-items(flex-start);
+}
+.action-bar {
+  @include display-flex;
+  @include justify-content(space-between);
+  .action-button {
+    text-align: right;
+    padding: 5px ms(1) ms(-1) 0;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0;
+    overflow:visible;
+  }
+  input {
+    //display: none;
+  }
+  input:checked ~ .action-menu {
+    max-height:3000px;
+    margin: 1em 0 0 -10em;
+    li {
+      opacity: 1;
+    }
+  }
+}
+
+ul.action-menu {
+  max-height: 0px;
+  li {
+    z-index: 999999;
+    padding-top: 14px;
+    opacity: 0;
+    &:first-of-type {
+      border-top: 0;
+    }
+  }
+}
+.upvote {
+  &:before {
+    content:'';
+  }
+}
+.downvote {
+  &:before {
+    content:'';
+  }
+}
+.middle {
+  &:before {
+    content:'';
+  }
+}
+
+ol.pagination {
+  @include display-flex;
+  @include justify-content(center);
+}
+
+footer {
+  @include display-flex;
+  small, #small-menu small {
+    line-height: ms(1);
+    display: block;
+    margin-top: ms(1);
+  }
+  div {
+    padding: ms(3) ms(1) 100px ms(1);
+    @include align-self(flex-end);
+  }
+  .large-screen-nav {
+    min-width: 270px;
+  }
+
+  a, div.large-screen-nav, div.small-screen-nav {
+    color: #465A63 !important;
+    background-color: #F8F8F8 !important;
+  }
+
+  div.large-screen-nav, div.small-screen-nav {
+    text-align: center;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 25px;
+  }
+
+}
+
+.anonymous-footer {
+  display: block;
+  margin: 0 auto;
+  padding: ms(2);
+  text-align: center;
+}
+
+.credits {
+  margin-top: ms(4);
+}
+
+
+.breadcrumbs {
+  @include display-flex;
+  li {
+    margin-right: ms(-3);
+    &:after {
+      content:' > ';
+      margin-left: ms(-3);
+    }
+  }
+}
+
+
+// bootstrap-like grid system
+// based on https://gist.github.com/Leimi/608d15fbacc95976f96d
+$susy-columns: 12;
+$susy-gutter-width: 15px;
+$susy: (
+  columns: $susy-columns,
+  gutter-position: inside-static, //fixed width gutters like bootstrap
+  //it seems we *have* to set the column width in order to get static gutters
+  // but it is not taken into account when using the span mixin. Must miss something...
+  column-width: 120px,
+  gutter: $susy-gutter-width/120px
+);
+
+// bootstrap compatible breakpoints
+// choose the names you want!
+$mq-breakpoints: (
+  tablet:   768px,
+  desktop:  992px,
+  wide:     1200px,
+);
+
+// common styling applied to any column (class="col-*" in bootstrap)
+// /!\ you should not use this directly and see the column mixin
+%columnDefaultStyles {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  padding-left: $susy-gutter-width;
+  padding-right: $susy-gutter-width;
+}
+
+// common styling applied to any row (class="row" in bootstrap)
+// /!\ you should not use this directly and see the row mixin
+%rowDefaultStyles {
+  @include break;
+  @include susy-clearfix;
+  margin-left: -$susy-gutter-width;
+  margin-right: -$susy-gutter-width;
+}
+
+/// set something to behave as a row (like having a class="row" on your element in a bootstrap project)
+@mixin row() {
+  @extend %rowDefaultStyles;
+}
+
+/// pass a map of [sass-mq compatible breakpoint:column width] to define responsive column sizes
+/// this kinda matches bootstrap columns, and allows for more breakpoints if we want
+/// Instead of writing `<div class="col-xs-12 col-md-6 col-lg-3">` in your HTML,
+/// write `@include column((small: 12, desktop: 6, wide: 3))` in your Sass
+@mixin column($widthList) {
+  @extend %columnDefaultStyles;
+  @each $breakpoint, $width in $widthList {
+    @if ($breakpoint == small) {
+      width: span($width of $susy-columns);
+    } @else {
+      @include mq($from: $breakpoint) {
+        width: span($width of $susy-columns);
+      }
+    }
+  }
+}
+
+///////////////////////////////
+
+// this is made only to easily test if our code is working correctly when copy/pasting some bootstrap html code
+// in the real world this is unnecessary
+@mixin make-bootstrap-breakpoint-classes($class) {
+  @for $i from 1 through $susy-columns {
+    .col-#{$class}-#{$i} {
+      width: span($i of $susy-columns);
+    }
+  }
+}
+
+@mixin make-bootstrap-classes() {
+  .row {
+    @include row();
+  }
+
+  $list: ".col-xs-1, .col-sm-1, .col-md-1, .col-lg-1";
+  @for $i from 2 through $susy-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+    @extend %columnDefaultStyles;
+  }
+
+  @include make-bootstrap-breakpoint-classes('xs');
+
+  @include mq($from: tablet) {
+    @include make-bootstrap-breakpoint-classes('sm');
+  }
+
+  @include mq($from: desktop) {
+    @include make-bootstrap-breakpoint-classes('md');
+  }
+
+  @include mq($from: wide) {
+    @include make-bootstrap-breakpoint-classes('lg');
+  }
+
+  @for $i from 1 through $susy-columns {
+    .col-offset-#{$i} {
+      margin-left: span($i of $susy-columns);
+    }
+  }
+}
+
+// if you want the exact same thing as bootstrap,
+// you will need to insert their "scaffolding code"
+// (normalize.css + default stylings on body, html, etc.)
+@include make-bootstrap-classes();

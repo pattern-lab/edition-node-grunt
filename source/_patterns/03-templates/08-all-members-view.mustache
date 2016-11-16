@@ -1,0 +1,23 @@
+{{> molecules-navigation }}
+<main class="app-main">
+	<section class="panel intro">
+		<h1 class="heading--title">All Members</h1>
+	  <p class="heading--header">in the <a href="{{ link.templates-working-group-dashboard }}">{{ group.name }}</a> Working Group.</p>
+		<p class="heading--small"><a href="#">Add a new member</a></p>
+	</section>
+	<section class="panel">
+		{{> molecules-pagination }}
+	</section>
+	<section class="all-member-list">
+			{{# listItems.nine }}
+			{{> molecules-user-card }}
+			{{/ listItems.nine }}
+			{{# listItems.nine }}
+			{{> molecules-user-card }}
+			{{/ listItems.nine }}
+	</section>
+	<section class="panel">
+		{{> molecules-pagination }}
+	</section>
+</main>
+{{> organisms-footer }}

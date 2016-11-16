@@ -1,3 +1,7 @@
+# AppCivist Pattern Library and Style Guide
+
+This style guide library is designed to provide a central place for the team to document and store front end components like HTML partials and CSS styles. It is based on the [Pattern Lab](https://patternlab.io) tool.
+
 # Pattern Lab Node - Grunt Edition
 
 The Grunt wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node), providing tasks to interact with the core library and move supporting frontend assets.
@@ -15,7 +19,6 @@ The Grunt Edition comes with the following components:
 
 The Pattern Lab Node - Grunt Edition uses [Node](https://nodejs.org) for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [grunt.js](http://gruntjs.com/) to run tasks and interface with the core library. Node version 4 or higher suffices. You can follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website if you haven't done so already. Installation of Node will include npm.
 
-It's also highly recommended that you [install grunt](http://gruntjs.com/getting-started) globally.
 
 ## Installing
 
@@ -42,7 +45,6 @@ The fastest way to get started with the Grunt Edition is to [download the pre-bu
     cd install/location
     npm install
     ```
-
 Running `npm install` from a directory containing a `package.json` file will download all dependencies defined within.
 
 #### Install the Grunt Edition of Pattern Lab Node as a Dependency
@@ -56,9 +58,32 @@ Use npm's [`install` command](https://docs.npmjs.com/cli/install) with an argume
 
 This will install the Grunt Edition into a directory called `node_modules` in `install/location/`.
 
+It's also highly recommended that you [install grunt](http://gruntjs.com/getting-started) globally.
+```
+npm install grunt -g
+```
+
+## Installing ruby dependencies
+
+***appcivist-patterns*** has the following ruby dependencies:
+
+* [compass](http://compass-style.org/install/). Compass plugin
+* [Susy](https://www.safaribooksonline.com/library/view/sass-and-compass/9781849694544/ch05s04.html)
+* [sass media queries](https://github.com/sass-mq/sass-mq) are also required.
+
+Install [rubygems](https://rubygems.org/pages/download) then run:
+```
+gem install rubygems-update
+update_rubygems
+gem install sass
+gem install sass-mq
+gem install compass
+gem install susy
+```
+
 ## Getting started
 
-The Pattern Lab Node - Grunt Edition ships with a [base experience](https://github.com/pattern-lab/starterkit-mustache-base) which serves as clean place to start from scratch with Pattern Lab. But if you want to get rolling with a starterkit of your own, or use the [demo starterkit](https://github.com/pattern-lab/starterkit-mustache-demo) like the one on [demo.patternlab.io](http://demo.patternlab.io), you can do so automatically at time of `npm install` by adding your starterkit to the `package.json` file.
+To start hacking with ***appcivist-patterns*** a few commands are available to you.
 
 You can also [work with starterkits using the command line](https://github.com/pattern-lab/patternlab-node/wiki/Importing-Starterkits).
 
@@ -90,10 +115,10 @@ To watch for changes, re-generate the front-end, and server it via a BrowserSync
 
 BrowserSync should open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Install a StarterKit
+### Generate distribution version
 
-To install a specific StarterKit from GitHub type:
+To generate a distributable version of the patternlab just issue the following command:
 
-    npm install [starterkit-vendor/starterkit-name]
+    grunt patternlab:dist
 
-    grunt patternlab:loadstarterkit --kit=[starterkit-name]
+And the necessary css will be at *dist* folder.

@@ -23,6 +23,17 @@
       "images" : "./public/images",
       "fonts" : "./public/fonts",
       "css" : "./public/css"
+    },
+    "dist": {
+      "root" : "./dist",
+      "css": "./dist/css",
+      "images" : "./dist/images",
+      "fonts" : "./dist/fonts"
+    },
+    "fontAwesome": {
+      "root": "./node_modules/font-awesome",
+      "css": "./node_modules/font-awesome/css/",
+      "fonts": "./node_modules/font-awesome/fonts/"
     }
   },
   "styleGuideExcludes": [
