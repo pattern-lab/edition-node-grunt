@@ -19,7 +19,6 @@ The Grunt Edition comes with the following components:
 
 The Pattern Lab Node - Grunt Edition uses [Node](https://nodejs.org) for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [grunt.js](http://gruntjs.com/) to run tasks and interface with the core library. Node version 4 or higher suffices. You can follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website if you haven't done so already. Installation of Node will include npm.
 
-It's also highly recommended that you [install grunt](http://gruntjs.com/getting-started) globally.
 
 ## Installing
 
@@ -46,7 +45,6 @@ The fastest way to get started with the Grunt Edition is to [download the pre-bu
     cd install/location
     npm install
     ```
-
 Running `npm install` from a directory containing a `package.json` file will download all dependencies defined within.
 
 #### Install the Grunt Edition of Pattern Lab Node as a Dependency
@@ -59,6 +57,29 @@ Use npm's [`install` command](https://docs.npmjs.com/cli/install) with an argume
     npm install edition-node-grunt
 
 This will install the Grunt Edition into a directory called `node_modules` in `install/location/`.
+
+It's also highly recommended that you [install grunt](http://gruntjs.com/getting-started) globally.
+```
+npm install grunt -g
+```
+
+## Installing ruby dependencies
+
+***appcivist-patterns*** has the following ruby dependencies:
+
+* [compass](http://compass-style.org/install/). Compass plugin
+* [Susy](https://www.safaribooksonline.com/library/view/sass-and-compass/9781849694544/ch05s04.html)
+* [sass media queries](https://github.com/sass-mq/sass-mq) are also required.
+
+Install [rubygems](https://rubygems.org/pages/download) then run:
+    ```
+    gem install rubygems-update
+    update_rubygems
+    gem install sass
+    gem install sass-mq
+    gem install compass
+    gem install susy
+    ```
 
 ## Getting started
 
@@ -123,3 +144,4 @@ Add the public CSS folder to your Gruntfile watch command:
 `path.resolve(paths().public.css + '**/*.css')`
 
 Then run `compass watch` and `grunt patternlab:serve` to start working.
+And the compiled css output will be in the *dist* folder.
