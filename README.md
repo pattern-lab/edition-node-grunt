@@ -72,14 +72,14 @@ npm install grunt -g
 * [sass media queries](https://github.com/sass-mq/sass-mq) are also required.
 
 Install [rubygems](https://rubygems.org/pages/download) then run:
-    ```
-    gem install rubygems-update
-    update_rubygems
-    gem install sass
-    gem install sass-mq
-    gem install compass
-    gem install susy
-    ```
+```
+gem install rubygems-update
+update_rubygems
+gem install sass
+gem install sass-mq
+gem install compass
+gem install susy
+```
 
 ## Getting started
 
