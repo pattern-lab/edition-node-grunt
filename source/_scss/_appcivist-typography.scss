@@ -15,91 +15,150 @@ TABLE OF CONTENTS
 // 1.0 GENERAL
 body {
   font-family: $typography__font-stack--system;
-  line-height: 1.2em;
+  font-size: $typography__body;
   -webkit-text-size-adjust: 100%;
   min-height: 100vh;
 }
 
-header {
-  text-align: center;
-  h1, p {
-    max-width: 40em;
-    margin: 0 auto;
-  }
+.body--bodycopy {
+  font-size: $typography__body;
 }
 
 a {
-  &:focus {
+  text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
   }
 }
 
-// 2.0 HEADINGS
-.heading--mega {
-  font-size: $typography__heading--mega;
-  line-height: 1.1em;
+.tags {
+  text-transform: uppercase;
+  font-size: $typography__tiny;
 }
-.heading--jumbo {
-  font-size: $typography__heading--jumbo;
-  line-height: 1.1em;
+
+// BUTTONS
+button, .button {
+  text-transform: uppercase;
 }
-.heading--display {
-  font-size: $typography__heading--display;
-  line-height: 1.2em;
+.tiny.button {
+  font-size: $typography__tiny;
+}
+.large.button {
+  font-size: $typography__tiny;
+}
+
+.vote-button {
+  font-weight: bold;
+}
+
+
+// 2.0 BASE SIZES
+
+.heading--title {
+  font-size: $typography__title;
 }
 .heading--headline {
-  font-size: $typography__heading--headline;
-  line-height: 1.2em;
+  font-size: $typography__headline;
+  font-weight: bold;
 }
-.heading--title {
-  font-size: $typography__heading--title;
-  line-height: 1.2em;
+p {
+  font-size: $typography__body;
+  line-height: ms(4);
 }
-.heading--subheader {
-  font-size: $typography__heading--subheader;
-  line-height: 1.2em;
+small, .heading--small {
+  font-size: $typography__small;
+}
+.heading--header {
+  font-size: $typography__header;
+  line-height: ms(1);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.heading--subheader, fieldset label {
+  font-size: $typography__subheader;
+  line-height: ms(1);
+  text-transform: uppercase;
+}
+.tiny {
+  font-size: $typography__tiny;
 }
 
 // 3.0 BODY TEXT
-p {
-  font-size: $typography__body--bodycopy;
-  line-height: 1.8em;
-}
-small {
-  font-size: $typography__body--small;
-  line-height: 1em;
-}
+
+
 blockquote {
-  font-size: $typography__heading--subheader;
+  font-size: $typography__headline;
   font-style: italic;
 }
 time {
-  font-size: $typography__body--caption;
+  font-size: $typography__subheader;
 }
 figcaption {
-  font-size: $typography__body--caption;
+  font-size: $typography__small;
   font-style: italic;
 }
 
 // 4.0 LISTS
-dt {
-  font-weight: bold;
+
+.timeline {
+  text-align: center;
+  text-transform: uppercase;
 }
 
 // 5.0 INLINE STYLES
-strong {
-}
-em {
+
+.panel span, .list-array span {
+  text-align: right;
 }
 
-// 6.0 NAVIGATION
+footer {
+  font-size: $typography__tiny;
+  .app-main small {
+    text-align: center;
+  }
+}
+
+// 6.0 BRAND AND NAV
+
 .logo {
-  text-align: left;
+  h1{
+    margin-bottom: ms(-6);
+    span {
+      font-weight: 100;
+      margin-top: ms(-6);
+    }
+  }
+  h3 {
+    font-weight: 100;
+  }
 }
-
-.user-menu label {
-  text-align: right;
+.user {
+  span {
+    margin-top: ms(-6);
+    font-weight: 100;
+  }
 }
-
 .submenu {
-  text-align: right;
+  h1 {
+    font-weight: 100;
+  }
+  li {
+    font-size: $typography__small;
+    line-height: ms(1);
+  }
+}
+
+// CARDS
+.card-info {
+  h1 {
+    line-height: ms(3);
+  }
+  p {
+    line-height: ms(-1);
+    margin-bottom: ms(-4);
+  }
 }

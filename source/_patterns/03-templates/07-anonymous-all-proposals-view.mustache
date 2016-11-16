@@ -1,0 +1,36 @@
+{{> molecules-navigation-anonymous }}
+<main class="app-main anonymous">
+	<section class="panel intro">
+		<h1 class="heading--title">All Proposals</h1>
+	  <p class="heading--header">in the <a href="{{ link.templates-working-group-dashboard }}">{{ group.name }}</a> Working Group.</p>
+	</section>
+	<section class="panel">
+		{{> molecules-pagination }}
+	</section>
+	<section class="panel">
+		<section class="list--idea all-proposals">
+				{{# listItems.ten }}
+		    {{> molecules-proposal-card }}
+		    {{/ listItems.ten }}
+				{{# listItems.ten }}
+		    {{> molecules-proposal-card }}
+		    {{/ listItems.ten }}
+				{{# listItems.ten }}
+		    {{> molecules-proposal-card }}
+		    {{/ listItems.ten }}
+				{{# listItems.ten }}
+		    {{> molecules-proposal-card }}
+		    {{/ listItems.ten }}
+				{{# listItems.ten }}
+		    {{> molecules-proposal-card }}
+		    {{/ listItems.ten }}
+				{{# listItems.ten }}
+		    {{> molecules-proposal-card }}
+		    {{/ listItems.ten }}
+		</section>
+	</section>
+	<section class="panel">
+		{{> molecules-pagination }}
+	</section>
+</main>
+{{> organisms-anonymous-footer }}

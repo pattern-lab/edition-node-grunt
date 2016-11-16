@@ -88,10 +88,19 @@ module.exports = function (grunt) {
         files: [
           { expand: true, cwd: path.resolve(paths().source.js), src: '**/*.js', dest: path.resolve(paths().public.js) },
           { expand: true, cwd: path.resolve(paths().source.css), src: '*.css', dest: path.resolve(paths().public.css) },
+          { expand: true, cwd: path.resolve(paths().fontAwesome.css), src: '*.css', dest: path.resolve(paths().public.css) },
+          { expand: true, cwd: path.resolve(paths().fontAwesome.fonts), src: '*', dest: path.resolve(paths().public.fonts) },
           { expand: true, cwd: path.resolve(paths().source.images), src: '*', dest: path.resolve(paths().public.images) },
           { expand: true, cwd: path.resolve(paths().source.fonts), src: '*', dest: path.resolve(paths().public.fonts) },
           { expand: true, cwd: path.resolve(paths().source.root), src: 'favicon.ico', dest: path.resolve(paths().public.root) },
           { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*', '**'], dest: path.resolve(paths().public.root) }
+        ]
+      },
+      dist: {
+        files: [
+          { expand: true, cwd: path.resolve(paths().public.css), src: '*.css', dest: path.resolve(paths().dist.css) },
+          { expand: true, cwd: path.resolve(paths().public.images), src: '*', dest: path.resolve(paths().dist.images) },
+          { expand: true, cwd: path.resolve(paths().public.fonts), src: '*', dest: path.resolve(paths().dist.fonts) },
         ]
       }
     },
@@ -166,6 +175,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['patternlab', 'sass', 'copy:main']);
   grunt.registerTask('patternlab:watch', ['patternlab', 'sass', 'copy:main', 'watch:all']);
   grunt.registerTask('patternlab:serve', ['patternlab', 'sass', 'copy:main', 'browserSync', 'watch:all']);
-  grunt.registerTask('patternlab:buildserve', ['patternlab', 'patternlab:build', 'copy:main', 'browserSync', 'watch:all']);
+  grunt.registerTask('patternlab:dist', ['patternlab', 'sass', 'patternlab:build', 'copy:main', 'copy:dist']);
+  grunt.registerTask('patternlab:buildserve', ['patternlab', 'sass', 'patternlab:build', 'copy:main', 'browserSync', 'watch:all']);
 
 };

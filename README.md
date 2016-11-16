@@ -83,7 +83,7 @@ gem install susy
 
 ## Getting started
 
-The Pattern Lab Node - Grunt Edition ships with a [base experience](https://github.com/pattern-lab/starterkit-mustache-base) which serves as clean place to start from scratch with Pattern Lab. But if you want to get rolling with a starterkit of your own, or use the [demo starterkit](https://github.com/pattern-lab/starterkit-mustache-demo) like the one on [demo.patternlab.io](http://demo.patternlab.io), you can do so automatically at time of `npm install` by adding your starterkit to the `package.json` file.
+To start hacking with ***appcivist-patterns*** a few commands are available to you.
 
 You can also [work with starterkits using the command line](https://github.com/pattern-lab/patternlab-node/wiki/Importing-Starterkits).
 
@@ -115,33 +115,10 @@ To watch for changes, re-generate the front-end, and server it via a BrowserSync
 
 BrowserSync should open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Install a StarterKit
+### Generate distribution version
 
-To install a specific StarterKit from GitHub type:
+To generate a distributable version of the patternlab just issue the following command:
 
-    npm install [starterkit-vendor/starterkit-name]
+    grunt patternlab:dist
 
-    grunt patternlab:loadstarterkit --kit=[starterkit-name]
-
-### Install SASS
-To install Sass:
-`npm install grunt-contrib-sass --save-dev`
-
-In your Gruntfile, add:
-`grunt.loadNpmTasks('grunt-contrib-sass');`
-
-Then run
-`sass --watch source/_scss:public/css`
-
-### Install Compass
-To install Compass:
-`gem install compass`
-
-`cd project/folder`
-`compass create --bare --sass-dir "source/_scss" --css-dir "public/css" --javascripts-dir "source/js" --images-dir "source/images"`
-
-Add the public CSS folder to your Gruntfile watch command:
-`path.resolve(paths().public.css + '**/*.css')`
-
-Then run `compass watch` and `grunt patternlab:serve` to start working.
-And the compiled css output will be in the *dist* folder.
+And the necessary css will be at *dist* folder.

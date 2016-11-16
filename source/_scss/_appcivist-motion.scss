@@ -17,6 +17,12 @@ a {
   @include transition-timing-function(ease);
 }
 
+button, .button {
+  @include transition-property(background-color);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease);
+}
+
 header {
   label {
     @include transition-property(background);
@@ -30,6 +36,14 @@ header {
     transition:border-top .1s, border-bottom .1s .1s;
   }
   input:checked ~ ul.submenu {
+    @include transition-property(max-height);
+    @include transition-duration(.5s);
+    @include transition-timing-function(ease-in);
+  }
+}
+
+.action-bar {
+  input:checked ~ ul.action-menu {
     @include transition-property(max-height);
     @include transition-duration(.5s);
     @include transition-timing-function(ease-in);

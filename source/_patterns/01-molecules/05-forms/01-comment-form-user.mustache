@@ -1,0 +1,14 @@
+<form method="post" action="{{ url }}" class="comment-form">
+	<fieldset>
+		<div class="field-container">
+			<textarea id="comment-field" rows="5" placeholder="Write you comment here"></textarea>
+		</div>
+		<div class="comment-meta">
+			<div class="member-card">
+				<figure>{{> atoms-avatar }}</figure>
+				<h4><a href="{{ link.template-member-profile }}">{{ name.first }} {{ name.last }}</a>
+			</div>
+	</div>
+	<input class="button" type='submit' value='Submit' />
+	</fieldset>
+</form>

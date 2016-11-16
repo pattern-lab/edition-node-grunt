@@ -1,9 +1,17 @@
-<li class="comment-container">
+<li class="panel comment-container">
 	<div class="comment-meta">
-		{{> atoms-avatar }}
-		<h4 class="comment-name"><a href="#">{{ name.first }} {{ name.last }}</a></h4>
+		<p class="heading--header">Yesterday in <a href="#">Housing and Urban Development (HUD) Funds</a></p>
+		<div class="member-card">
+			<figure>{{> atoms-avatar }}</figure>
+			<h4><a href="{{ link.template-member-profile }}">{{ name.first }} {{ name.last }}</a></h4>
+		</div>
 	</div>
 	<div class="comment-text">
-		<p>{{ description }}</p>
+		<small>{{ description }}</small>
+	</div>
+	<div class="comment-reply-controls">
+		{{> molecules-voting-module }}
+		<a class="heading--subheader reply-count">2 Replies</a>
+		<a class="heading--subheader reply-count reply">Reply to this comment</a>
 	</div>
 </li>

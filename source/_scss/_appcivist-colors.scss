@@ -4,8 +4,9 @@ in use throughout the AppCivist Sass files
 
 TABLE OF CONTENTS
 1.0 GENERAL
-2.0 ALERTS
-3.0 NAVIGATION
+2.0 BUTTONS
+3.0 ALERTS
+4.0 NAVIGATION
 /--------------------------------------*/
 
 .color__brand-primary {
@@ -29,9 +30,24 @@ TABLE OF CONTENTS
 .color__borders {
   background: $color__borders;
 }
-
+.color__borders--dark {
+  background: $color__borders--dark;
+}
+.color__borders--accent {
+  background: $color__borders--accent;
+}
+.color__borders--primary {
+  background: $color__borders--primary;
+}
 
 // 1.0 GENERAL
+
+html, .sg-main {
+  background-color: $color__text--reverse;
+}
+
+body {
+}
 
 a {
   color: $color__link--active;
@@ -44,28 +60,110 @@ blockquote {
   color: $color__text--primary;
 }
 
-.submenu {
-  background:$color__text--primary;
-  box-shadow:0 0 1px $color__borders;
-  & li a {
-    color:$color__link--active;
+nav, nav a,
+.navigation-anonymous,
+.navigation-anonymous a,
+footer .large-screen-nav,
+footer .large-screen-nav a,
+.navigation-bar, div[navigation-bar] {
+  background-color: $color__brand-primary;
+  color: $color__text--reverse;
+  &:hover {
+    color: darken($color__text--reverse, 10%);
   }
 }
 
-header {
-  ul#menu {
-    background: $color__brand-primary;
-    color: $color__text--reverse;
+.overlay-background {
+  background-color: $color__text--primary;
+}
+
+.activity-stream-item {
+  border-bottom: 1px solid $color__borders;
+}
+
+// 2.0 BUTTONS
+button, .button  {
+  color: $color__text--reverse;
+  background-color: $color__brand-accent;
+  border-color: darken($color__link--active, 10%);
+  &:hover {
+    background-color: darken($color__brand-accent, 20%);
   }
-  ul.submenu {
-    background: $color__brand-primary;
-    //box-shadow:0 0 1px rgba(0,0,0,.3);
-    & li a {
+}
+
+input[type=submit] {
+  color: $color__text--reverse;
+  background: $color__brand-accent;
+  border-color: darken($color__link--active, 10%);
+  &:hover {
+    background-color: darken($color__brand-accent, 20%);
+  }
+}
+
+.vote-button {
+  border-color: $color__brand-accent;
+  color: $color__brand-accent;
+  &:hover {
+    background-color:$color__link--hover;
+    a {
       color: $color__text--reverse;
     }
   }
+  a {
+    color: $color__link--active;
+  }
 }
-// 2.0 ALERTS
+
+.disabled.button {
+  color: lighten($color__text--secondary, 10%);
+  background-color: lighten($color__text--secondary, 40%);
+  border-color: lighten($color__text--secondary, 30%);
+  cursor: default;
+  &:hover {
+    background-color: lighten($color__text--secondary, 40%);
+  }
+}
+.secondary.button {
+  color: $color__brand-accent;
+  background-color: $color__text--reverse;
+  &:hover {
+    background-color: $color__brand-accent;
+    color: $color__text--reverse;
+  }
+}
+.warning.button {
+  color: $color__text--reverse;
+  background-color: $color__alert;
+  &:hover {
+    background-color: darken($color__alert, 20%);
+  }
+}
+.add-button, .close-button, .more-menu, .action-button, .upvote, .downvote {
+  svg g {
+     fill: $color__brand-accent;
+     &:hover {
+       fill: darken($color__brand-accent, 30%);
+     }
+  }
+}
+.close-button {
+  background-color: lighten($color__brand-accent, 100%);
+  border-color: darken($color__brand-accent, 50%);
+  &:hover {
+    background-color: lighten($color__brand-accent, 30%);
+  }
+}
+
+.small-screen-nav {
+  svg g {
+     fill: $color__text--reverse;
+     &:hover {
+       fill: $color__brand-primary--light;
+     }
+  }
+}
+
+// 3.0 ALERTS
 .alert {
   background: $color__alert-background;
   & a {
@@ -92,32 +190,106 @@ header {
   }
 }
 
-// 3.0 NAVIGATION
-header {
-  label:after{
-    border-top:4px solid $color__text--reverse;
-    border-bottom:0 solid $color__text--reverse;
-    border-left:4px solid transparent;
-    border-right:4px solid transparent;
-    }
-  label:hover, input:checked ~ label {
-    background:$color__brand-primary--dark;
-  }
-  input:checked ~ label:after{
-    border-top:0 solid $color__text--reverse;
-    border-bottom:4px solid $color__text--reverse;
-  }
-}
-
-/*style for the second level menu*/
-ul.submenu{
-  div li a, li a {
-    &:hover{
-      background: $color__brand-primary--dark;
+// 4.0 NAVIGATION
+.navigation {
+  &-logged-in {
+    .logo {
+      border-bottom: 1px solid $color__text--reverse;
     }
   }
 }
+.submenu {
+  h1 {
+    color: $color__text--reverse;
+  }
+}
 
+
+.panel{
+  //border: 1px solid $color__borders;
+  &.comment-container {
+    border-top: 1px solid $color__borders;
+  }
+}
 .card {
-  border: 1px solid $color__borders;
+  border: 1px solid $color__borders--accent;
+  background-color: lighten($color__text--reverse, 20%);
+  color: $color__text--secondary;
+  clear: both;
+}
+
+.card-list {
+  background-color: $color__text--reverse;
+}
+
+.timeline-item {
+  border-top: 1px solid $color__borders;
+}
+.timeline {
+  .marker {
+    background-color: $color__borders;
+  }
+}
+.inactive {
+  color: lighten($color__text--secondary, 30%);
+  .marker {
+    background-color: lighten($color__text--secondary, 30%);
+  }
+}
+.active {
+  color: $color__brand-primary;
+  .marker {
+    background-color: $color__brand-primary;
+    }
+}
+.future {
+  color: $color__brand-primary--light;
+  .marker {
+    background-color: $color__brand-primary--light;
+  }
+}
+// 5.0 TYPE
+.heading--header {
+  color: $color__text--secondary;
+}
+
+footer, footer a {
+  //color: $color__text--reverse;
+}
+
+.label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+.label-default {
+   background: $color__text--secondary;
+}
+
+.label-primary {
+  background: $color__brand-primary;
+}
+
+.label-info {
+  background: $color__brand-accent;
+}
+
+.label-success {
+  background: lighten($color__brand-accent-green,20%);
+}
+
+.label-danger {
+  background: $color__brand-accent-red;
+}
+
+.label-warning {
+  background: $color__brand-accent-yellow;
 }

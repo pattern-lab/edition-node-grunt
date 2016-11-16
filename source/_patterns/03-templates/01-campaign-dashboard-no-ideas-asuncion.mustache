@@ -1,0 +1,45 @@
+{{> molecules-navigation-asuncion }}
+<main class="app-main">
+	<section class="panel intro">
+	  <p class="heading--header">Iniciativa</p>
+	  <h1 class="heading--title">Presupuesto Participativo Asunción 2017</h1>
+	  <p>Asunción está recolectando ideas para su segundo ciclo de Presupuestos Participativos. Unite vos también!</p>
+	</section>
+	<section class="panel">
+		<h1 class="heading--header">Estado</h1>
+		{{> molecules-timeline }}
+	</section>
+
+  <section class="panel">
+    <div class="panel-heading-no-margin">
+      <h1 class="heading--header">Propuestas</h1>
+      <p class="heading--small">
+          <a href="{{ link.templates-all-proposals-view }}"><i class="fa fa-arrows-alt"></i>&nbsp;Ver Todo&nbsp;&nbsp;</a>
+          <a href="{{ link.templates-campaign-dashboard }}"><i class="fa fa-lightbulb-o"></i>&nbsp;Mostrar Ideas&nbsp;&nbsp;</a>
+          <a href="#"><i class="fa fa-plus-square"></i>&nbsp;Proponer&nbsp;&nbsp;</a>
+      </p>
+    </div>
+    <section class="list--proposal all-proposals">
+      {{# listItems.four }}
+        {{> molecules-proposal-card }}
+      {{/ listItems.four }}
+
+      {{# listItems.seven }}
+        {{> molecules-proposal-card }}
+      {{/ listItems.seven }}
+    </section>
+  </section>
+
+	<section class="panel">
+		<div class="panel-heading">
+			<h1 class="heading--header">Conversaciones</h1><p class="heading--small"><a href="#">Comentar</a></p>
+		</div>
+		{{> molecules-single-conversation }}
+		{{> molecules-single-conversation }}
+	</section>
+	<div class="panel reply-field">
+		<h1 class="heading--header">Comentar</h1>
+		{{> molecules-comment-form-user }}
+	</div>
+</main>
+{{> organisms-footer }}
