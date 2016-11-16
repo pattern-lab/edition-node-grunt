@@ -1,0 +1,64 @@
+{{> molecules-navigation-asuncion }}
+<main class="app-main">
+	<section class="panel intro">
+	  <p class="heading--header">Grupo de Trabajo</p>
+	  <h1 class="heading--title">Centro Municipal 23</h1>
+	  <p>Organización de residentes de los barrios San Roque y Ricardo Brugada, para el desarrollo de propuestas para la ciudad</p>
+	</section>
+  <section class="panel activity-and-members">
+    <section class="latest-activity">
+      <div class="panel-heading">
+          <h1 class="heading--header">Latest Activity</h1><p class="heading--small"><a href="{{ link.templates-all-proposals-view }}">See All</a></p>
+      </div>
+      {{# listItems.two }}
+      {{> atoms-activity-stream-list-item }}
+      {{/ listItems.two }}
+    </section>
+    <section>
+      <div class="panel-heading">
+          <h1 class="heading--header">Members</h1><p class="heading--small"><a href="{{ link.templates-all-proposals-view }}">See All</a> | <a href="#">Add New</a></p>
+      </div>
+      {{# listItems.two }}
+      {{> molecules-user-card }}
+      {{/ listItems.two }}
+    </section>
+  </section>
+  <section class="panel ideas-and-proposals">
+        <section class="list--proposal">
+            <div class="panel-heading-no-margin">
+                <h1 class="heading--header">Proposals</h1>
+                <p class="heading--small">
+                    <a href="{{ link.templates-all-proposals-view }}"><i class="fa fa-arrows-alt"></i>&nbsp;See All&nbsp;&nbsp;</a>
+                    <a href="#"><i class="fa fa-plus-square"></i>&nbsp;Add New</a>
+                </p>
+            </div>
+          {{# listItems.four }}
+            {{> molecules-proposal-card }}
+          {{/ listItems.four }}
+        </section>
+        <section class="list--idea">
+            <div class="panel-heading-no-margin">
+                <h1 class="heading--header">Ideas</h1>
+                <p class="heading--small">
+                    <a href="{{ link.templates-all-ideas-view }}"><i class="fa fa-arrows-alt"></i>&nbsp;See All&nbsp;&nbsp;</a>
+                    <a href="#"><i class="fa fa-plus-square"></i>&nbsp;Add New</a>
+                </p>
+            </div>
+          {{# listItems.seven }}
+            {{> molecules-idea-card }}
+          {{/ listItems.seven }}
+        </section>
+    </section>
+  <section class="panel">
+		<div class="panel-heading">
+			<h1 class="heading--header">Conversaciones</h1><p class="heading--small"><a href="#">Comentar</a></p>
+		</div>
+		{{> molecules-single-conversation }}
+		{{> molecules-single-conversation }}
+	</section>
+	<div class="panel reply-field">
+		<h1 class="heading--header">Comentar</h1>
+		{{> molecules-comment-form-user }}
+	</div>
+</main>
+{{> organisms-footer }}

@@ -9,7 +9,14 @@ compiled into production.
 // FRAMEWORKS AND DEPENDENCIES
 @import "compass/reset";
 @import "compass/css3";
+@import "compass/utilities/general/clearfix";
 @import "color";
+@import "susy";
+@import "../../node_modules/font-awesome/scss/font-awesome";
+@import "../../node_modules/sass-mq/mq";
+//--------------------------------------
+// LOCAL TOOLS
+@import "modular-scale";
 
 //--------------------------------------
 // PATTERNLAB STYLES
@@ -23,6 +30,3 @@ compiled into production.
 @import "appcivist-layout";
 @import "appcivist-colors";
 @import "appcivist-motion";
-
-
-// SCRATCHPAD — this is for Junk CSS
