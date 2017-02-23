@@ -56,7 +56,7 @@ module.exports = function (grunt) {
       pl.loadstarterkit(argv.kit, argv.clean);
     }
 
-    if (arg && (arg !== "version" && arg !== "patternsonly" && arg !== "help" && arg !== "starterkit-list" && arg !== "starterkit-load")) {
+    if (arg && (arg !== "version" && arg !== "patternsonly" && arg !== "help" && arg !== "liststarterkits" && arg !== "loadstarterkit")) {
       pl.help();
     }
   });
