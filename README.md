@@ -80,7 +80,7 @@ To list all available commands type:
 
 To generate the front-end for Pattern Lab type:
 
-    grunt patternlab:build
+    grunt
 
 ### Watch for changes and re-generate Pattern Lab
 
