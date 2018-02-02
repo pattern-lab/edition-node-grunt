@@ -1,7 +1,7 @@
 {
-  "name": "edition-node-grunt",
+  "name": "@pattern-lab/edition-node-grunt",
   "description": "The grunt wrapper around patternlab-node core, providing tasks to interact with the core library and move supporting frontend assets.",
-  "version": "2.0.0",
+  "version": "2.0.0-alpha.1",
   "main": "./core/lib/patternlab.js",
   "dependencies": {
     "bs-html-injector": "^3.0.0",
