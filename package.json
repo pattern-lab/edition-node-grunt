@@ -12,7 +12,8 @@
     "minimist": "^1.2.0",
     "patternlab-node": "^2.0.0",
     "styleguidekit-assets-default": "^3.0.0",
-    "styleguidekit-mustache-default": "^3.0.0"
+    "styleguidekit-mustache-default": "^3.0.0",
+    "snyk": "^1.163.1"
   },
   "keywords": [
     "Pattern Lab",
@@ -28,10 +29,13 @@
   "bugs": "https://github.com/pattern-lab/edition-node-grunt/issues",
   "author": "Brian Muenzenmeyer",
   "scripts": {
-    "postinstall": "node node_modules/patternlab-node/core/scripts/postinstall.js"
+    "postinstall": "node node_modules/patternlab-node/core/scripts/postinstall.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "license": "MIT",
   "engines": {
     "node": ">=5.0"
-  }
+  },
+  "snyk": true
 }
